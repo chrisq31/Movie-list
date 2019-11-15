@@ -52,8 +52,11 @@ https://www.themoviedb.org/?_dc=1573834572
 add an .env with YOUR Api key eg REACT_APP_API_KEY=XXXXXXXXXXXXX
 
 
-## Why styled components
+## Why styled components?
 https://www.styled-components.com/docs/basics
+
+https://medium.com/styled-components/how-styled-components-works-618a69970421
 
 ### no global conflicts
 No class name bugs: styled-components generates unique class names for your styles. You never have to worry about duplication, overlap or misspellings.
+

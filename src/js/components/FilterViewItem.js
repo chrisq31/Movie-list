@@ -27,7 +27,18 @@ const Button = styled.button`
     background: ${bgColorLight};
     color:${bgColor};
   }
+
+  &:active {
+    background: ${bgColorLight};
+    color:${bgColor};
+  }
 `;
+
+const isSelected=styled.div`
+background: ${bgColorLight};
+color:${bgColor};
+
+`
 
 
 
@@ -36,7 +47,7 @@ const Button = styled.button`
 
 class FilterViewItem extends React.Component {
 
-    state = { checked: false }
+    state = { active: false }
 
     onMouseOver = (e) => {
         e.preventDefault();
@@ -51,8 +62,8 @@ class FilterViewItem extends React.Component {
 
     onMouseDown = (e) => {
         e.preventDefault();
-        this.setState({ checked: !this.state.checked })
-        console.log('down', this.state.checked)
+        this.setState({ active: !this.state.active })
+        console.log('down', this.state.active)
 
 
     }
@@ -67,7 +78,7 @@ class FilterViewItem extends React.Component {
 
             <div className="col" >
 
-                <Button className={(this.state.checked ? 'isSelected' : 'isNotSelected')}
+                <Button className={(this.state.active ? 'isSelected' : 'isNotSelected')}
                     onMouseOver={this.onMouseOver}
                     onMouseOut={this.onMouseOut}
                     onMouseDown={this.onMouseDown}
