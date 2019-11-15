@@ -4,44 +4,33 @@ import { object, func, string, oneOfType, number, array } from 'prop-types';
 import styled from 'styled-components';
 import { BASE_URL_IMAGE } from '../constants/site-constants'
 
-const bgColor = "#bbbbbb";
+const bgColor = "#000000";
+const bgColorLight = "#ffffff";
 
 
 const primaryFontFamily = "league_gothicregular";
 
 
 
-const FilterItem = styled.div`
-    width: 300px;
-  height: 100%;
-   box-sizing: border-box;
-   cursor: pointer;
+const Button = styled.button`
+    font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  color:${bgColorLight};
+  cursor:pointer;
+  
+  border-radius: 2px;
    background-color:${bgColor};
    overflow:hidden;
 
-   margin:20px;
-    padding:0;
-   
-   
+   &:hover {
+    background: ${bgColorLight};
+    color:${bgColor};
+  }
 `;
 
 
-
-
-
-
-const Title = styled.h2`
-padding-top:20px;
-position:relative;
-text-transform: uppercase;
-width:100%;
-  font-size: 2em;
-  text-align: center;
-  color: #000000;
-  font-family: ${primaryFontFamily};
-`;
-
-
+ 
 
 
 
@@ -78,13 +67,13 @@ class FilterViewItem extends React.Component {
 
             <div className="col" >
 
-                <FilterItem
+                <Button className={ (this.state.checked ? 'isSelected' : 'isNotSelected')}
                     onMouseOver={this.onMouseOver}
                     onMouseOut={this.onMouseOut}
                     onMouseDown={this.onMouseDown}
                 >
-                    <Title>{name}</Title>
-                </FilterItem>
+                    {name}
+                </Button>
             </div>
         );
 

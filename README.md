@@ -50,3 +50,10 @@ Note: You’ll need an TMDb account to request an API key. Once you are register
 https://www.themoviedb.org/?_dc=1573834572
 
 add an .env with YOUR Api key eg REACT_APP_API_KEY=XXXXXXXXXXXXX
+
+
+## Why styled components
+https://www.styled-components.com/docs/basics
+
+### no global conflicts
+No class name bugs: styled-components generates unique class names for your styles. You never have to worry about duplication, overlap or misspellings.
