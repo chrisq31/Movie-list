@@ -57,6 +57,8 @@ https://www.styled-components.com/docs/basics
 
 https://medium.com/styled-components/how-styled-components-works-618a69970421
 
+https://github.com/styled-components/styled-components/issues/1746
+
 ### no global conflicts
 No class name bugs: styled-components generates unique class names for your styles. You never have to worry about duplication, overlap or misspellings.
 
