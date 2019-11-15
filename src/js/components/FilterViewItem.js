@@ -46,16 +46,43 @@ width:100%;
 
 
 class FilterViewItem extends React.Component {
-     render() {
+
+    state = { checked: false }
+
+    onMouseOver = (e) => {
+        e.preventDefault();
+
+    }
+
+
+    onMouseOut = (e) => {
+        e.preventDefault();
+
+    }
+
+    onMouseDown = (e) => {
+        e.preventDefault();
+        this.setState({ checked: !this.state.checked })
+        console.log('down', this.state.checked)
+
+
+    }
+
+
+    render() {
         const {
             name,
-             } = this.props.item
+        } = this.props.item
 
-     return (
+        return (
 
             <div className="col" >
 
-                <FilterItem>
+                <FilterItem
+                    onMouseOver={this.onMouseOver}
+                    onMouseOut={this.onMouseOut}
+                    onMouseDown={this.onMouseDown}
+                >
                     <Title>{name}</Title>
                 </FilterItem>
             </div>
