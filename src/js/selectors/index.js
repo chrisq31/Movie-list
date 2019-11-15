@@ -1,10 +1,14 @@
+
+const genresList =(state) => state.genresList
+
+console.log('genresList ',genresList)
 export const selectItemById = createSelector(
 
 
     [selectPosts, selectedPost],
-    (genreList, genreId) =>
+    (genresList, genreId) =>
     {
-         let result = genreList.find (genre => genre.id ==genreId)
+         let result = genresList.find (genre => genre.id ==genreId)
         return result;
     }
 );
