@@ -42,3 +42,35 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Zone Movies
+Link to the task: https://zone.github.io/frontend/movie-listing
+quinn31
+dipMovie31!
+https://www.themoviedb.org/u/quinn31
+
+Using the TMDb API display a list of now showing movies allowing the user to filter by genre and rating. Don't worry about pagination, the first page is fine.
+
+//input -now showing
+
+https://api.themoviedb.org/3/movie/now_playing?api_key=c72352499d66ee87c33c6c30493a8e7e&language=en-US&page=1
+https://api.themoviedb.org/3/movie/now_playing?api_key=<<api_key>>&language=en-US&page=1
+
+API Key (v3 auth)
+c72352499d66ee87c33c6c30493a8e7e
+
+Example API Request
+https://api.themoviedb.org/3/movie/550?api_key=c72352499d66ee87c33c6c30493a8e7e
+
+API Read Access Token (v4 auth)
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNzIzNTI0OTlkNjZlZTg3YzMzYzZjMzA0OTNhOGU3ZSIsInN1YiI6IjVkY2JlN2Y1ZTI2M2JiMDAxMzcwMjE0ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.KRajZKTp-ec7V_t123KlB_6flJCDco6j2iVd8ApCuOc
+
+//request
+https://api.themoviedb.org/3/movie/now_playing?api_key=c72352499d66ee87c33c6c30493a8e7e&language=en-US&page=1
+
+// response
+Display a list of movies, each showing their title, genres and poster image.
+The movies should be ordered by popularity (most popular first - popularity property).
+Movies should be filterable by multiple genres, the user should have the ability to toggle movies depending on all of its assigned genres. For example if 'Action' and 'Drama' genres are selected listed movies must have both 'Action' and 'Drama' genres.
+Movies should also be filterable by their rating (vote_average property). i.e If rating was set to 5, you would expect to see all movies with a rating of 5 or higher.
+The input API's should only be called once.
