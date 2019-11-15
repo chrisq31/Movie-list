@@ -30,7 +30,7 @@ const Button = styled.button`
 `;
 
 
- 
+
 
 
 
@@ -67,7 +67,7 @@ class FilterViewItem extends React.Component {
 
             <div className="col" >
 
-                <Button className={ (this.state.checked ? 'isSelected' : 'isNotSelected')}
+                <Button className={(this.state.checked ? 'isSelected' : 'isNotSelected')}
                     onMouseOver={this.onMouseOver}
                     onMouseOut={this.onMouseOut}
                     onMouseDown={this.onMouseDown}
