@@ -3,7 +3,7 @@ import React from 'react';
 import {object, func, string, oneOfType, number, array} from 'prop-types';
 import styled from 'styled-components';
 import {BASE_URL_IMAGE} from '../constants/site-constants'
-const darkColor="#0099CC";
+const lightColor="#ffffff";
 const bgColor="#000000";
 
 
@@ -23,6 +23,9 @@ const MovieContainer = styled.div`
    flex-direction: column;
    margin:20px;
     padding:0;
+
+    border:10px;
+    border-radius: 0px 0px 286px 0px;
    
    
 `;
@@ -52,8 +55,10 @@ text-transform: uppercase;
 width:100%;
   font-size: 3em;
   text-align: center;
-  color: ${darkColor};
+  color: ${lightColor};
   font-family: ${primaryFontFamily};
+
+  
 `;
 
 
