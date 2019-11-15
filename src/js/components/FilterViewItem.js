@@ -1,10 +1,10 @@
 import React from 'react';
 
-import {object, func, string, oneOfType, number, array} from 'prop-types';
+import { object, func, string, oneOfType, number, array } from 'prop-types';
 import styled from 'styled-components';
-import {BASE_URL_IMAGE} from '../constants/site-constants'
+import { BASE_URL_IMAGE } from '../constants/site-constants'
 
-const bgColor="#bbbbbb";
+const bgColor = "#bbbbbb";
 
 
 const primaryFontFamily = "league_gothicregular";
@@ -45,44 +45,33 @@ width:100%;
 
 
 
-class  FilterViewItem extends React.Component {
-
-   
-    
-
-    render(){
-        console.log('title',this.props.item)
-
-
-         const{
+class FilterViewItem extends React.Component {
+     render() {
+        const {
             name,
-       
+             } = this.props.item
 
-        } = this.props.item
-        
+     return (
 
+            <div className="col" >
 
-    return (
-
-        <div className = "col" >
-
-        <FilterItem>
-            <Title>{name}</Title>
-        </FilterItem>
-        </div>
-    );
+                <FilterItem>
+                    <Title>{name}</Title>
+                </FilterItem>
+            </div>
+        );
 
 
     }
 
-    
+
 }
 
 export default FilterViewItem;
 
 // ListViewItem.propTypes = {
 
-  
+
 //     title:string,
 //     genres:oneOfType([string, array]),
 //     poster_path:string
