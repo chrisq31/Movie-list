@@ -3,43 +3,28 @@ import React from 'react';
 import {object, func, string, oneOfType, number, array} from 'prop-types';
 import styled from 'styled-components';
 import {BASE_URL_IMAGE} from '../constants/site-constants'
-const darkColor="#0099CC";
-const bgColor="#000000";
+
+const bgColor="#bbbbbb";
 
 
 const primaryFontFamily = "league_gothicregular";
 
 
 
-const MovieContainer = styled.div`
+const FilterItem = styled.div`
     width: 300px;
   height: 100%;
    box-sizing: border-box;
    cursor: pointer;
    background-color:${bgColor};
    overflow:hidden;
-   display:flex;
- 
-   flex-direction: column;
+
    margin:20px;
     padding:0;
    
    
 `;
 
-const ImageContainer = styled.div`
- display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
- 
-`
-
-const Img = styled.img`
-  max-width: 1200px;
-    max-height: 1200px;
-`;
 
 
 
@@ -50,9 +35,9 @@ padding-top:20px;
 position:relative;
 text-transform: uppercase;
 width:100%;
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
-  color: ${darkColor};
+  color: #000000;
   font-family: ${primaryFontFamily};
 `;
 
@@ -60,20 +45,18 @@ width:100%;
 
 
 
-class  ListViewItem extends React.Component {
+class  FilterViewItem extends React.Component {
 
    
     
 
     render(){
+        console.log('title',this.props.item)
 
-        console.log('genresArray>>>', this.props.genresArray)
 
          const{
-            title,
-            genres,
-            poster_path
-
+            name,
+       
 
         } = this.props.item
         
@@ -83,13 +66,9 @@ class  ListViewItem extends React.Component {
 
         <div className = "col" >
 
-        <MovieContainer>
-            <Title>{title}</Title>
-            <div>{genres}</div>
-            <ImageContainer>
-                <Img src={ BASE_URL_IMAGE+poster_path} alt ={title} />
-            </ImageContainer>
-        </MovieContainer>
+        <FilterItem>
+            <Title>{name}</Title>
+        </FilterItem>
         </div>
     );
 
@@ -99,7 +78,7 @@ class  ListViewItem extends React.Component {
     
 }
 
-export default ListViewItem;
+export default FilterViewItem;
 
 // ListViewItem.propTypes = {
 

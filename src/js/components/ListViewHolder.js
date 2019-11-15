@@ -14,7 +14,15 @@ const ListViewHolder = (props) => {
 
     const movies = props.movieList;
 
-    console.log('genres', props.genresList)
+
+    const genArray =(id) =>{
+
+        console.log('checking',id)
+
+        const genre = 'Action'
+        return genre
+
+    }
 
    
     if (props.loadingMovieList === true || props.loadingGenres === true) {
@@ -24,7 +32,7 @@ const ListViewHolder = (props) => {
     return (
         <MoviesContainer className="row">
             {movies.map(movie => (
-                <ListViewItem key={movie.id} item={movie} />
+                <ListViewItem key={movie.id} item={movie} genresArray ={genarray=>{genArray(0)}} />
             ))}
         </MoviesContainer>
     )
