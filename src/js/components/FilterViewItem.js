@@ -12,76 +12,22 @@ const primaryFontFamily = "league_gothicregular";
 
 
 
-const Button = styled.button`
-    font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  color:${bgColorLight};
-  cursor:pointer;
-  
-  border-radius: 2px;
-   background-color:${bgColor};
-   overflow:hidden;
 
-   &:hover {
-    background: ${bgColorLight};
-    color:${bgColor};
-  }
-
-  &:active {
-    background: ${bgColorLight};
-    color:${bgColor};
-  }
-`;
-
-
-const ButtonChecked = styled.button`
-    font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  background: ${bgColorLight};
-  color:${bgColor};
-  cursor:pointer;
-  
-  border-radius: 2px;
-
-   overflow:hidden;
-
-   &:hover {
-    background: ${bgColorLight};
-    color:${bgColor};
-  }
-
-  &:active {
-    background: ${bgColorLight};
-    color:${bgColor};
-  }
-`;
-
-
-const StyledProduct = styled.div`
-  background-color: ${(props) => props.active ? "red" : "green"};
+const StyledButton = styled.div`
+  background-color: ${(props) => props.active ? "#000000" : "#ffffff"};
+    color: ${(props) => props.active ? "#ffffff" : "#000000"};
+   border-color: ${(props) => props.active ? "#ffffff" : "#000000"};
 
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
- 
-  color:${bgColor};
-  cursor:pointer;
-  
-  border-radius: 2px;
+ cursor:pointer;
+  border:10px;
+  border-radius: 20px;
 
    overflow:hidden;
 
-   &:hover {
-    background: ${bgColorLight};
-    color:${bgColor};
-  }
 
-  &:active {
-    background: ${bgColorLight};
-    color:${bgColor};
-  }
 `;
 
 
@@ -125,13 +71,13 @@ class FilterViewItem extends React.Component {
 
             <div className="col" >
 
-                <StyledProduct onClick={this.handleClick} active={this.state.active}
+                <StyledButton onClick={this.handleClick} active={this.state.active}
                     onMouseOver={this.onMouseOver}
                     onMouseOut={this.onMouseOut}
-                  
+
                 >
                     {name}
-                </StyledProduct>
+                </StyledButton>
             </div>
         );
 
