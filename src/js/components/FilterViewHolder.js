@@ -38,9 +38,9 @@ const FilterViewHolder = (props) => {
     )
 }
 const mapStateToProps = state => ({
-    loadingMovieList: state.dataLoadingMovieList,
-    loadingGenres: state.dataLoadingGenreList,
-    genresList: state.genresList
+    loadingMovieList: state.siteData.dataLoadingMovieList,
+    loadingGenres: state.siteData.dataLoadingGenreList,
+    genresList: state.siteData.genresList
 });
 
 const mapDispatchToProps = dispatch => ({
