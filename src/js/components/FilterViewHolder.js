@@ -7,12 +7,13 @@ const bgColor="#961086";
 const FilterContainer = styled.div`
 display:flex;
 position:fixed
+box-sizing:border-box;
 
 flex-direction:row;
 align-items: flex-start; 
 align-content: flex-start; 
 justify-content: flex-start;
-padding:0%;
+padding:0 2%;
 background-color:${bgColor};
 `;
 

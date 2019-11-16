@@ -28,7 +28,7 @@ const MovieContainer = styled.div`
     border-radius: 0px 0px 84% 0px;
 
 
-    box-shadow: 10px 3px 66px 155px rgba(15, 16, 25, 0.75);
+    box-shadow: 10px 3px 66px 90px rgba(15, 16, 25, 0.75);
 
     
 `;
