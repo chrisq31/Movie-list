@@ -2,13 +2,22 @@ import React from 'react';
 import { connect } from "react-redux";
 import styled from 'styled-components';
 import FilterViewItem from "./FilterViewItem";
-import{addGenre}from "../actions/index";
+import { addGenre } from "../actions/index";
 
 
-const bgColor="#961086";
+const bgColor = "#961086";
+
+const FilterContainerHolder = styled.div`
+display:flex;
+position:fixed;
+box-sizing:border-box;
+
+`;
+
+
 const FilterContainer = styled.div`
 display:flex;
-position:fixed
+position:relative;
 box-sizing:border-box;
 
 flex-direction:row;
@@ -23,18 +32,33 @@ const textColor = "white";
 const FilterViewHolder = (props) => {
 
     const genres = props.genresList;
-    const onGenreClick =props.onGenreClick;
+    const onGenreClick = props.onGenreClick;
 
     if (props.loadingMovieList === true || props.loadingGenres === true) {
 
         return <div>Loading</div>
     }
     return (
-        <FilterContainer className="row">
-            {genres.map(genre => (
-                <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre.id)}/>
-            ))}
-        </FilterContainer>
+
+        <div className="row">
+
+            <FilterContainerHolder>
+                <FilterContainer className="row">
+
+                    {genres.map(genre => (
+                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre.id)} />
+                    ))}
+                </FilterContainer>
+
+                <FilterContainer className="row">
+                    {genres.map(genre => (
+                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre.id)} />
+                    ))}
+                </FilterContainer>
+
+            </FilterContainerHolder>
+
+        </div>
     )
 }
 const mapStateToProps = state => ({
@@ -45,12 +69,12 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     onGenreClick: id => dispatch(addGenre(id))
-  })
+})
 
 
 
 
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(FilterViewHolder);
+export default connect(mapStateToProps, mapDispatchToProps)(FilterViewHolder);
 
