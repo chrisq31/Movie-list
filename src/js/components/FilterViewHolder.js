@@ -51,7 +51,14 @@ const FilterViewHolder = (props) => {
                 </FilterContainer>
 
                 <FilterContainer className="row">
-                    {genres.reverse().map(genre => (
+                    {genres.map(genre => (
+                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre.id)} />
+                    ))}
+                </FilterContainer>
+
+                <FilterContainer className="row">
+
+                    {genres.map(genre => (
                         <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre.id)} />
                     ))}
                 </FilterContainer>

@@ -8,7 +8,7 @@ const StyledButton = styled.div`
     color: ${(props) => props.active ? "#ffffff" : "#000000"};
    border-color: "#ffffff";
    text-align:center;
-    font-size: 1.8em;
+    font-size: 3vh;
   line-height:1em;
   margin: 1em;
   padding: .25em 1.5em;

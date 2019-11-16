@@ -12,17 +12,18 @@ const primaryFontFamily = "league_gothicregular";
 
 
 const MovieContainer = styled.div`
-    width: 66%;
+    width: 60%;
   height: 100%;
+
+  max-wwidth:600px;
    box-sizing: border-box;
    cursor: pointer;
    background-color:${bgColor};
    overflow:hidden;
    display:flex;
+   flex-direction:column;
     border:10px;
     border-radius: 0px 0px 84% 0px;
-
-
     box-shadow: 10px 3px 66px 90px rgba(15, 16, 25, 0.75);
 
     
@@ -33,11 +34,12 @@ const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: auto;
  
 `
 
 const Img = styled.img`
+min-width:600px;
 //   max-width: 1200px;
 //     max-height: 1200px;
 `;
@@ -47,7 +49,7 @@ const Img = styled.img`
 
 
 const Title = styled.h2`
-padding-top:30%;
+padding-top:8%;
 position:relative;
 text-transform: uppercase;
 width:100%;
