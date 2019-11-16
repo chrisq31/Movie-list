@@ -9,7 +9,9 @@ import{submitGenres}from "../actions/index";
 const bgColor="#961086";
 const DivContainer = styled.div`
 display:flex;
-position:fixed
+position:fixed;
+top:20%;
+
 box-sizing:border-box;
 
 flex-direction:row;

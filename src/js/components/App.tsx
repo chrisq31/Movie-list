@@ -11,9 +11,9 @@ const App: React.FC = () => {
   return (
     <div className="App">
      <LoadingView />
-     <SubmitButtonHolder />
      <FilterViewHolder />
       <ListViewContainer />
+      <SubmitButtonHolder />
     </div>
   );
 }
