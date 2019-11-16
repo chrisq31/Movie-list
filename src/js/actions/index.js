@@ -3,16 +3,16 @@
 import { GET_MOVIE_DATA,GET_GENRE_DATA,ADD_GENRE,FILTER_RATING ,SORT_POPULAR} from "../constants/action-types";
 
 // eg Action and Drama
-export const addGenre = (genrePayload) => ({
+export const addGenre = (payload) => ({
     type: ADD_GENRE,
-    genrePayload
+    payload
    
 })
 
 // eg movie Rating >=5
-export const filterByRating = (ratingPayload) => ({
+export const filterByRating = (payload) => ({
     type: FILTER_RATING,
-    ratingPayload
+    payload
    
 })
 

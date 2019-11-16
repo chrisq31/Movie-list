@@ -14,7 +14,7 @@ const initialState = {
 function rootReducer(state = initialState, action) {
 
     let array
-    let genre
+
 
     switch (action.type) {
 
@@ -38,10 +38,8 @@ function rootReducer(state = initialState, action) {
             return
 
         case types.ADD_GENRE:
-            genre = action.payload.genre;
-            console.log("genre added ", genre)
 
-            return { ...state, genresSelectedList: array }
+            return { ...state, genresSelectedList: action.payload }
 
 
         default:

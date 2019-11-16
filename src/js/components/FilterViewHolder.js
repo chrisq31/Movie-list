@@ -23,13 +23,8 @@ const textColor = "white";
 const FilterViewHolder = (props) => {
 
     const genres = props.genresList;
+    //const onGenreClick =props.onGenreClick;
 
-    const onGenreClick = (genreId) =>{
-
-        console.log('genreId',genreId)
-
-    }
-    
     if (props.loadingMovieList === true || props.loadingGenres === true) {
 
         return <div>Loading</div>
@@ -37,7 +32,7 @@ const FilterViewHolder = (props) => {
     return (
         <FilterContainer className="row">
             {genres.map(genre => (
-                <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre.id)}/>
+                <FilterViewItem key={genre.id} {...genre} onClick={() => props.onGenreClick(genre.id)}/>
             ))}
         </FilterContainer>
     )
@@ -48,10 +43,14 @@ const mapStateToProps = state => ({
     genresList: state.genresList
 });
 
+const mapDispatchToProps = dispatch => ({
+    onGenreClick: id => dispatch(addGenre(id))
+  })
 
 
 
 
 
-export default connect(mapStateToProps)(FilterViewHolder);
+
+export default connect(mapStateToProps,mapDispatchToProps)(FilterViewHolder);
 

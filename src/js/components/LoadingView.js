@@ -21,12 +21,5 @@ const mapDispatchToProps = dispatch => {
     return dispatch(getData());
 }
 
-
-
-
-
-
-
-
 export default connect(null,mapDispatchToProps)(LoadingView);
 

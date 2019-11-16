@@ -3,10 +3,6 @@ import styled from 'styled-components';
 
 
 const primaryFontFamily = "league_gothicregular";
-
-
-
-
 const StyledButton = styled.div`
   background-color: ${(props) => props.active ? "#000000" : "#ffffff"};
     color: ${(props) => props.active ? "#ffffff" : "#000000"};
@@ -28,7 +24,7 @@ const StyledButton = styled.div`
 `;
 
 const FilterViewItem = ({ onClick, isActive, name }) => (
-    
+
     <div className="col" onClick={onClick} >
         <StyledButton active={isActive}> {name}</StyledButton>
     </div>
