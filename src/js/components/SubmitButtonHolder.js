@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from "react-redux";
 import styled from 'styled-components';
-import FilterViewItem from "./FilterViewItem";
-import{addGenre}from "../actions/index";
+import GenresSubmitButton from './GenresSubmitButton';
+import{submitGenres}from "../actions/index";
+
 
 
 const bgColor="#961086";
-const FilterContainer = styled.div`
+const DivContainer = styled.div`
 display:flex;
 position:fixed
 box-sizing:border-box;
@@ -20,21 +21,20 @@ background-color:${bgColor};
 `;
 
 const textColor = "white";
-const FilterViewHolder = (props) => {
+const SubmitButtonHolder = (props) => {
 
-    const genres = props.genresList;
-    const onGenreClick =props.onGenreClick;
+    const onSubmitClick =props.onSubmitClick;
 
     if (props.loadingMovieList === true || props.loadingGenres === true) {
 
         return <div>Loading</div>
     }
     return (
-        <FilterContainer className="row">
-            {genres.map(genre => (
-                <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre.id)}/>
-            ))}
-        </FilterContainer>
+        <DivContainer className="row">
+        
+                <GenresSubmitButton  onClick={() => onSubmitClick()}/>
+        
+        </DivContainer>
     )
 }
 const mapStateToProps = state => ({
@@ -44,7 +44,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    onGenreClick: id => dispatch(addGenre(id))
+    onSubmitClick: id => dispatch(submitGenres())
   })
 
 
@@ -52,5 +52,5 @@ const mapDispatchToProps = dispatch => ({
 
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(FilterViewHolder);
+export default connect(mapStateToProps,mapDispatchToProps)(SubmitButtonHolder);
 
