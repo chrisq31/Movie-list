@@ -1,15 +1,44 @@
-
-const genresList =(state) => state.genresList
-
-console.log('genresList ',genresList)
-export const selectItemById = createSelector(
+import {createSelector} from "reselect";
 
 
-    [selectPosts, selectedPost],
-    (genresList, genreId) =>
+const selectedGenres =(state) => state.genresData; // selector genres for filtering
+const movieListGenres =(state) => state.siteData.movieList.genre_ids; // selector for movie genres
+const movieList =(state) => state.siteData.movieList; // selector for movie genres
+
+
+// TODO returm full movieList if selectedGenres length = 0
+// so can use one selector for movie listing
+
+export const getMoviesInGenres = createSelector(
+
+
+    [movieListGenres, selectedGenres],
+    (movieGenresIds, genresIdArray) =>
     {
-         let result = genresList.find (genre => genre.id ==genreId)
-        return result;
+
+
+        console.log('SELECTOR selectedGenres ',selectedGenres)
+
+        if (genresIdArray.length < 1)
+        {
+            console.log('SELECTOR selectedGenres ',selectedGenres)
+            console.log('no genres ', movieList)
+            return movieList
+        }else{
+            // need to find intersections between movie genre_ids and selected genres
+            // then return the movies (if any) that intersect
+            
+            let intersection = movieGenresIds.filter(id => genresIdArray.includes(id));
+            console.log('genres selected ', genresIdArray)
+            console.log('intersections ', intersection)
+
+
+      
+            return intersection;
+
+        }
+
+   
     }
 );
 

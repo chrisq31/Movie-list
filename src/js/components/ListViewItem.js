@@ -1,10 +1,10 @@
 import React from 'react';
 
-import {object, func, string, oneOfType, number, array} from 'prop-types';
+import { object, func, string, oneOfType, number, array } from 'prop-types';
 import styled from 'styled-components';
-import {BASE_URL_IMAGE} from '../constants/site-constants'
-const lightColor="#ffffff";
-const bgColor="#c3204c";
+import { BASE_URL_IMAGE } from '../constants/site-constants'
+const lightColor = "#ffffff";
+const bgColor = "#c3204c";
 
 
 const primaryFontFamily = "league_gothicregular";
@@ -68,50 +68,50 @@ width:100%;
 
 
 
-class  ListViewItem extends React.Component {
+class ListViewItem extends React.Component {
 
-   
-    
 
-    render(){
 
-        console.log('genresArray>>>', this.props.genresArray)
 
-         const{
+    render() {
+
+
+
+        const {
             title,
             genres,
             poster_path
 
 
         } = this.props.item
-        
 
 
-    return (
 
-        <div className = "col" >
+        return (
 
-        <MovieContainer>
-            <Title>{title}</Title>
-            <div>{genres}</div>
-            <ImageContainer>
-                <Img src={ BASE_URL_IMAGE+poster_path} alt ={title} />
-            </ImageContainer>
-        </MovieContainer>
-        </div>
-    );
+            <div className="col" >
+
+                <MovieContainer>
+                    <Title>{title}</Title>
+                    <div>{genres}</div>
+                    <ImageContainer>
+                        <Img src={BASE_URL_IMAGE + poster_path} alt={title} />
+                    </ImageContainer>
+                </MovieContainer>
+            </div>
+        );
 
 
     }
 
-    
+
 }
 
 export default ListViewItem;
 
 // ListViewItem.propTypes = {
 
-  
+
 //     title:string,
 //     genres:oneOfType([string, array]),
 //     poster_path:string

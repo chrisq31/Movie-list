@@ -18,19 +18,9 @@ pointer-events: none;
 const textColor = "white";
 const ListViewHolder = (props) => {
 
+    console.log ('getMoviesInGenres', props.selectedGenres)
+
     const movies = props.movieList;
-
-
-    const genArray =(id) =>{
-
-        console.log('checking',id)
-
-        const genre = 'Action'
-        return genre
-
-    }
-
-   
     if (props.loadingMovieList === true || props.loadingGenres === true) {
 
         return <div>Loading</div>
@@ -38,7 +28,7 @@ const ListViewHolder = (props) => {
     return (
         <MoviesContainer className="row">
             {movies.map(movie => (
-                <ListViewItem key={movie.id} item={movie} genresArray ={genarray=>{genArray(0)}} />
+                <ListViewItem key={movie.id} item={movie} />
             ))}
         </MoviesContainer>
     )
