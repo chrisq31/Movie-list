@@ -19,11 +19,6 @@ const MovieContainer = styled.div`
    background-color:${bgColor};
    overflow:hidden;
    display:flex;
- 
-   flex-direction: column;
-   margin:20px;
-    padding:0;
-
     border:10px;
     border-radius: 0px 0px 84% 0px;
 
