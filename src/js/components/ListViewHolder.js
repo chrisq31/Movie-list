@@ -8,6 +8,9 @@ const MoviesContainer = styled.div`
 display:flex;
 padding-top:140px;
 background-color:${bgColor};
+
+pointer-events: none;
+
 `;
 
 const textColor = "white";

@@ -12,7 +12,7 @@ flex-direction:row;
 align-items: flex-start; 
 align-content: flex-start; 
 justify-content: flex-start;
-padding:5%;
+padding:0%;
 background-color:${bgColor};
 `;
 
