@@ -6,13 +6,15 @@ const initialState = {
     dataLoadingGenreList: true,
     menuState: ['Home'],
     movieList: [],
-    genresList: []
+    genresList: [],
+    genresSelectedList: []
 };
 
 
 function rootReducer(state = initialState, action) {
 
     let array
+    let genre
 
     switch (action.type) {
 
@@ -26,14 +28,21 @@ function rootReducer(state = initialState, action) {
 
 
         case types.API_ERRORED_MOVIE_LIST:
-            //
+
             console.log('API_ERRORED_MOVIE_LIST')
             return
 
         case types.API_ERRORED_GENRE_LIST:
-            //
+
             console.log('API_ERRORED_GENRE_LIST')
             return
+
+        case types.ADD_GENRE:
+            genre = action.payload.genre;
+            console.log("genre added ", genre)
+
+            return { ...state, genresSelectedList: array }
+
 
         default:
             return state
@@ -42,3 +51,6 @@ function rootReducer(state = initialState, action) {
 }
 
 export default rootReducer;
+
+
+//ADD_GENRE

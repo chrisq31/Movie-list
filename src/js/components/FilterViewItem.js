@@ -1,11 +1,5 @@
 import React from 'react';
-
-import { object, func, string, oneOfType, number, array } from 'prop-types';
 import styled from 'styled-components';
-import { BASE_URL_IMAGE } from '../constants/site-constants'
-
-const bgColor = "#000000";
-const bgColorLight = "#ffffff";
 
 
 const primaryFontFamily = "league_gothicregular";
@@ -18,9 +12,7 @@ const StyledButton = styled.div`
     color: ${(props) => props.active ? "#ffffff" : "#000000"};
    border-color: "#ffffff";
    text-align:center;
-
-
-  font-size: 1.8em;
+    font-size: 1.8em;
   line-height:1em;
   margin: 1em;
   padding: .25em 1.5em;
@@ -35,52 +27,13 @@ const StyledButton = styled.div`
 
 `;
 
-class FilterViewItem extends React.Component {
-
-    state = { active: false }
-
+const FilterViewItem = ({ onClick, isActive, name }) => (
     
-    handleClick = (e) => {
-        e.preventDefault();
-        this.setState({ active: !this.state.active })
-        console.log('down', this.state.active)
+    <div className="col" onClick={onClick} >
+        <StyledButton active={isActive}> {name}</StyledButton>
+    </div>
 
 
-    }
-
-
-    render() {
-        const {
-            name,
-        } = this.props.item
-
-        return (
-
-            <div className="col" >
-
-                <StyledButton onClick={this.handleClick} active={this.state.active}
-                    onMouseOver={this.onMouseOver}
-                    onMouseOut={this.onMouseOut}
-
-                >
-                    {name}
-                </StyledButton>
-            </div>
-        );
-
-
-    }
-
-
-}
+)
 
 export default FilterViewItem;
-
-// ListViewItem.propTypes = {
-
-
-//     title:string,
-//     genres:oneOfType([string, array]),
-//     poster_path:string
-
-// }

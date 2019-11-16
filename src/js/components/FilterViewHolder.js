@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from "react-redux";
 import styled from 'styled-components';
 import FilterViewItem from "./FilterViewItem";
+import{addGenre}from "../actions/index";
 
 
 const bgColor="#961086";
@@ -21,6 +23,12 @@ const textColor = "white";
 const FilterViewHolder = (props) => {
 
     const genres = props.genresList;
+
+    const onGenreClick = (genreId) =>{
+
+        console.log('genreId',genreId)
+
+    }
     
     if (props.loadingMovieList === true || props.loadingGenres === true) {
 
@@ -29,16 +37,21 @@ const FilterViewHolder = (props) => {
     return (
         <FilterContainer className="row">
             {genres.map(genre => (
-                <FilterViewItem key={genre.id} item={genre} />
+                <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre.id)}/>
             ))}
         </FilterContainer>
     )
 }
+const mapStateToProps = state => ({
+    loadingMovieList: state.dataLoadingMovieList,
+    loadingGenres: state.dataLoadingGenreList,
+    genresList: state.genresList
+});
 
 
 
 
 
 
+export default connect(mapStateToProps)(FilterViewHolder);
 
-export default FilterViewHolder

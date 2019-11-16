@@ -8,8 +8,10 @@ const MoviesContainer = styled.div`
 display:flex;
 padding-top:140px;
 background-color:${bgColor};
+box-sizing:border-box;
 
 pointer-events: none;
+
 
 `;
 

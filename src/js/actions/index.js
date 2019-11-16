@@ -1,10 +1,10 @@
 //action creators
 
-import { GET_MOVIE_DATA,GET_GENRE_DATA,FILTER_GENRE,FILTER_RATING ,SORT_POPULAR} from "../constants/action-types";
+import { GET_MOVIE_DATA,GET_GENRE_DATA,ADD_GENRE,FILTER_RATING ,SORT_POPULAR} from "../constants/action-types";
 
 // eg Action and Drama
-export const filterByGenre = (genrePayload) => ({
-    type: FILTER_GENRE,
+export const addGenre = (genrePayload) => ({
+    type: ADD_GENRE,
     genrePayload
    
 })

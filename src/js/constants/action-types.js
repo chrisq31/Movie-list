@@ -16,7 +16,7 @@ export const API_ERRORED_GENRE_LIST ="API_ERRORED_GENRE_LIST";
 
 export const APP_READY ="APP_READY";
 
-export const FILTER_GENRE = "FILTER_GENRE";
+export const ADD_GENRE = "ADD_GENRE";
 
 export const FILTER_RATING = "FILTER_RATING";
 
