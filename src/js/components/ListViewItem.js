@@ -12,7 +12,7 @@ const primaryFontFamily = "league_gothicregular";
 
 
 const MovieContainer = styled.div`
-    width: 300px;
+    width: 66%;
   height: 100%;
    box-sizing: border-box;
    cursor: pointer;
@@ -25,9 +25,10 @@ const MovieContainer = styled.div`
     padding:0;
 
     border:10px;
-    border-radius: 0px 0px 286px 0px;
-   
-   
+    border-radius: 0px 0px 84% 0px;
+
+
+    box-shadow: 10px 3px 66px 155px rgba(15, 16, 25, 0.75)
 `;
 
 const ImageContainer = styled.div`
@@ -49,7 +50,7 @@ const Img = styled.img`
 
 
 const Title = styled.h2`
-padding-top:20px;
+padding-top:30%;
 position:relative;
 text-transform: uppercase;
 width:100%;
