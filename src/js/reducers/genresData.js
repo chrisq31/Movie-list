@@ -7,16 +7,17 @@ const initialState = {
 };
 
 
-function genresData(state = initialState, action) {
+function genresData(state = initialState.genresSelectedList, action) {
      switch (action.type) {
         
         case types.ADD_GENRE:
 
-            if (state.indexOf(action.payload) !== -1) {
+        // check genre not already in store
+         if (state.indexOf(action.payload) !== -1) {
                 return state
             }
 
-            return { ...state, genresSelectedList: action.payload }
+            return [ ...state, action.payload ]
 
 
         default:
