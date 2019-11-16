@@ -13,9 +13,9 @@ const primaryFontFamily = "league_gothicregular";
 
 const MovieContainer = styled.div`
     width: 60%;
-  height: 100%;
+  height: auto;
 
-  max-wwidth:600px;
+  max-width:600px;
    box-sizing: border-box;
    cursor: pointer;
    background-color:${bgColor};
