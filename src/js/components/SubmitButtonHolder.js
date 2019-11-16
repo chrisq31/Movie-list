@@ -26,23 +26,38 @@ const textColor = "white";
 const SubmitButtonHolder = (props) => {
 
     const onSubmitClick =props.onSubmitClick;
+    const genresSelected = props.genresSelected;
+
 
     if (props.loadingMovieList === true || props.loadingGenres === true) {
 
         return <div>Loading</div>
     }
-    return (
-        <DivContainer className="row">
-        
-                <GenresSubmitButton  onClick={() => onSubmitClick()}/>
-        
-        </DivContainer>
-    )
+
+    if (genresSelected.length > 0) {
+
+      return (
+      
+            <DivContainer className="row">
+    
+                 <GenresSubmitButton  onClick={() => onSubmitClick()}/>
+            
+            </DivContainer>
+        )
+         
+     }
+
+     return <div></div>
+
+   
+
+
+   
 }
 const mapStateToProps = state => ({
     loadingMovieList: state.siteData.dataLoadingMovieList,
     loadingGenres: state.siteData.dataLoadingGenreList,
-    genresList: state.siteData.genresList
+    genresSelected: state.genresData
 });
 
 const mapDispatchToProps = dispatch => ({
