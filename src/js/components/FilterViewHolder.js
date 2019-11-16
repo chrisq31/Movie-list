@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import FilterViewItem from "./FilterViewItem";
 
 
-const bgColor="#25332f";
+const bgColor="#961086";
 const FilterContainer = styled.div`
 display:flex;
+position:fixed
 
 flex-direction:row;
 align-items: flex-start; 
