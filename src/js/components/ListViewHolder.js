@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import ListViewItem from "./ListViewItem";
 
 
-const bgColor="#3a3120";
+
 const MoviesContainer = styled.div`
 display:flex;
 padding-top:140px;
-background-color:${bgColor};
+
 box-sizing:border-box;
 
 pointer-events: none;

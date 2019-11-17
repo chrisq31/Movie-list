@@ -5,7 +5,7 @@ import FilterViewItem from "./FilterViewItem";
 import { addGenre } from "../actions/index";
 
 
-const bgColor = "#961086";
+const bgColor = "#f90202";
 
 const primaryFontFamily = "league_gothicregular";
 

@@ -12,7 +12,7 @@ const primaryFontFamily = "league_gothicregular";
 const NavHeader = styled.div`
 position:fixed;
 top:0;
-  padding: 10px 20px;
+
   width: 100%;
   min-height: 30px;
   overflow:hidden;
