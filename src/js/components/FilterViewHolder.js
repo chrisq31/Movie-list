@@ -7,6 +7,8 @@ import { addGenre } from "../actions/index";
 
 const bgColor = "#961086";
 
+const primaryFontFamily = "league_gothicregular";
+
 const FilterContainerHolder = styled.div`
 display:flex;
 position:fixed;
@@ -26,6 +28,9 @@ align-content: flex-start;
 justify-content: flex-start;
 padding:0 2%;
 background-color:${bgColor};
+
+font-family: ${primaryFontFamily};
+text-transform: uppercase;
 `;
 
 const textColor = "white";

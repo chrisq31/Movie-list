@@ -22,7 +22,7 @@ const StyledButton = styled.div`
 
    border:10px;
    border-radius: 0px 0px -1% 0px;
-   box-shadow: 10px 3px 66px 90px rgba(245, 7, 7, 0.75)
+   box-shadow: -28px 18px 85px 32px rgba(245,7,7,0.75)
 
 
 `;
@@ -30,7 +30,7 @@ const StyledButton = styled.div`
 const GenresSubmitButton = ({ onClick }) => (
 
     <div className="col" onClick={onClick} >
-        <StyledButton> SUBMIT</StyledButton>
+        <StyledButton> DRAMA + CRIME + FAMILY ?</StyledButton>
     </div>
 
 

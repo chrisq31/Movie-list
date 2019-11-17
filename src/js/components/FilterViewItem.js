@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const primaryFontFamily = "league_gothicregular";
+
 const StyledButton = styled.div`
   background-color: ${(props) => props.active ? "#000000" : "#ffffff"};
     color: ${(props) => props.active ? "#ffffff" : "#000000"};
@@ -15,8 +15,7 @@ const StyledButton = styled.div`
  cursor:pointer;
   border:10px;
   border-radius: 80px 1px;
-  font-family: ${primaryFontFamily};
-  text-transform: uppercase;
+
 
    overflow:hidden;
 
