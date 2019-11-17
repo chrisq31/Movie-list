@@ -27,13 +27,16 @@ const StyledButton = styled.div`
 
 `;
 
-const GenresSubmitButton = ({ onClick }) => (
+const GenresSubmitButton = ({ onClick, isActive, name }) => (
 
-    <div className="col" onClick={onClick} >
-        <StyledButton> DRAMA + CRIME + FAMILY ?</StyledButton>
-    </div>
+          <div className="col" onClick={onClick} >
+              <StyledButton active={isActive}> {name}</StyledButton>
+          </div>
+      
+      
+      )
 
 
-)
+
 
 export default GenresSubmitButton;

@@ -41,14 +41,14 @@ const SubmitButtonHolder = (props) => {
       
             <DivContainer className="row">
     
-                 <GenresSubmitButton  onClick={() => onSubmitClick()}/>
+                 <GenresSubmitButton name ={genresSelected} onClick={() => onSubmitClick()}/>
             
             </DivContainer>
         )
          
      }
 
-     return <div></div>
+     return null;
 
    
 
