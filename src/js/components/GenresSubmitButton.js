@@ -4,11 +4,11 @@ import styled from 'styled-components';
 
 const primaryFontFamily = "league_gothicregular";
 const StyledButton = styled.div`
-  background-color: ${(props) => props.active ? "#000000" : "#ffffff"};
-    color: ${(props) => props.active ? "#ffffff" : "#000000"};
+  background-color: ${(props) => props.active ? "#000000" : "#40142c"};
+    color: ${(props) => props.active ? "#ffffff" : "#ffffff"};
    border-color: "#ffffff";
    text-align:center;
-    font-size: 1.8em;
+    font-size: 5vw;
   line-height:1em;
   margin: 1em;
   padding: .25em 1.5em;
@@ -19,6 +19,10 @@ const StyledButton = styled.div`
   text-transform: uppercase;
 
    overflow:hidden;
+
+   border:10px;
+   border-radius: 0px 0px -1% 0px;
+   box-shadow: 10px 3px 66px 90px rgba(245, 7, 7, 0.75)
 
 
 `;

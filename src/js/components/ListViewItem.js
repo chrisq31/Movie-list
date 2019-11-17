@@ -15,10 +15,10 @@ const MovieContainer = styled.div`
     width: 60%;
   height: auto;
 
-  padding-top:50px;
-  margin-top:50px;
+
+  margin-top:20%;
   max-width:600px;
-//    box-sizing: border-box;
+
    cursor: pointer;
    background-color:${bgColor};
    overflow:hidden;

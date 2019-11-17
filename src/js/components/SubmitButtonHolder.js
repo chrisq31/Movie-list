@@ -19,7 +19,8 @@ align-items: flex-start;
 align-content: flex-start; 
 justify-content: flex-start;
 padding:0 2%;
-background-color:${bgColor};
+
+
 `;
 
 const textColor = "white";
