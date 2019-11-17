@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/index.css';
+import SiteHeaderView from './SiteHeaderView'
 import ListViewContainer from './ListViewContainer';
 import FilterViewHolder from './FilterViewHolder';
 import SubmitButtonHolder from './SubmitButtonHolder';
@@ -14,6 +15,7 @@ const App: React.FC = () => {
      <FilterViewHolder />
       <ListViewContainer />
       <SubmitButtonHolder />
+      <SiteHeaderView />
     </div>
   );
 }
