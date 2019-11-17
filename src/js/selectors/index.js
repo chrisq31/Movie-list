@@ -1,6 +1,7 @@
 import {createSelector} from "reselect";
 
 
+const genresList =(state) => state.siteData.genresList; // selector genres for filtering
 const selectedGenres =(state) => state.genresData; // selector genres for filtering
 const movieListGenres =(state) => state.siteData.movieList.genre_ids; // selector for movie genres
 const movieList =(state) => state.siteData.movieList; // selector for movie genres
@@ -39,6 +40,27 @@ export const getMoviesInGenres = createSelector(
         }
 
    
+    }
+);
+
+export const getGenresById = createSelector(
+
+   
+
+
+    [genresList, selectedGenres],
+    (list, genresIds) =>
+    {
+
+        console.log('selector ',selectedGenres)
+     
+        let intersection = list.filter(id => genresIds.includes(id));
+      
+        console.log('intersectionsGenres ', intersection)
+
+
+  
+        return intersection;
     }
 );
 

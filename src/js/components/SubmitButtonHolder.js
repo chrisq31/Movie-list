@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import styled from 'styled-components';
 import GenresSubmitButton from './GenresSubmitButton';
 import{submitGenres}from "../actions/index";
+import {getGenresById} from '../selectors/index'
 
 
 
@@ -28,6 +29,8 @@ const SubmitButtonHolder = (props) => {
 
     const onSubmitClick =props.onSubmitClick;
     const genresSelected = props.genresSelected;
+
+   // console.log('selected : ', props.selectedGenres)
 
 
     if (props.loadingMovieList === true || props.loadingGenres === true) {
@@ -58,7 +61,8 @@ const SubmitButtonHolder = (props) => {
 const mapStateToProps = state => ({
     loadingMovieList: state.siteData.dataLoadingMovieList,
     loadingGenres: state.siteData.dataLoadingGenreList,
-    genresSelected: state.genresData
+    genresSelected: state.genresData,
+    selectedGenres:getGenresById
 });
 
 const mapDispatchToProps = dispatch => ({
