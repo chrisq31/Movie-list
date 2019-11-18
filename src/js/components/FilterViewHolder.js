@@ -51,7 +51,7 @@ const FilterViewHolder = (props) => {
                 <FilterContainer className="row">
 
                     {genres.map(genre => (
-                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre.id)} />
+                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick({...genre})} />
                     ))}
                 </FilterContainer>
 
@@ -80,7 +80,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    onGenreClick: id => dispatch(addGenre(id))
+    onGenreClick: genreObj => dispatch(addGenre(genreObj))
 })
 
 
