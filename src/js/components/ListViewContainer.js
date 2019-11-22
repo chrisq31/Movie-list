@@ -7,7 +7,7 @@ const mapStateToProps = state => ({
     loadingGenres: state.siteData.dataLoadingGenreList,
      movieList: state.siteData.movieList,
      genresList: state.siteData.genresList.movieList,
-     selectedGenres:getMoviesInGenres
+ 
 });
 
 export default connect(mapStateToProps)(ListViewHolder);

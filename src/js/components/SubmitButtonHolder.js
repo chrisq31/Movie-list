@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import styled from 'styled-components';
 import GenresSubmitButton from './GenresSubmitButton';
 import{submitGenres}from "../actions/index";
+import {getSelectedGenresByName} from "../selectors"
 
 
 
@@ -28,33 +29,25 @@ const textColor = "white";
 const SubmitButtonHolder = (props) => {
 
     const onSubmitClick =props.onSubmitClick;
-    const genresSelected = props.genresSelected;
+    const getSelectedGenresByName = props.getSelectedGenresByName;
 
+    console.log ('props ',props)
 
-
-     console.log('selected : ',props.genresSelected)
-
-     console.log('str : ', props.genresSelected.forEach(
-         function(item,index,array)
-         {
-             console.log(item,index)
-            }
-            )
-     )
-
-
+    
     if (props.loadingMovieList === true || props.loadingGenres === true) {
 
         return <div>Loading</div>
     }
 
-    if (genresSelected.length > 0) {
+    console.log ('getSelectedGenresByName ',getSelectedGenresByName)
+
+    if (getSelectedGenresByName.length > 0) {
 
       return (
       
             <DivContainer className="row">
     
-                 <GenresSubmitButton name ={genresSelected.name} onClick={() => onSubmitClick()}/>
+                 <GenresSubmitButton name ={getSelectedGenresByName} onClick={() => onSubmitClick()}/>
             
             </DivContainer>
         )
@@ -71,7 +64,7 @@ const SubmitButtonHolder = (props) => {
 const mapStateToProps = state => ({
     loadingMovieList: state.siteData.dataLoadingMovieList,
     loadingGenres: state.siteData.dataLoadingGenreList,
-    genresSelected: state.genresData
+    getSelectedGenresByName: getSelectedGenresByName(state)
 
 });
 

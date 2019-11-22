@@ -57,14 +57,14 @@ const FilterViewHolder = (props) => {
 
                 <FilterContainer className="row">
                     {genres.map(genre => (
-                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre.id)} />
+                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre)} />
                     ))}
                 </FilterContainer>
 
                 <FilterContainer className="row">
 
                     {genres.map(genre => (
-                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre.id)} />
+                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre)} />
                     ))}
                 </FilterContainer>
 

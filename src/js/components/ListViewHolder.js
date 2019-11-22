@@ -18,7 +18,7 @@ pointer-events: none;
 const textColor = "white";
 const ListViewHolder = (props) => {
 
-    console.log ('getMoviesInGenres', props.selectedGenres)
+
 
     const movies = props.movieList;
     if (props.loadingMovieList === true || props.loadingGenres === true) {
