@@ -41,6 +41,12 @@ const getNamesFromSelectedGenres = () => {
 
 }
 
+const joinNamesFromSelectedGenres = () => {
+
+    return   _.map(genresData, 'name').join(' + ');
+   
+   }
+
 
 
 test('expect name 1 to be TV Movie', () => {
@@ -57,6 +63,11 @@ test('expect name 3 to be Music', () => {
 
 test('expect names from selected genres to be TV Movie", "Science Fiction", "History", "Music", "Crime"', () => {
     expect(getNamesFromSelectedGenres()).toEqual(["TV Movie", "Science Fiction", "History", "Music", "Crime"])
+})
+
+
+test('expect names from selected genres to be "TV Movie + Science Fiction + History+ Music + Crime"', () => {
+    expect(joinNamesFromSelectedGenres()).toEqual("TV Movie + Science Fiction + History + Music + Crime")
 })
 
 

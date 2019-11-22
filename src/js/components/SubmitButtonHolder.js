@@ -31,7 +31,7 @@ const SubmitButtonHolder = (props) => {
     const onSubmitClick =props.onSubmitClick;
     const getSelectedGenresByName = props.getSelectedGenresByName;
 
-    console.log ('props ',props)
+
 
     
     if (props.loadingMovieList === true || props.loadingGenres === true) {
@@ -39,9 +39,11 @@ const SubmitButtonHolder = (props) => {
         return <div>Loading</div>
     }
 
-    console.log ('getSelectedGenresByName ',getSelectedGenresByName)
+ 
 
     if (getSelectedGenresByName.length > 0) {
+
+   
 
       return (
       
