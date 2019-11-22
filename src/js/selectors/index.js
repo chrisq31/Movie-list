@@ -8,6 +8,8 @@ const selectedGenres =(state) => state.genresData; // selector genres for filter
 const movieListGenres =(state) => state.siteData.movieList.genre_ids; // selector for movie genres
 const movieList =(state) => state.siteData.movieList; // selector for movie genres
 
+const separator=" + ";
+
 
 
 export const getSelectedGenresByName = createSelector(
@@ -16,11 +18,11 @@ export const getSelectedGenresByName = createSelector(
 
         console.log('genres >>',genres)
     
-       return  _.map(genres, 'name');
+       return  _.map(genres, 'name').join(separator);
 
     }
 ) 
 
    
-    //return  _.map(selectedGenres, 'name');
+   
 
