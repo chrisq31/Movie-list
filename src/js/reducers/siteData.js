@@ -26,16 +26,6 @@ function siteData(state = initialState, action) {
             return { ...state, genresList: array, dataLoadingGenreList: false }
 
 
-
-        case types.SUBMIT_GENRES:
-
-            console.log('submit')
-
-
-            return
-
-
-
         case types.API_ERRORED_MOVIE_LIST:
 
             console.log('API_ERRORED_MOVIE_LIST')

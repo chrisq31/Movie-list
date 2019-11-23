@@ -3,7 +3,8 @@ import * as types from '../constants/action-types'
 
 const initialState = {
 
-    genresSelectedList: []
+    genresSelectedList: [],
+    submitGenres:false
 };
 
 
@@ -18,7 +19,18 @@ function genresData(state = initialState.genresSelectedList, action) {
                 return state
             }
 
-            return [...state, action.payload]
+            return [...state, action.payload];
+
+            case types.SUBMIT_GENRES:
+
+                    return {...state, submitGenres:true};
+
+                
+
+            console.log('submit')
+
+
+            return
 
 
         default:
