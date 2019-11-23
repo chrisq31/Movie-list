@@ -310,18 +310,41 @@ test('test lodash intersection, expect to return 878 from [2,3,878] and [878,6]'
      expect(getIntersection(genreSubmitArr,moviesGenreArr)).toEqual([878])
  })
 
-//  const joinNamesFromSelectedGenres = () => {
+ const getIntersectionForMovies =(genreSelectedArr,movieLis)=>{
 
-        let arr1 =  _.map(genresData3, 'id')
+    movieList.forEach(element => {
 
-        console.log ('arr1 ',arr1)
-        let arr2 =  _.map(movieList, 'genre_ids')
+        //console.log ('ele ', element)
+        let genreIds = element.genre_ids
 
-        console.log ('arr2 ',arr2)
+        let result = getIntersection(genreSelectedArr,genreIds)
+        
+        console.log ('result ', result)
+        if (result.length > 0){
+            console.log ('element parent ', element.title)
+        }
 
-//     return _.map(genresData, 'id').join(' + ');
+       // console.log ('ele getIntersection ', result)
+    
+  
+      
+        
+    });0
 
-// }
+    
+
+   // return _.intersection(genreSelectedArr, movieListGenres);
+}
+
+ let genresArr1 =  _.map(genresData3, 'id')
+
+
+
+
+ console.log ('test genreSubmitArr for intersections in moviesGenreArr ', getIntersectionForMovies(genresArr1,movieList))
+
+
+
 
 
 
