@@ -4,9 +4,9 @@ import clapperBoard from '../../img/clapperBoard.svg'
 
 
 const primaryFontFamily = "league_gothicregular";
-const bgColor = "#40142c";
+const bgColor = "#4a0a13";
 const textColor = "#ffffff";
-const textColorCTA = "#ffffff";
+const textColorCTA = "#f70d0d";
 
 const StyledButton = styled.div`
 
@@ -15,7 +15,6 @@ justify-content: center;
 align-items: center;
 background-color: ${bgColor};
 text-align:center;
-font-size: 5vw;
 line-height:1em;
 margin: 1em;
 padding: .25em 1.5em;
@@ -32,13 +31,16 @@ box-shadow: -28px 18px 85px 32px rgba(245,7,7,0.75)
 `;
 
 const Title = styled.h1`
-  font-size: 1.5em;
+  font-size:calc(18px + 3vw);
   text-align: center;
   color: ${textColor};
 `;
 
 const TitleCTA = styled(Title)`
-  color: ${textColorCTA};
+  color: ${bgColor};
+  font-size:calc(24px + 5vw);
+  margin-top:60%;
+  margin-left:26%;
  
 `;
 
@@ -49,19 +51,20 @@ const TitleCTA = styled(Title)`
 
 
 const SubmitLogo = styled.div`
-display:block;
+display:flex;
 width:200px;
 height:inherit;
-font-size: 8vw;
+
 background-image: url(${clapperBoard});
 background-repeat: no-repeat;
 background-size: contain;
-margin-left:30px;
+margin:1.6rem;
+
 `
 
 
 
-const ctaText = "GO!"
+const ctaText = "CUT!"
 
 const GenresSubmitButton = ({ onClick, isActive, genres }) => (
 
