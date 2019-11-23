@@ -12,7 +12,7 @@ const primaryFontFamily = "league_gothicregular";
 
 
 const MovieContainer = styled.div`
-    width: 60%;
+    width: 70%;
   height: auto;
 
 
@@ -25,7 +25,7 @@ const MovieContainer = styled.div`
    display:flex;
    flex-direction:column;
     border:10px;
-    border-radius: 0px 0px 84% 0px;
+    border-radius: 0px 74px 286px 0px;
     box-shadow: 10px 3px 66px 90px rgba(15, 16, 25, 0.75);
 
     
