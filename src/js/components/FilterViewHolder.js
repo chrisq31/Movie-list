@@ -13,6 +13,8 @@ const FilterContainerHolder = styled.div`
 display:flex;
 position:fixed;
 box-sizing:border-box;
+top:0;
+margin-top:30px;
 
 `;
 
