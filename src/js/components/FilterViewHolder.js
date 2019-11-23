@@ -41,46 +41,54 @@ text-transform: uppercase;
 `;
 
 const textColor = "white";
-const FilterViewHolder = (props) => {
 
-    const genres = props.genresList;
-    const onGenreClick = props.onGenreClick;
+class FilterViewHolder extends React.Component {
 
-    if (props.loadingMovieList === true || props.loadingGenres === true) {
+
+    render(){
+
+
+    const genres = this.props.genresList;
+    const onGenreClick = this.props.onGenreClick;
+    
+    if (this.props.loadingMovieList === true || this.props.loadingGenres === true) {
 
         return <div>Loading</div>
     }
+
     return (
-        
 
+        <FilterContainerHolder>
+        <FilterContainer className="row">
 
+            {genres.map(genre => (
+                <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick({...genre})} />
+            ))}
+        </FilterContainer>
 
+      
 
+        <FilterContainer className="row">
 
-            <FilterContainerHolder>
-                <FilterContainer className="row">
-
-                    {genres.map(genre => (
-                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick({...genre})} />
-                    ))}
-                </FilterContainer>
-
-              
-
-                <FilterContainer className="row">
-
-                    {genres.map(genre => (
-                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick({...genre})} />
-                    ))}
-                </FilterContainer>
-
-            
-             </FilterContainerHolder>
+            {genres.map(genre => (
+                <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick({...genre})} />
+            ))}
+        </FilterContainer>
 
     
+     </FilterContainerHolder>
 
-        
+
     )
+
+    }
+
+
+
+
+
+   
+   
 }
 const mapStateToProps = state => ({
     loadingMovieList: state.siteData.dataLoadingMovieList,
