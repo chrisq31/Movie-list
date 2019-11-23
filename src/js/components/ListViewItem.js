@@ -4,7 +4,7 @@ import { object, func, string, oneOfType, number, array } from 'prop-types';
 import styled from 'styled-components';
 import { BASE_URL_IMAGE } from '../constants/site-constants'
 const lightColor = "#ffffff";
-const bgColor = "#c3204c";
+const bgColor = "#f30a0a";
 
 
 const primaryFontFamily = "league_gothicregular";
@@ -42,8 +42,7 @@ const ImageContainer = styled.div`
 
 const Img = styled.img`
 min-width:600px;
-//   max-width: 1200px;
-//     max-height: 1200px;
+
 `;
 
 
