@@ -4,12 +4,12 @@ import clapperBoard from '../../img/clapperBoard.svg'
 
 
 const primaryFontFamily = "league_gothicregular";
-const bgColor = "#4a0a13";
+const bgColor = "#f30a0a";
 const textColor = "#ffffff";
 const textColorCTA = "#f70d0d";
 
 const StyledButton = styled.div`
-
+width:70%;
 display:flex;
 justify-content: center;
 align-items: center;
@@ -38,7 +38,7 @@ const Title = styled.h1`
 
 const TitleCTA = styled(Title)`
   color: ${bgColor};
-  font-size:calc(24px + 5vw);
+  font-size:calc(24px + 3vw);
   margin-top:60%;
   margin-left:26%;
  
