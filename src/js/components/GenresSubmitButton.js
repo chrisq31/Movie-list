@@ -1,9 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components'
+import clapperBoard from '../../img/clapperBoard.svg'
 
 
 const primaryFontFamily = "league_gothicregular";
+
 const StyledButton = styled.div`
+
+display:flex;
+justify-content: center;
+align-items: center;
   background-color: ${(props) => props.active ? "#000000" : "#40142c"};
     color: ${(props) => props.active ? "#ffffff" : "#ffffff"};
    border-color: "#ffffff";
@@ -24,17 +30,32 @@ const StyledButton = styled.div`
    border-radius: 0px 0px -1% 0px;
    box-shadow: -28px 18px 85px 32px rgba(245,7,7,0.75)
 
-
 `;
 
-const GenresSubmitButton = ({ onClick, isActive, name }) => (
 
-          <div className="col" onClick={onClick} >
-              <StyledButton active={isActive}> {name}</StyledButton>
-          </div>
-      
-      
-      )
+
+const SubmitLogo = styled.img`
+width:74px
+height: 88px;
+margin-left:30px;
+
+`
+
+const GenresSubmitButton = ({ onClick, isActive, genres }) => (
+
+  <div className="row" onClick={onClick} >
+   
+    <StyledButton active={isActive}> 
+    {genres}
+    <SubmitLogo src={clapperBoard} alt="clapper board" />
+    
+    </StyledButton>
+  
+    </div>
+   
+
+
+)
 
 
 

@@ -49,7 +49,7 @@ const SubmitButtonHolder = (props) => {
       
             <DivContainer className="row">
     
-                 <GenresSubmitButton name ={getSelectedGenresByName} onClick={() => onSubmitClick()}/>
+                 <GenresSubmitButton genres ={getSelectedGenresByName} onClick={() => onSubmitClick()}/>
             
             </DivContainer>
         )

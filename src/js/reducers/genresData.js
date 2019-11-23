@@ -12,17 +12,11 @@ function genresData(state = initialState.genresSelectedList, action) {
 
         case types.ADD_GENRE:
             
-        console.log ('action.payload ',action.payload)
-        console.log ('action.payload.id ',action.payload.id)
-            // check genre not already in store
-            // if (state.indexOf(action.payload.id) !== -1) {
-            //     return state
-            // }
-
-            //array = action.payload.results;
-            // return { ...state, movieList: array, dataLoadingMovieList: false }
-
-            console.log ('...state ',...state)
+        //TODO check genre not already in store
+            
+            if (state.indexOf(action.payload.id) !== -1) {
+                return state
+            }
 
             return [...state, action.payload]
 
