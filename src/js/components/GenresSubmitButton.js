@@ -38,6 +38,12 @@ const Title = styled.h1`
   color: palevioletred;
 `;
 
+const TitleCta = styled(Title)`
+  color: tomato;
+  border-color: tomato;
+`;
+
+
 
 
 
@@ -53,6 +59,8 @@ background-repeat: no-repeat;
 background-size: contain;
 `
 
+
+
 const ctaText = "GO!"
 
 const GenresSubmitButton = ({ onClick, isActive, genres }) => (
@@ -65,7 +73,7 @@ const GenresSubmitButton = ({ onClick, isActive, genres }) => (
 
     <SubmitLogo>
 
-    <Title> {ctaText}</Title>
+    <TitleCta> {ctaText}</TitleCta>
       
     </SubmitLogo>
     
