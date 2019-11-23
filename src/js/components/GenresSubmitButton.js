@@ -9,14 +9,13 @@ const textColor = "#ffffff";
 const textColorCTA = "#f70d0d";
 
 const StyledButton = styled.div`
-width:70%;
+width:62%;
 display:flex;
 justify-content: center;
 align-items: center;
 background-color: ${bgColor};
-text-align:center;
-line-height:1em;
-margin: 1em;
+
+margin: 0;
 padding: .25em 1.5em;
 cursor:pointer;
 border:10px;
@@ -34,6 +33,8 @@ const Title = styled.h1`
   font-size:calc(18px + 3vw);
   text-align: center;
   color: ${textColor};
+  text-align:right;
+line-height:1em;
 `;
 
 const TitleCTA = styled(Title)`

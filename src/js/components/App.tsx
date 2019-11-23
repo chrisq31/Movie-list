@@ -15,9 +15,9 @@ const App: React.FC = () => {
      <LoadingView />
      <FilterViewHolder />
       <ListViewContainer />
-      <SubmitButtonHolder />
       <SiteHeaderView />
       <SiteFooterView />
+      <SubmitButtonHolder />
     </div>
   );
 }

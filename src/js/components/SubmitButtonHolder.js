@@ -12,7 +12,8 @@ const bgColor="#961086";
 const DivContainer = styled.div`
 display:flex;
 position:fixed;
-top:20%;
+top:5%;
+right:-10%;
 
 box-sizing:border-box;
 
@@ -21,7 +22,7 @@ align-items: flex-start;
 align-content: flex-start; 
 justify-content: flex-start;
 padding:0 2%;
-
+z-index:210;
 
 `;
 
