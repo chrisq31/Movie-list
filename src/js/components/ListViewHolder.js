@@ -7,9 +7,7 @@ import ListViewItem from "./ListViewItem";
 const MoviesContainer = styled.div`
 display:flex;
 padding-top:140px;
-
 box-sizing:border-box;
-
 pointer-events: none;
 
 
@@ -20,6 +18,8 @@ const ListViewHolder = (props) => {
 
     console.log ('selectedMovieInGenre ', props.selectedMovieInGenre)
     console.log('props : ', props)
+
+    console.log('siteState : ', props.siteState.filterState)
 
 
 
