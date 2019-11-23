@@ -12,6 +12,7 @@ const primaryFontFamily = "league_gothicregular";
 const FilterContainerHolder = styled.div`
 display:flex;
 position:fixed;
+flex-direction: row;
 box-sizing:border-box;
 top:0;
 margin-top:30px;
@@ -20,15 +21,19 @@ margin-top:30px;
 
 
 const FilterContainer = styled.div`
-display:flex;
+// display:flex;
 position:relative;
 box-sizing:border-box;
+width:100%;
+height:100vh;
 
-flex-direction:row;
-align-items: flex-start; 
-align-content: flex-start; 
-justify-content: flex-start;
-padding:0 2%;
+
+// flex-direction:row;
+// align-items: flex-start; 
+// align-content: flex-start; 
+// justify-content: flex-start;
+top:100px ;
+margin:0 5%;
 background-color:${bgColor};
 
 font-family: ${primaryFontFamily};
@@ -46,8 +51,11 @@ const FilterViewHolder = (props) => {
         return <div>Loading</div>
     }
     return (
+        
 
-        <div className="row">
+
+
+
 
             <FilterContainerHolder>
                 <FilterContainer className="row">
@@ -57,22 +65,21 @@ const FilterViewHolder = (props) => {
                     ))}
                 </FilterContainer>
 
-                <FilterContainer className="row">
-                    {genres.map(genre => (
-                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre)} />
-                    ))}
-                </FilterContainer>
+              
 
                 <FilterContainer className="row">
 
                     {genres.map(genre => (
-                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick(genre)} />
+                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick({...genre})} />
                     ))}
                 </FilterContainer>
 
-            </FilterContainerHolder>
+            
+             </FilterContainerHolder>
 
-        </div>
+    
+
+        
     )
 }
 const mapStateToProps = state => ({
