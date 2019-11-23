@@ -66,8 +66,12 @@ test('expect names from selected genres to be TV Movie", "Science Fiction", "His
 })
 
 
-test('expect names from selected genres to be "TV Movie + Science Fiction + History+ Music + Crime"', () => {
+test('expect names with separator from selected genres to be "TV Movie + Science Fiction + History+ Music + Crime"', () => {
     expect(joinNamesFromSelectedGenres()).toEqual("TV Movie + Science Fiction + History + Music + Crime")
 })
+
+// test first selected genre across all movies
+//test first three
+// test all
 
 
