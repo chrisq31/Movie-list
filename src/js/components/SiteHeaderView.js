@@ -4,8 +4,8 @@ import styled from 'styled-components';
 //
 
 
-const lightColor = "#f70d0d";
-const darkColor="#2f1d1df7";
+const lightColor = "#ffffff";
+const darkColor="#f30a0a";
 const primaryFontFamily = "league_gothicregular";
 
 

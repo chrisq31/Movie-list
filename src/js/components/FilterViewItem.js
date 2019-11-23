@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const StyledButton = styled.div`
   background-color: ${(props) => props.active ? "#000000" : "#ffffff"};
-    color: ${(props) => props.active ? "#ffffff" : "#000000"};
+    color: ${(props) => props.active ? "#ffffff" : "#f30a0a"};
    border-color: "#ffffff";
    text-align:center;
     font-size: 3vh;
