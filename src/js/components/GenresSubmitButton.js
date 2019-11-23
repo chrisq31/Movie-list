@@ -19,12 +19,12 @@ margin: 0;
 padding: .25em 1.5em;
 cursor:pointer;
 border:10px;
-border-radius: 80px 1px;
+border-radius: 70px 0px;
 font-family: ${primaryFontFamily};
 text-transform: uppercase;
 overflow:hidden;
 border:10px;
-border-radius: 0px 0px -1% 0px;
+
 box-shadow: -28px 18px 85px 32px rgba(245,7,7,0.75)
 
 `;
