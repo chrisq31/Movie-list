@@ -37,15 +37,15 @@ const name = (index) => {
 
 const getNamesFromSelectedGenres = () => {
 
- return  _.map(genresData, 'name');
+    return _.map(genresData, 'name');
 
 }
 
 const joinNamesFromSelectedGenres = () => {
 
-    return   _.map(genresData, 'name').join(' + ');
-   
-   }
+    return _.map(genresData, 'name').join(' + ');
+
+}
 
 
 
@@ -70,8 +70,6 @@ test('expect names with separator from selected genres to be "TV Movie + Science
     expect(joinNamesFromSelectedGenres()).toEqual("TV Movie + Science Fiction + History + Music + Crime")
 })
 
-// test first selected genre across all movies
-//test first three
-// test all
+
 
 

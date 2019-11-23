@@ -7,7 +7,7 @@ const initialState = {
     menuState: ['Home'],
     movieList: [],
     genresList: [],
-  };
+};
 
 
 function siteData(state = initialState, action) {
@@ -24,6 +24,16 @@ function siteData(state = initialState, action) {
         case types.MOVIE_GENRES_DATA_LOADED:
             array = action.payload.genres;
             return { ...state, genresList: array, dataLoadingGenreList: false }
+
+
+
+        case types.SUBMIT_GENRES:
+
+            console.log('submit')
+
+
+            return
+
 
 
         case types.API_ERRORED_MOVIE_LIST:
