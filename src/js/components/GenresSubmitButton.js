@@ -32,22 +32,42 @@ align-items: center;
 
 `;
 
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
 
 
-const SubmitLogo = styled.img`
-width:74px
-height: 88px;
-margin-left:30px;
 
+
+
+
+const SubmitLogo = styled.div`
+display:block;
+width:200px;
+height:inherit;
+font-size: 8vw;
+background-image: url(${clapperBoard});
+background-repeat: no-repeat;
+background-size: contain;
 `
+
+const ctaText = "GO!"
 
 const GenresSubmitButton = ({ onClick, isActive, genres }) => (
 
   <div className="row" onClick={onClick} >
    
     <StyledButton active={isActive}> 
-    {genres}
-    <SubmitLogo src={clapperBoard} alt="clapper board" />
+    <Title> {genres}</Title>
+   
+
+    <SubmitLogo>
+
+    <Title> {ctaText}</Title>
+      
+    </SubmitLogo>
     
     </StyledButton>
   
