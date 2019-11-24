@@ -10,18 +10,13 @@ import {getSelectedGenresByName} from "../selectors"
 
 
 const DivContainer = styled.div`
-display:flex;
+
 position:fixed;
+display:block;
 top:5%;
-right:-10%;
-
+right:0;
 box-sizing:border-box;
-
-flex-direction:row;
-align-items: flex-start; 
-align-content: flex-start; 
-justify-content: flex-start;
-padding:0 2%;
+padding:0 0;
 z-index:210;
 
 `;

@@ -9,7 +9,7 @@ const textColor = "#ffffff";
 
 
 const StyledButton = styled.div`
-width:62%;
+
 display:flex;
 justify-content: center;
 align-items: center;
@@ -18,19 +18,19 @@ background-color: ${bgColor};
 margin: 0;
 padding: .25em 1.5em;
 cursor:pointer;
-border:10px;
+
 border-radius: 70px 0px;
 font-family: ${primaryFontFamily};
 text-transform: uppercase;
 overflow:hidden;
-border:10px;
+
 
 box-shadow: -28px 18px 85px 32px rgba(245,7,7,0.75)
 
 `;
 
 const Title = styled.h1`
-  font-size:calc(18px + 3vw);
+  font-size:calc(18px + 1vw);
   text-align: center;
   color: ${textColor};
   text-align:right;
@@ -39,7 +39,7 @@ line-height:1em;
 
 const TitleCTA = styled(Title)`
   color: ${bgColor};
-  font-size:calc(24px + 3vw);
+  font-size:calc(24px + 1vw);
   margin-top:60%;
   margin-left:26%;
  
@@ -53,12 +53,13 @@ const TitleCTA = styled(Title)`
 
 const SubmitLogo = styled.div`
 display:flex;
-width:200px;
+width:100%;
+min-width:100px;
 height:inherit;
 
 background-image: url(${clapperBoard});
 background-repeat: no-repeat;
-background-size: contain;
+background-size: cover;
 margin:1.6rem;
 
 `
