@@ -27,7 +27,7 @@ const getIntersection = (arr1, arr2) => {
     return _.intersection(arr1, arr2);
 }
 
-export const getSelectedGenresMatchingMovies = createSelector(
+export const getMovies = createSelector(
     [selectedGenres, movieList, siteState],
     (genres, movieList, siteState) => {
 

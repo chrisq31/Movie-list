@@ -1,9 +1,8 @@
 import { connect } from "react-redux";
-import {getSelectedGenresMatchingMovies} from '../selectors/index'
-
 import React from 'react';
 import styled from 'styled-components';
 import ListViewItem from "./ListViewItem";
+import { getMovies } from '../selectors/index'
 
 
 
@@ -18,20 +17,11 @@ pointer-events: none;
 
 const textColor = "white";
 const ListViewHolder = (props) => {
-  
-    console.log ('selectedMovieInGenre ', getSelectedGenresMatchingMovies)
-    console.log('props : ', props)
+
+    const movies = props.movies;
 
 
 
-
-
-    //const movies = props.movieList;
-
-    const movies = props.selectedMovieInGenre;
-
-
-    
     if (props.loadingMovieList === true || props.loadingGenres === true) {
 
         return <div>Loading</div>
@@ -51,15 +41,13 @@ const ListViewHolder = (props) => {
 
 const mapStateToProps = (state) => {
 
-    return{
-    loadingMovieList: state.siteData.dataLoadingMovieList,
-    loadingGenres: state.siteData.dataLoadingGenreList,
- 
-     movieList: state.siteData.movieList,
-    selectedMovieInGenre:getSelectedGenresMatchingMovies(state)
+    return {
+        loadingMovieList: state.siteData.dataLoadingMovieList,
+        loadingGenres: state.siteData.dataLoadingGenreList,
+        movies: getMovies(state)
 
-}
- 
+    }
+
 };
 
 export default connect(mapStateToProps)(ListViewHolder);
