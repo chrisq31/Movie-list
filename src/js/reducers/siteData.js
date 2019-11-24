@@ -1,13 +1,13 @@
 
 import * as types from '../constants/action-types'
+import {STATE_POPULAR,STATE_FILTERED}  from '../constants/site-constants'
 
 const initialState = {
     dataLoadingMovieList: true,
     dataLoadingGenreList: true,
-    menuState: ['Home'],
     movieList: [],
     genresList: [],
-    filteredList:[]
+    filterState:STATE_POPULAR
 };
 
 

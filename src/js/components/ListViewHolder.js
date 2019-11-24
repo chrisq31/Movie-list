@@ -19,7 +19,7 @@ pointer-events: none;
 const textColor = "white";
 const ListViewHolder = (props) => {
   
-    console.log ('selectedMovieInGenre ', props.selectedMovieInGenre)
+    console.log ('selectedMovieInGenre ', getSelectedGenresMatchingMovies)
     console.log('props : ', props)
 
 
@@ -47,14 +47,18 @@ const ListViewHolder = (props) => {
 
 
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state) => {
+
+    return{
     loadingMovieList: state.siteData.dataLoadingMovieList,
     loadingGenres: state.siteData.dataLoadingGenreList,
-    siteState:state.siteState,
+ 
      movieList: state.siteData.movieList,
     selectedMovieInGenre:getSelectedGenresMatchingMovies(state)
+
+}
  
-});
+};
 
 export default connect(mapStateToProps)(ListViewHolder);
 

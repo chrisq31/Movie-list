@@ -32,6 +32,8 @@ const SubmitButtonHolder = (props) => {
     const onSubmitClick =props.onSubmitClick;
     const getSelectedGenresByName = props.getSelectedGenresByName;
 
+    console.log('selected')
+
 
 
     
