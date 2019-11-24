@@ -25,7 +25,7 @@ function genresData(state = initialState, action) {
   
         case types.SWITCH_SITE_STATE:
 
-            return { ...state,  filterState: STATE_POPULAR }
+            return { ...state,genresSelectedList:[], filterState: STATE_POPULAR }
 
        default:
             return state
