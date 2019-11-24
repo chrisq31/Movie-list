@@ -65,7 +65,7 @@ margin:1.6rem;
 
 
 
-const ctaText = "CUT!"
+const ctaText = "BACK!"
 
 const GenresSubmitButton = ({ onClick, isActive, text }) => (
 

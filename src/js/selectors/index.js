@@ -30,27 +30,19 @@ export const getMovies = createSelector(
     [selectedGenres, movieList, siteState],
     (genres, movieList, siteState) => {
         
-        console.log ('siteState ',siteState)
-        switch (siteState) {
+      switch (siteState) {
 
             case STATE_POPULAR:
 
-                console.log('STATE_POPULAR')
-
-                return movieList;
+               return movieList;
 
             case STATE_FILTERED:
 
 
-                console.log('STATE_FILTERED')
-
-                console.log ('genres ',genres)
 
                 if (genres.length < 1) return movieList;
 
                 let genresIdArray = _.map(genres, 'id'); // get ids for each gene
-
-                console.log ('genresIdArray ',genresIdArray)
 
                 let filteredArray = [];
 
