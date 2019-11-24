@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from "react-redux";
 import styled from 'styled-components';
 import GenresSubmitButton from './GenresSubmitButton';
-import{submitGenres}from "../actions/index";
+import{switchState}from "../actions/index";
 import {getSelectedGenresByName} from "../selectors"
 
 
@@ -52,7 +52,7 @@ const SubmitButtonHolder = (props) => {
       
             <DivContainer className="row">
     
-                 <GenresSubmitButton genres ={getSelectedGenresByName} onClick={() => onSubmitClick()}/>
+                 <GenresSubmitButton text ={getSelectedGenresByName} onClick={() => onSubmitClick()}/>
             
             </DivContainer>
         )
@@ -74,7 +74,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    onSubmitClick: id => dispatch(submitGenres())
+    onSubmitClick: id => dispatch(switchState())
   })
 
 

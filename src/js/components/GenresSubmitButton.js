@@ -67,12 +67,12 @@ margin:1.6rem;
 
 const ctaText = "CUT!"
 
-const GenresSubmitButton = ({ onClick, isActive, genres }) => (
+const GenresSubmitButton = ({ onClick, isActive, text }) => (
 
   <div className="row" onClick={onClick} >
 
     <StyledButton active={isActive}>
-      <Title> {genres}</Title>
+      <Title> {text}</Title>
       <SubmitLogo>
         <TitleCTA> {ctaText}</TitleCTA>
       </SubmitLogo>

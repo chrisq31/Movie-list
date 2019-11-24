@@ -8,7 +8,7 @@ const selectedGenres = (state) => state.genresData; // selector genres for filte
 
 const movieList = (state) => state.siteData.movieList; // selector for movie genres
 
-const filterState = (state) => state.siteData.filterState;
+const siteState = (state) => state.siteStateData;
 
 const separator = " - ";
 
@@ -28,7 +28,7 @@ const getIntersection = (arr1, arr2) => {
 }
 
 export const getSelectedGenresMatchingMovies = createSelector(
-    [selectedGenres, movieList, filterState],
+    [selectedGenres, movieList, siteState],
     (genres, movieList, siteState) => {
 
         switch (siteState) {

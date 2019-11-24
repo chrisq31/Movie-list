@@ -6,8 +6,8 @@ const initialState = {
     dataLoadingMovieList: true,
     dataLoadingGenreList: true,
     movieList: [],
-    genresList: [],
-    filterState:STATE_FILTERED
+    genresList: []
+
 };
 
 
