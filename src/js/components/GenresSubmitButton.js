@@ -32,10 +32,10 @@ box-shadow: -28px 18px 85px 32px rgba(245,7,7,0.75)
 const Title = styled.h1`
   font-size:calc(18px + 1vw);
   margin-right:5%;
- 
-  color: ${textColor};
+ color: ${textColor};
   text-align:right;
 line-height:1em;
+white-space: nowrap;
 `;
 
 const TitleCTA = styled(Title)`
