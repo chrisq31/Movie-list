@@ -57,16 +57,9 @@ export const getSelectedGenresMatchingMovies = createSelector(
                     // get intersection (common overlap) betwwen two arrays
                     let result = getIntersection(genresIdArray, movieGenreIds)
 
-
                     if (result.length > 0) {
-                        console.log('element parent ', movie.title)
-
 
                         filteredArray.push(movie)
-
-
-                        console.log('filteredArray ', filteredArray)
-                        
                     }
 
                 }
@@ -75,47 +68,12 @@ export const getSelectedGenresMatchingMovies = createSelector(
 
                 return filteredArray;
 
-
-
-
             default:
 
                 console.log('DEFAULT')
                 return movieList;
         }
 
-
-
-
-        // if (genres.length < 1) return;
-
-        // let genresIdArray = _.map(genres, 'id'); // get ids for each gene
-
-        // let filteredArray = [];
-
-
-
-        // movieList.forEach(movie => {
-
-        //     let movieGenreIds = movie.genre_ids;
-        //     // get intersection (common overlap) betwwen two arrays
-        //     let result = getIntersection(genresIdArray, movieGenreIds)
-
-
-        //     if (result.length > 0) {
-        //         console.log('element parent ', movie.title)
-
-
-        //         filteredArray.push(movie)
-
-
-        //         console.log('filteredArray ', filteredArray)
-        //         return filteredArray;
-        //     }
-
-        // }
-
-        // )
     })
 
 
