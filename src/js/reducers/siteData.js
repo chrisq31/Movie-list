@@ -7,7 +7,7 @@ const initialState = {
     dataLoadingGenreList: true,
     movieList: [],
     genresList: [],
-    filterState:STATE_POPULAR
+    filterState:STATE_FILTERED
 };
 
 
