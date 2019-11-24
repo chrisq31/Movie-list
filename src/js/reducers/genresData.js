@@ -1,6 +1,7 @@
 
 import * as types from '../constants/action-types'
 import {STATE_POPULAR,STATE_FILTERED } from '../constants/site-constants'
+import _ from 'lodash';
 
 const initialState = {
 
@@ -14,15 +15,9 @@ function genresData(state = initialState, action) {
 
         case types.ADD_GENRE:
             
-        //TODO check genre not already in store
+        let genresIdArray = _.map(state.genresSelectedList, 'id'); // get ids for each gene tp check not in state
 
-        console.log ("action.payload.id ",action.payload.id)
-
-        console.log ("(state.genresSelectedList length ",state.genresSelectedList.length)
-
-        console.log ("state.genresSelectedList ",[...state.genresSelectedList].indexOf(action.payload.id))
-            
-            if (state.genresSelectedList.indexOf(action.payload.id) !== -1) {
+        if (genresIdArray.indexOf(action.payload.id) !== -1) {
                 return state
             }
 
