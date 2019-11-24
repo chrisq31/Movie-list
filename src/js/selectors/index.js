@@ -29,27 +29,14 @@ export const getSelectedGenresMatchingMovies = createSelector(
     [selectedGenres, movieList],
     (genres, movieList) => {
 
-
-          console.log('genresb selected',genres)
-
-
-          let genresIdArray =  _.map(genres, 'id')
-
-
-          console.log('genresIdArray',genresIdArray)
-
+        let genresIdArray = _.map(genres, 'id'); // get ids for each gene
 
         movieList.forEach(movie => {
-            
 
-            let movieGenreIds = movie.genre_ids;
+        let movieGenreIds = movie.genre_ids;
+         // get intersection (common overlap) betwwen two arrays
+        let result = getIntersection(genresIdArray, movieGenreIds)
 
-            console.log('movieGenreIds',movieGenreIds)
-            // console.log('genres',genres)
-
-
-            let result = getIntersection(genresIdArray, movieGenreIds)
-            console.log('result',result)
 
             if (result.length > 0) {
                 console.log('element parent ', movie.title)
