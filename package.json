@@ -2,7 +2,7 @@
   "name": "zone-movies",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "http:/chrisq31/Movie-list/tree/master/build/",
+  "homepage" : "http://chrisq31.github.io/Movie-list",
   "dependencies": {
     "@types/jest": "24.0.23",
     "@types/node": "12.12.7",
