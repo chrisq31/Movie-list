@@ -24,6 +24,9 @@ const ListViewHolder = (props) => {
 
 
     const movies = props.movieList;
+
+
+    
     if (props.loadingMovieList === true || props.loadingGenres === true) {
 
         return <div>Loading</div>

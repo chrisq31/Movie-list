@@ -44,51 +44,73 @@ const textColor = "white";
 
 class FilterViewHolder extends React.Component {
 
+    // constructor(props){
 
-    render(){
+    //     // super(props);
+    //     // state={
+    //     //     positionY:'top'
+    //     // }
 
+    // }
 
-    const genres = this.props.genresList;
-    const onGenreClick = this.props.onGenreClick;
-    
-    if (this.props.loadingMovieList === true || this.props.loadingGenres === true) {
+    scrollUp(){
 
-        return <div>Loading</div>
-    }
-
-    return (
-
-        <FilterContainerHolder>
-        <FilterContainer className="row">
-
-            {genres.map(genre => (
-                <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick({...genre})} />
-            ))}
-        </FilterContainer>
-
-      
-
-        <FilterContainer className="row">
-
-            {genres.map(genre => (
-                <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick({...genre})} />
-            ))}
-        </FilterContainer>
-
-    
-     </FilterContainerHolder>
-
-
-    )
+        this.setState({positionY:'top'})
 
     }
 
 
+    scrollDown(){
+
+        this.setState({positionY:'bottom'})
+
+    }
+
+
+    render() {
+
+
+        const genres = this.props.genresList;
+        const onGenreClick = this.props.onGenreClick;
+
+        if (this.props.loadingMovieList === true || this.props.loadingGenres === true) {
+
+            return <div>Loading</div>
+        }
+
+        return (
+
+            <FilterContainerHolder>
+                <FilterContainer className="row">
+
+                    {genres.map(genre => (
+                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick({ ...genre })} />
+                    ))}
+                </FilterContainer>
 
 
 
-   
-   
+                <FilterContainer className="row">
+
+                    {genres.map(genre => (
+                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick({ ...genre })} />
+                    ))}
+                </FilterContainer>
+
+
+            </FilterContainerHolder>
+
+
+        )
+
+    }
+
+
+
+
+
+
+
 }
 const mapStateToProps = state => ({
     loadingMovieList: state.siteData.dataLoadingMovieList,

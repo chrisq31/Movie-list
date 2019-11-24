@@ -8,11 +8,10 @@ const mapStateToProps = state => ({
     siteState:state.siteState,
      movieList: state.siteData.movieList,
      genresList: state.siteData.genresList.movieList,
-     selectedMovieInGenre:getSelectedGenresMatchingMovies
+     selectedMovieInGenre:getSelectedGenresMatchingMovies(state)
  
 });
 
 export default connect(mapStateToProps)(ListViewHolder);
-
 
 
