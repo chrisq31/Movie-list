@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styles/index.css';
 import SiteHeaderView from './SiteHeaderView';
 import SiteFooterView from './SiteFooterView';
-import ListViewContainer from './ListViewContainer';
+import ListViewHolder from './ListViewHolder';
 import FilterViewHolder from './FilterViewHolder';
 import SubmitButtonHolder from './SubmitButtonHolder';
 import LoadingView from './LoadingView';
@@ -14,7 +14,7 @@ const App: React.FC = () => {
     <div className="App">
      <LoadingView />
      <FilterViewHolder />
-      <ListViewContainer />
+      <ListViewHolder />
       <SiteHeaderView />
       <SiteFooterView />
       <SubmitButtonHolder />

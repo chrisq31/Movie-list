@@ -7,6 +7,7 @@ const initialState = {
     menuState: ['Home'],
     movieList: [],
     genresList: [],
+    filteredList:[]
 };
 
 

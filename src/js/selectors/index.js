@@ -3,9 +3,8 @@ import _ from 'lodash';
 
 
 
-const genresList = (state) => state.siteData.genresList; // selector genres for filtering
 const selectedGenres = (state) => state.genresData; // selector genres for filtering
-const movieListGenres = (state) => state.siteData.movieList.genre_ids; // selector for movie genres
+
 const movieList = (state) => state.siteData.movieList; // selector for movie genres
 
 const separator = " - ";
@@ -29,17 +28,24 @@ export const getSelectedGenresMatchingMovies = createSelector(
     [selectedGenres, movieList],
     (genres, movieList) => {
 
+
+        if (genres.length < 1) return;
+
         let genresIdArray = _.map(genres, 'id'); // get ids for each gene
+
+        console.log('genresIdArray ',genresIdArray)
 
         movieList.forEach(movie => {
 
-        let movieGenreIds = movie.genre_ids;
-         // get intersection (common overlap) betwwen two arrays
-        let result = getIntersection(genresIdArray, movieGenreIds)
+            let movieGenreIds = movie.genre_ids;
+            // get intersection (common overlap) betwwen two arrays
+            let result = getIntersection(genresIdArray, movieGenreIds)
 
 
             if (result.length > 0) {
                 console.log('element parent ', movie.title)
+
+                return result;
             }
 
         }
