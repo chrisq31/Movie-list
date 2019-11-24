@@ -27,11 +27,6 @@ box-sizing:border-box;
 width:100%;
 height:100vh;
 
-
-// flex-direction:row;
-// align-items: flex-start; 
-// align-content: flex-start; 
-// justify-content: flex-start;
 top:100px ;
 margin:0 5%;
 background-color:${bgColor};
@@ -40,34 +35,11 @@ font-family: ${primaryFontFamily};
 text-transform: uppercase;
 `;
 
-const textColor = "white";
 
 class FilterViewHolder extends React.Component {
 
-    // constructor(props){
 
-    //     // super(props);
-    //     // state={
-    //     //     positionY:'top'
-    //     // }
-
-    // }
-
-    scrollUp(){
-
-        this.setState({positionY:'top'})
-
-    }
-
-
-    scrollDown(){
-
-        this.setState({positionY:'bottom'})
-
-    }
-
-
-    render() {
+     render() {
 
 
         const genres = this.props.genresList;

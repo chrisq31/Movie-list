@@ -15,7 +15,7 @@ pointer-events: none;
 
 `;
 
-const textColor = "white";
+
 const ListViewHolder = (props) => {
 
     const movies = props.movies;

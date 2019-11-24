@@ -1,12 +1,12 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import clapperBoard from '../../img/clapperBoard.svg'
 
 
 const primaryFontFamily = "league_gothicregular";
 const bgColor = "#f30a0a";
 const textColor = "#ffffff";
-const textColorCTA = "#f70d0d";
+
 
 const StyledButton = styled.div`
 width:62%;

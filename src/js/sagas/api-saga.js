@@ -1,6 +1,6 @@
-import { GET_MOVIE_DATA, MOVIE_LIST_DATA_LOADED, API_ERRORED_MOVIE_LIST, GET_GENRE_DATA, MOVIE_GENRES_DATA_LOADED, API_ERRORED_GENRE_LIST } from "../constants/action-types";
+import { GET_MOVIE_DATA, MOVIE_LIST_DATA_LOADED, API_ERRORED_MOVIE_LIST, MOVIE_GENRES_DATA_LOADED, API_ERRORED_GENRE_LIST } from "../constants/action-types";
 
-import { takeEvery, takeLatest, call, put, all } from "redux-saga/effects";
+import {  takeLatest, call, put, all } from "redux-saga/effects";
 
 import axios from 'axios';
 

@@ -8,7 +8,7 @@ import {getSelectedGenresByName} from "../selectors"
 
 
 
-const bgColor="#961086";
+
 const DivContainer = styled.div`
 display:flex;
 position:fixed;
@@ -26,7 +26,7 @@ z-index:210;
 
 `;
 
-const textColor = "white";
+
 const SubmitButtonHolder = (props) => {
 
     const onSubmitClick =props.onSubmitClick;

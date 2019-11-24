@@ -1,11 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-
-//
-
-
 const lightColor = "#ffffff";
-const darkColor="#f30a0a";
+
 const primaryFontFamily = "league_gothicregular";
 
 
@@ -37,17 +33,17 @@ white-space: nowrap;
 `;
 
 
-const SiteFooterView =() => {
+const SiteFooterView = () => {
 
-   
+
 
     return (
 
-        <div className = "row">
+        <div className="row">
             <NavFooter>
-                
 
-                <div className = "col-8">
+
+                <div className="col-8">
 
                     <Title>A CHRIS QUINN PRODUCTION</Title>
 

@@ -1,6 +1,4 @@
 import React from 'react';
-
-import { object, func, string, oneOfType, number, array } from 'prop-types';
 import styled from 'styled-components';
 import { BASE_URL_IMAGE } from '../constants/site-constants'
 const lightColor = "#ffffff";
@@ -13,22 +11,17 @@ const primaryFontFamily = "league_gothicregular";
 
 const MovieContainer = styled.div`
     width: 70%;
-  height: auto;
-
-
-  margin-top:20%;
-  max-width:600px;
-
-   cursor: pointer;
-   background-color:${bgColor};
-   overflow:hidden;
-   display:flex;
-   flex-direction:column;
+    height: auto;
+    margin-top:20%;
+    max-width:600px;
+    cursor: pointer;
+    background-color:${bgColor};
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
     border:10px;
     border-radius: 0px 74px 286px 0px;
     box-shadow: 10px 3px 66px 90px rgba(15, 16, 25, 0.75);
-
-    
 `;
 
 const ImageContainer = styled.div`
@@ -72,9 +65,6 @@ class ListViewItem extends React.Component {
 
 
     render() {
-
-
-
         const {
             title,
             genres,
@@ -107,11 +97,4 @@ class ListViewItem extends React.Component {
 
 export default ListViewItem;
 
-// ListViewItem.propTypes = {
 
-
-//     title:string,
-//     genres:oneOfType([string, array]),
-//     poster_path:string
-
-// }

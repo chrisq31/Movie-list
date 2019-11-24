@@ -1,11 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-//
-
-
 const lightColor = "#ffffff";
-const darkColor="#f30a0a";
+
 const primaryFontFamily = "league_gothicregular";
 
 
@@ -37,21 +34,20 @@ white-space: nowrap;
 `;
 
 
-const SiteHeaderView =() => {
+const SiteHeaderView = () => {
 
-   
+
 
     return (
 
-        <div className = "row">
+        <div className="row">
             <NavHeader>
-                
 
-                <div className = "col-8">
+                <div className="col-8">
 
                     <Title>POP MY CORN...PUNK</Title>
 
-                </div>
+                 </div>
 
             </NavHeader>
         </div>
