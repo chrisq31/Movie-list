@@ -26,7 +26,9 @@ const ListViewHolder = (props) => {
 
 
 
-    const movies = props.movieList;
+    //const movies = props.movieList;
+
+    const movies = props.selectedMovieInGenre;
 
 
     

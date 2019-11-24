@@ -37,12 +37,16 @@ export const getSelectedGenresMatchingMovies =  createSelector(
 
             console.log('STATE_POPULAR')
 
+            return movieList;
+
+ 
+
             break
 
 
-            case STATE_POPULAR:
+            case STATE_FILTERED:
 
-            console.log('STATE_POPULAR')
+            console.log('STATE_FILTERED')
         
              break
 
