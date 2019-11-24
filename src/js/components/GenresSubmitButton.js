@@ -14,6 +14,7 @@ display:flex;
 justify-content: center;
 align-items: center;
 background-color: ${bgColor};
+box-sizing:border-box;
 
 margin: 0;
 padding: .25em 1.5em;
@@ -35,7 +36,7 @@ const Title = styled.h1`
  color: ${textColor};
   text-align:right;
 line-height:1em;
-white-space: nowrap;
+  //  white-space: nowrap;
 `;
 
 const TitleCTA = styled(Title)`
@@ -44,6 +45,7 @@ const TitleCTA = styled(Title)`
   font-size:calc(24px + 1vw);
   margin-top:60%;
   margin-right:0;
+  margin-left:10%;
  
 `;
 
