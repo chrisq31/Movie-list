@@ -23,9 +23,11 @@ function genresData(state = initialState, action) {
            return { ...state, genresSelectedList: [...state.genresSelectedList,action.payload], filterState: STATE_FILTERED }
 
   
+        case types.SWITCH_SITE_STATE:
 
+            return { ...state,  filterState: STATE_POPULAR }
 
-        default:
+       default:
             return state
     }
 
