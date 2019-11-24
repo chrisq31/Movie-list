@@ -3,12 +3,11 @@ import _ from 'lodash';
 import { STATE_POPULAR, STATE_FILTERED } from '../constants/site-constants'
 
 
-
-const selectedGenres = (state) => state.genresData; // selector genres for filtering
-
 const movieList = (state) => state.siteData.movieList; // selector for movie genres
 
-const siteState = (state) => state.siteStateData;
+const selectedGenres = (state) => state.genresData.genresSelectedList; // selector genres for filtering
+
+const siteState = (state) => state.genresData.filterState;
 
 const separator = " - ";
 
@@ -30,7 +29,8 @@ const getIntersection = (arr1, arr2) => {
 export const getMovies = createSelector(
     [selectedGenres, movieList, siteState],
     (genres, movieList, siteState) => {
-
+        
+        console.log ('siteState ',siteState)
         switch (siteState) {
 
             case STATE_POPULAR:
@@ -44,9 +44,13 @@ export const getMovies = createSelector(
 
                 console.log('STATE_FILTERED')
 
+                console.log ('genres ',genres)
+
                 if (genres.length < 1) return movieList;
 
                 let genresIdArray = _.map(genres, 'id'); // get ids for each gene
+
+                console.log ('genresIdArray ',genresIdArray)
 
                 let filteredArray = [];
 
