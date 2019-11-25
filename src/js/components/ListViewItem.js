@@ -10,18 +10,24 @@ const primaryFontFamily = "league_gothicregular";
 
 
 const MovieContainer = styled.div`
-    width: 70%;
+    width: 40%;
     height: auto;
     margin-top:20%;
-    max-width:600px;
-    cursor: pointer;
+    max-width:400px;
+    min-width:400px;
+
+    max-height:650px;
+    margin-right:50px;
+  
     background-color:${bgColor};
     overflow:hidden;
     display:flex;
     flex-direction:column;
     border:10px;
     border-radius: 0px 74px 286px 0px;
-    box-shadow: 10px 3px 66px 90px rgba(15, 16, 25, 0.75);
+    box-shadow:10px 3px 33px 35px rgba(15,16,25,0.33);
+
+
 `;
 
 const ImageContainer = styled.div`
@@ -77,7 +83,7 @@ class ListViewItem extends React.Component {
 
         return (
 
-            <div className="col" >
+       
 
                 <MovieContainer>
                     <Title>{title}</Title>
@@ -86,7 +92,7 @@ class ListViewItem extends React.Component {
                         <Img src={BASE_URL_IMAGE + poster_path} alt={title} />
                     </ImageContainer>
                 </MovieContainer>
-            </div>
+           
         );
 
 

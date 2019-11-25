@@ -11,26 +11,22 @@ const primaryFontFamily = "league_gothicregular";
 
 const FilterContainerHolder = styled.div`
 display:flex;
-position:fixed;
-flex-direction: row;
+
+flex-direction: column;
 box-sizing:border-box;
 top:0;
-margin-top:30px;
+max-width:300px;
+min-width:250px;
+padding-top:20%;
+
+min-height:80vh;
+
+
 
 `;
 
 
 const FilterContainer = styled.div`
-// display:flex;
-position:relative;
-box-sizing:border-box;
-width:100%;
-height:100vh;
-
-top:100px ;
-margin:0 5%;
-background-color:${bgColor};
-
 font-family: ${primaryFontFamily};
 text-transform: uppercase;
 `;
@@ -53,24 +49,14 @@ class FilterViewHolder extends React.Component {
         return (
 
             <FilterContainerHolder>
-                <FilterContainer className="row">
+                <FilterContainer>
 
                     {genres.map(genre => (
                         <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick({ ...genre })} />
                     ))}
                 </FilterContainer>
 
-
-
-                <FilterContainer className="row">
-
-                    {genres.map(genre => (
-                        <FilterViewItem key={genre.id} {...genre} onClick={() => onGenreClick({ ...genre })} />
-                    ))}
-                </FilterContainer>
-
-
-            </FilterContainerHolder>
+             </FilterContainerHolder>
 
 
         )

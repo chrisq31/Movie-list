@@ -8,9 +8,10 @@ import { getMovies } from '../selectors/index'
 
 const MoviesContainer = styled.div`
 display:flex;
-padding-top:140px;
-box-sizing:border-box;
 pointer-events: none;
+
+padding:0;
+margin:0;
 
 
 `;
