@@ -9,6 +9,7 @@ import { getMovies } from '../selectors/index'
 const MoviesContainer = styled.div`
 display:flex;
 pointer-events: none;
+justify-content: center;
 
 padding:0;
 margin:0;

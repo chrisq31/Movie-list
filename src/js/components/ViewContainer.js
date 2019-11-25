@@ -8,6 +8,9 @@ const ViewContainerHolder = styled.div`
 display:flex;
 flex-flow: row wrap;
 padding-top:100px;
+padding-bottom:100px;
+
+justify-content: center;
 `;
 
 
@@ -25,11 +28,11 @@ const ViewContainer = () => (
 
         <ViewContainerHolder>
 
-        <Flexcolumn size={8}>
+        <Flexcolumn size={9}>
         <ListViewHolder />
         </Flexcolumn>
 
-        <Flexcolumn size={4}>
+        <Flexcolumn size={3}>
         <FilterViewHolder />
         </Flexcolumn>
 

@@ -45,7 +45,7 @@ const SiteFooterView = () => {
 
                 <div className="col-8">
 
-                    <Title>A CHRIS QUINN PRODUCTION</Title>
+                    <Title>A CHRIS QUINN PRODUCTION    quinn.uk@gmail.com</Title>
 
                 </div>
 
