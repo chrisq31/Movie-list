@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.b052c800.chunk.css",
-    "main.js": "/static/js/main.574c69a0.chunk.js",
-    "main.js.map": "/static/js/main.574c69a0.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c64ef48b.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c64ef48b.js.map",
-    "static/js/2.95c43486.chunk.js": "/static/js/2.95c43486.chunk.js",
-    "static/js/2.95c43486.chunk.js.map": "/static/js/2.95c43486.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.0e49a1127927724da115055eee5b5e92.js": "/precache-manifest.0e49a1127927724da115055eee5b5e92.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.b052c800.chunk.css.map": "/static/css/main.b052c800.chunk.css.map",
-    "static/media/clapperBoard.svg": "/static/media/clapperBoard.3feec74b.svg",
-    "static/media/index.css": "/static/media/leaguegothic-regular-webfont.ba4cbc9a.woff"
+    "main.css": "/Movie-list/build/static/css/main.284c1176.chunk.css",
+    "main.js": "/Movie-list/build/static/js/main.574c69a0.chunk.js",
+    "main.js.map": "/Movie-list/build/static/js/main.574c69a0.chunk.js.map",
+    "runtime-main.js": "/Movie-list/build/static/js/runtime-main.e01e643b.js",
+    "runtime-main.js.map": "/Movie-list/build/static/js/runtime-main.e01e643b.js.map",
+    "static/js/2.58157a5c.chunk.js": "/Movie-list/build/static/js/2.58157a5c.chunk.js",
+    "static/js/2.58157a5c.chunk.js.map": "/Movie-list/build/static/js/2.58157a5c.chunk.js.map",
+    "index.html": "/Movie-list/build/index.html",
+    "precache-manifest.e9a832258d8eac205caad49fd0418514.js": "/Movie-list/build/precache-manifest.e9a832258d8eac205caad49fd0418514.js",
+    "service-worker.js": "/Movie-list/build/service-worker.js",
+    "static/css/main.284c1176.chunk.css.map": "/Movie-list/build/static/css/main.284c1176.chunk.css.map",
+    "static/media/clapperBoard.svg": "/Movie-list/build/static/media/clapperBoard.3feec74b.svg",
+    "static/media/index.css": "/Movie-list/build/static/media/leaguegothic-regular-webfont.ba4cbc9a.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.c64ef48b.js",
-    "static/js/2.95c43486.chunk.js",
-    "static/css/main.b052c800.chunk.css",
+    "static/js/runtime-main.e01e643b.js",
+    "static/js/2.58157a5c.chunk.js",
+    "static/css/main.284c1176.chunk.css",
     "static/js/main.574c69a0.chunk.js"
   ]
 }
