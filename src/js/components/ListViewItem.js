@@ -73,7 +73,7 @@ class ListViewItem extends React.Component {
     render() {
         const {
             title,
-            genres,
+            genre_ids,
             poster_path
 
 
@@ -87,7 +87,7 @@ class ListViewItem extends React.Component {
 
                 <MovieContainer>
                     <Title>{title}</Title>
-                    <div>{genres}</div>
+                    <div>{genre_ids}</div>
                     <ImageContainer>
                         <Img src={BASE_URL_IMAGE + poster_path} alt={title} />
                     </ImageContainer>

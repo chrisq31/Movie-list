@@ -5,34 +5,113 @@ import _ from 'lodash';
 const genresData =
     [
         {
-            id: 10770,
-            name: 'TV Movie'
-        },
-        {
-            id: 878,
-            name: 'Science Fiction'
-        },
-        {
-            id: 36,
-            name: 'History'
-        },
-        {
-            id: 10402,
-            name: 'Music'
-        },
-        {
-            id: 80,
-            name: 'Crime'
-        }
-
+            "id": 28,
+            "name": "Action"
+          },
+          {
+            "id": 12,
+            "name": "Adventure"
+          },
+          {
+            "id": 16,
+            "name": "Animation"
+          },
+          {
+            "id": 35,
+            "name": "Comedy"
+          },
+          {
+            "id": 80,
+            "name": "Crime"
+          },
+          {
+            "id": 99,
+            "name": "Documentary"
+          },
+          {
+            "id": 18,
+            "name": "Drama"
+          },
+          {
+            "id": 10751,
+            "name": "Family"
+          },
+          {
+            "id": 14,
+            "name": "Fantasy"
+          },
+          {
+            "id": 36,
+            "name": "History"
+          },
+          {
+            "id": 27,
+            "name": "Horror"
+          },
+          {
+            "id": 10402,
+            "name": "Music"
+          },
+          {
+            "id": 9648,
+            "name": "Mystery"
+          },
+          {
+            "id": 10749,
+            "name": "Romance"
+          },
+          {
+            "id": 878,
+            "name": "Science Fiction"
+          },
+          {
+            "id": 10770,
+            "name": "TV Movie"
+          },
+          {
+            "id": 53,
+            "name": "Thriller"
+          },
+          {
+            "id": 10752,
+            "name": "War"
+          },
+          {
+            "id": 37,
+            "name": "Western"
+          }
     ]
 
+const getGenreObjFromId =(id) =>{
 
+   console.log("result : ", genresData.find(element => element.id === id)) 
+
+    // genresData.forEach(element => {
+
+    //     let id = element.id;
+
+    // }
+
+    // let matchId = genresData.findIndex(id);
+
+    // console.log ('matchId',matchId)
+
+    // let result = genresData[matchId];
+
+
+    // console.log('result>> ',result )
+
+    // console.log('result name >> ',result.name )
+
+
+    // genresData.findIndex (id = )
+}
+
+getGenreObjFromId(16)
 
 const name = (index) => {
 
-
-    return genresData[index].name;
+return genresData[index].name;
 }
 
 const getNamesFromSelectedGenres = () => {
@@ -47,10 +126,12 @@ const joinNamesFromSelectedGenres = () => {
 
 }
 
-
+// test('expect id  16 to return Animation', () => {
+//     expect(name(0)).toBe("TV Movie")
+// })
 
 test('expect name 1 to be TV Movie', () => {
-    expect(name(0)).toBe("TV Movie")
+    expect(name(0)).toBe("Action")
 })
 
 test('expect index 2 not to be Music', () => {
@@ -58,17 +139,17 @@ test('expect index 2 not to be Music', () => {
 })
 
 test('expect name 3 to be Music', () => {
-    expect(name(3)).toBe("Music")
+    expect(name(3)).toBe("Comedy")
 })
 
-test('expect names from selected genres to be TV Movie", "Science Fiction", "History", "Music", "Crime"', () => {
-    expect(getNamesFromSelectedGenres()).toEqual(["TV Movie", "Science Fiction", "History", "Music", "Crime"])
+test('expect names from selected genres to be Action", "Adventure", "Animation", "Comedy","Crime", "Documentary","Drama","Family","Fantasy","History","Horror","Music","Mystery","Romance","Science Fiction","TV Movie","Thriller","War","Western"', () => {
+    expect(getNamesFromSelectedGenres()).toEqual(["Action", "Adventure", "Animation", "Comedy","Crime", "Documentary","Drama","Family","Fantasy","History","Horror","Music","Mystery","Romance","Science Fiction","TV Movie","Thriller","War","Western"])
 })
 
 
-test('expect names with separator from selected genres to be "TV Movie + Science Fiction + History+ Music + Crime"', () => {
-    expect(joinNamesFromSelectedGenres()).toEqual("TV Movie + Science Fiction + History + Music + Crime")
-})
+// test('expect names with separator from selected genres to be "TV Movie + Science Fiction + History+ Music + Crime"', () => {
+//     expect(joinNamesFromSelectedGenres()).toEqual("TV Movie + Science Fiction + History + Music + Crime")
+// })
 
 
 
