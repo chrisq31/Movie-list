@@ -84,30 +84,12 @@ const genresData =
 
 const getGenreObjFromId =(id) =>{
 
+    return genresData.find(element => element.id === id)
+
    console.log("result : ", genresData.find(element => element.id === id)) 
-
-    // genresData.forEach(element => {
-
-    //     let id = element.id;
-
-    // }
-
-    // let matchId = genresData.findIndex(id);
-
-    // console.log ('matchId',matchId)
-
-    // let result = genresData[matchId];
-
-
-    // console.log('result>> ',result )
-
-    // console.log('result name >> ',result.name )
-
-
-    // genresData.findIndex (id = )
 }
 
-getGenreObjFromId(16)
+
 
 const name = (index) => {
 
@@ -144,6 +126,12 @@ test('expect name 3 to be Music', () => {
 
 test('expect names from selected genres to be Action", "Adventure", "Animation", "Comedy","Crime", "Documentary","Drama","Family","Fantasy","History","Horror","Music","Mystery","Romance","Science Fiction","TV Movie","Thriller","War","Western"', () => {
     expect(getNamesFromSelectedGenres()).toEqual(["Action", "Adventure", "Animation", "Comedy","Crime", "Documentary","Drama","Family","Fantasy","History","Horror","Music","Mystery","Romance","Science Fiction","TV Movie","Thriller","War","Western"])
+})
+
+
+
+test("expect id 16 to return { id: 16, name: 'Animation' } ", () => {
+    getGenreObjFromId(16).toBe({ id: 16, name: 'Animation' } )
 })
 
 
