@@ -312,7 +312,7 @@ test('test lodash intersection, expect to return 878 from [2,3,878] and [878,6]'
 
  const getIntersectionForMovies =(genreSelectedArr)=>{
 
-    movieList.forEach(element => {
+     movieList.forEach(element => {
 
         let genreIds = element.genre_ids
 

@@ -86,7 +86,6 @@ const getGenreObjFromId =(id) =>{
 
     return genresData.find(element => element.id === id)
 
-   console.log("result : ", genresData.find(element => element.id === id)) 
 }
 
 
@@ -131,8 +130,15 @@ test('expect names from selected genres to be Action", "Adventure", "Animation",
 
 
 test("expect id 16 to return { id: 16, name: 'Animation' } ", () => {
-    getGenreObjFromId(16).toBe({ id: 16, name: 'Animation' } )
+    getGenreObjFromId(16).toEqual({ id: 16, name: 'Animation' } )
 })
+
+
+
+test("expect id 878 to return { id: 878, name: 'Science Fiction' } ", () => {
+    getGenreObjFromId(16).toEqual({ id: 878, "name": "Science Fiction" } )
+})
+
 
 
 // test('expect names with separator from selected genres to be "TV Movie + Science Fiction + History+ Music + Crime"', () => {
