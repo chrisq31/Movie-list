@@ -291,9 +291,7 @@ test('expect genreIds ids of movielist[3] to be genre_ids: [28,12,35],', () => {
     expect(getGenreIdArray(3)).toEqual([28,12,35])
 })
 
-test('expect genre selected[878], Science Fiction to return Terminator: Dark Fate', () => {
-   // expect(getGenreIdArray(3)).toEqual([28,12,35])
-})
+
 
 
 // test intersection
@@ -332,7 +330,7 @@ test('test lodash intersection, expect to return 878 from [2,3,878] and [878,6]'
 
 
 
- console.log ('test genreSubmitArr for intersections in moviesGenreArr ', getIntersectionForMovies(genresArr1))
+ //console.log ('test genreSubmitArr for intersections in moviesGenreArr ', getIntersectionForMovies(genresArr1))
 
 
 
