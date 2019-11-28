@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import FilterViewItem from "./FilterViewItem";
 import { BASE_URL_IMAGE } from '../constants/site-constants'
 const lightColor = "#ffffff";
 const bgColor = "#f30a0a";
@@ -30,7 +31,7 @@ const MovieContainer = styled.div`
 
 `;
 
-const ImageContainer = styled.div`
+const CenterContainer = styled.div`
  display: flex;
   justify-content: center;
   align-items: center;
@@ -87,10 +88,10 @@ class ListViewItem extends React.Component {
 
                 <MovieContainer>
                     <Title>{title}</Title>
-                    <div>{genre_ids}</div>
-                    <ImageContainer>
+                    <CenterContainer>{genre_ids}</CenterContainer>
+                    <CenterContainer>
                         <Img src={BASE_URL_IMAGE + poster_path} alt={title} />
-                    </ImageContainer>
+                    </CenterContainer>
                 </MovieContainer>
            
         );
