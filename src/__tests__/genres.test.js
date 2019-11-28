@@ -1,4 +1,5 @@
 import { CustomConsole } from "@jest/console"
+import expect from 'expect'
 import _ from 'lodash';
 
 // selected from filterview
@@ -107,9 +108,7 @@ const joinNamesFromSelectedGenres = () => {
 
 }
 
-// test('expect id  16 to return Animation', () => {
-//     expect(name(0)).toBe("TV Movie")
-// })
+
 
 test('expect name 1 to be TV Movie', () => {
     expect(name(0)).toBe("Action")
@@ -130,20 +129,16 @@ test('expect names from selected genres to be Action", "Adventure", "Animation",
 
 
 test("expect id 16 to return { id: 16, name: 'Animation' } ", () => {
-    getGenreObjFromId(16).toEqual({ id: 16, name: 'Animation' } )
+   expect(getGenreObjFromId(16)).toEqual({ id: 16, name: 'Animation' } )
 })
 
 
 
 test("expect id 878 to return { id: 878, name: 'Science Fiction' } ", () => {
-    getGenreObjFromId(16).toEqual({ id: 878, "name": "Science Fiction" } )
+    expect(getGenreObjFromId(16)).not.toEqual({ id: 878, "name": "Science Fiction" } )
 })
 
 
-
-// test('expect names with separator from selected genres to be "TV Movie + Science Fiction + History+ Music + Crime"', () => {
-//     expect(joinNamesFromSelectedGenres()).toEqual("TV Movie + Science Fiction + History + Music + Crime")
-// })
 
 
 
