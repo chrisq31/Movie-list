@@ -13,11 +13,28 @@ const genresList = (state) => state.siteData.genresList;
 
 const separator = " - ";
 
-const getGenreObjFromIdArray =(idArray) =>{
+/**** get genres objects from genre ids and return array of genre objects */
 
-    //return genresList.find(element => element.id === id)
+const getGenreObjFromId =(id) =>{
+
+    return genresList.find(element => element.id === id)
 
 }
+
+export const getGenresArrayFromIdArray =(idArray) =>{
+
+    let filterCollectionarray =[];
+
+    idArray.forEach(element => {
+
+        filterCollectionarray.push(getGenreObjFromId(element));
+
+    });
+
+    return filterCollectionarray;
+}
+
+/*****/
 
 
 
