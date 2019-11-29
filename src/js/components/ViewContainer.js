@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import ListViewHolder from './ListViewHolder';
 import FilterViewHolder from './FilterViewHolder';
 
+import popcorn from '../../img/popcorn.svg'
+
 const ViewContainerHolder = styled.div`
 display:flex;
 flex-flow: row wrap;
@@ -11,6 +13,10 @@ padding-top:100px;
 padding-bottom:100px;
 
 justify-content: center;
+
+background-image: url(${popcorn});
+// background-repeat: no-repeat;
+background-size:contain;
 `;
 
 
