@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import styled from 'styled-components';
 import FilterViewItem from "./FilterViewItem";
 import { addGenre } from "../actions/index";
-import {getGenresArrayFromIdArray} from "../selectors/index";
+//import {getGenresArrayFromIdArray} from "../selectors/index";
 import { element } from 'prop-types';
 
 
@@ -29,9 +29,13 @@ class FilterViewCollection extends React.Component {
         const genreIds = [28,878];
         const onGenreClick = this.props.onGenreClick;
 
+        //hard-coded for quick test
+
+       const filterCollectionarray= [ { id: 12, "name": "Adventure"}, { id: 14, "name": "Fantasy"},{ id: 10751, "name": "Family"}]
+
         //const filterCollectionarray =this.props.getGenresArray(genreIds);
 
-        const filterCollectionarray =getGenresArrayFromIdArray(genreIds);
+       // const filterCollectionarray =getGenresArrayFromIdArray(genreIds);
 
        
         return (
@@ -40,7 +44,12 @@ class FilterViewCollection extends React.Component {
                 <FilterContainer>
 
                     {filterCollectionarray.map(element => (
-                        <FilterViewItem key={element.id} genreObj={element} onClick={() => onGenreClick({element})} />
+
+                  
+                 
+                    <FilterViewItem key={element.id} genreName={element.name} genreId={element.id} onClick={() => onGenreClick({element})} />
+
+                  
                     ))}
                 </FilterContainer>
 
@@ -58,8 +67,8 @@ class FilterViewCollection extends React.Component {
 
 
 }
-const mapStateToProps = state => ({
-   // getGenresArray:getGenresArrayFromIdArray(genreIds)
+const mapStateToProps = (state,props) => ({
+   // getGenresArray:getGenresArrayFromIdArray(state,props)
 });
 
 const mapDispatchToProps = dispatch => ({

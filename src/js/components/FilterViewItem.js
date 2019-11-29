@@ -23,10 +23,10 @@ box-sizing:border-box;
 
 `;
 
-const FilterViewItem = ({ onClick, isActive, genreObj }) => (
+const FilterViewItem = ({ onClick, isActive, genreName, genreId }) => (
 
     <div className="col" onClick={onClick} >
-        <StyledButton active={isActive}> {genreObj.name}</StyledButton>
+        <StyledButton active={isActive}> {genreName}</StyledButton>
     </div>
 
 
