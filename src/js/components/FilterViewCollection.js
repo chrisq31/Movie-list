@@ -17,7 +17,7 @@ font-family: ${primaryFontFamily};
 text-transform: uppercase;
 `;
 
-// component for each movie showing genre button
+// collection component for each movie showing genre buttons
 
 class FilterViewCollection extends React.Component {
 
