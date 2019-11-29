@@ -9,7 +9,16 @@ const selectedGenres = (state) => state.genresData.genresSelectedList; // select
 
 const siteState = (state) => state.genresData.filterState;
 
+const genresList = (state) => state.siteData.genresList;
+
 const separator = " - ";
+
+const getGenreObjFromIdArray =(idArray) =>{
+
+    //return genresList.find(element => element.id === id)
+
+}
+
 
 
 
@@ -37,8 +46,6 @@ export const getMovies = createSelector(
                return movieList;
 
             case STATE_FILTERED:
-
-
 
                 if (genres.length < 1) return movieList;
 

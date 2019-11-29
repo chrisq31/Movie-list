@@ -89,6 +89,20 @@ const getGenreObjFromId =(id) =>{
 
 }
 
+const getGenresArrayFromIdArray =(idArray) =>{
+
+    let filterCollectionarray =[];
+
+    idArray.forEach(element => {
+
+        filterCollectionarray.push(getGenreObjFromId(element));
+
+    });
+
+    return filterCollectionarray;
+}
+
+
 
 
 const name = (index) => {
@@ -137,6 +151,12 @@ test("expect id 16 to return { id: 16, name: 'Animation' } ", () => {
 test("expect id 878 to return { id: 878, name: 'Science Fiction' } ", () => {
     expect(getGenreObjFromId(16)).not.toEqual({ id: 878, "name": "Science Fiction" } )
 })
+
+
+test("expect genre_ids [28,878] to return [{ id: 28, name: Action},{ id: 878, name: Science Fiction}],", () => {
+    expect(getGenresArrayFromIdArray([28,878])).toEqual([ { id: 28, "name": "Action"}, { id: 878, "name": "Science Fiction"},] )
+})
+
 
 
 

@@ -37,6 +37,20 @@ const ListViewHolder = (props) => {
     )
 }
 
+// <div className="buttons">
+//     {buttons.map(item => (
+//       <button
+//         variant="outline-primary"
+//         key={item.id}
+//         className={item.btnClass}
+//         type="button"
+//         onClick={() => {
+//           filterData(item.type, item.parameter, item.id);
+//         }}
+//       >
+//         {item.label}
+//       </button>
+
 
 
 
