@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "60d537e341fa0459bca16c3be54da60e",
+    "revision": "01a0c0c45b20d91b38d984a7ca9b1962",
     "url": "/Movie-list/build/index.html"
   },
   {
-    "revision": "113384b6a0894695d20f",
+    "revision": "a059d8fa56c22c9ae5bd",
     "url": "/Movie-list/build/static/css/main.284c1176.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Movie-list/build/static/js/2.b6ebf7a4.chunk.js"
   },
   {
-    "revision": "113384b6a0894695d20f",
-    "url": "/Movie-list/build/static/js/main.1c960fc7.chunk.js"
+    "revision": "a059d8fa56c22c9ae5bd",
+    "url": "/Movie-list/build/static/js/main.12750e41.chunk.js"
   },
   {
     "revision": "613f39289053b70c7274",
@@ -32,7 +32,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Movie-list/build/static/media/leaguegothic-regular-webfont.ba4cbc9a.woff"
   },
   {
-    "revision": "99743eae9bda3bf1af4a08603078259e",
-    "url": "/Movie-list/build/static/media/popcorn.99743eae.svg"
+    "revision": "333c8689426a2cb87731c86054ae6acc",
+    "url": "/Movie-list/build/static/media/popcorn.333c8689.svg"
   }
 ]);
