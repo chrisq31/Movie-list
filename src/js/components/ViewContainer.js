@@ -15,8 +15,11 @@ padding-bottom:100px;
 justify-content: center;
 
 background-image: url(${popcorn});
-// background-repeat: no-repeat;
+background-repeat: repeat-y;
 background-size:contain;
+
+
+
 `;
 
 
