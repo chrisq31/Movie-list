@@ -154,8 +154,13 @@ test("expect id 878 to return { id: 878, name: 'Science Fiction' } ", () => {
 
 
 test("expect genre_ids [28,878] to return [{ id: 28, name: Action},{ id: 878, name: Science Fiction}],", () => {
-    expect(getGenresArrayFromIdArray([28,878])).toEqual([ { id: 28, "name": "Action"}, { id: 878, "name": "Science Fiction"},] )
+    expect(getGenresArrayFromIdArray([28,878])).toEqual([ { id: 28, "name": "Action"}, { id: 878, "name": "Science Fiction"}] )
 })
+
+test("expect genre_ids [12,14,10751] to return [{ id: 12, name: Adventure},{ id: 14, name: Fantasy},{ id: 10751, name: Family}],", () => {
+    expect(getGenresArrayFromIdArray([12,14,10751])).toEqual([ { id: 12, "name": "Adventure"}, { id: 14, "name": "Fantasy"},{ id: 10751, "name": "Family"}] )
+})
+
 
 
 
