@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import styled from 'styled-components';
 import FilterViewItem from "./FilterViewItem";
 import { addGenre } from "../actions/index";
-import {getGenresArrayFromIdArray} from "../actions/index";
+import {getGenresArrayFromIdArray} from "../selectors/index";
 import { element } from 'prop-types';
 
 
@@ -13,7 +13,7 @@ import { element } from 'prop-types';
 
 
 const FilterContainer = styled.div`
-font-family: ${primaryFontFamily};
+
 text-transform: uppercase;
 `;
 
@@ -25,10 +25,13 @@ class FilterViewCollection extends React.Component {
      render() {
 
 
-        const genreIds = this.props.genre_ids;
+       // const genreIds = this.props.genre_ids;
+        const genreIds = [28,878];
         const onGenreClick = this.props.onGenreClick;
 
-        const filterCollectionarray =this.props.getGenresArray(genreIds);
+        //const filterCollectionarray =this.props.getGenresArray(genreIds);
+
+        const filterCollectionarray =getGenresArrayFromIdArray(genreIds);
 
        
         return (
@@ -56,7 +59,7 @@ class FilterViewCollection extends React.Component {
 
 }
 const mapStateToProps = state => ({
-    getGenresArray:getGenresArrayFromIdArray(genreIds)
+   // getGenresArray:getGenresArrayFromIdArray(genreIds)
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import FilterViewItem from "./FilterViewItem";
-import { BASE_URL_IMAGE } from '../constants/site-constants'
+import FilterViewCollection from "./FilterViewCollection";
+import { BASE_URL_IMAGE } from '../constants/site-constants';
 const lightColor = "#ffffff";
 const bgColor = "#f30a0a";
 
@@ -84,16 +84,18 @@ class ListViewItem extends React.Component {
 
         return (
 
-       
 
-                <MovieContainer>
-                    <Title>{title}</Title>
-                    <CenterContainer>{genre_ids}</CenterContainer>
-                    <CenterContainer>
-                        <Img src={BASE_URL_IMAGE + poster_path} alt={title} />
-                    </CenterContainer>
-                </MovieContainer>
-           
+
+            <MovieContainer>
+                <Title>{title}</Title>
+                <CenterContainer>
+                    <FilterViewCollection genreIds ={genre_ids} />
+                </CenterContainer>
+                <CenterContainer>
+                    <Img src={BASE_URL_IMAGE + poster_path} alt={title} />
+                </CenterContainer>
+            </MovieContainer>
+
         );
 
 

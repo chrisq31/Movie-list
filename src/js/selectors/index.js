@@ -34,6 +34,14 @@ export const getGenresArrayFromIdArray =(idArray) =>{
     return filterCollectionarray;
 }
 
+export const getGenresFromIdArraySelector = createSelector(
+    [genresList,],
+    (genres,) => {
+        return getGenresArrayFromIdArray
+
+    }
+)
+
 /*****/
 
 
