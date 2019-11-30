@@ -90,8 +90,12 @@ class ListViewItem extends React.Component {
               </div>
 
                 <FilterViewCollectionHolder>
+
+                <div className="row" >
                
-                    <FilterViewCollection genreIds ={genre_ids} />0
+                    <FilterViewCollection genreIds ={genre_ids} />
+
+                    </div>
               
                 </FilterViewCollectionHolder>
 
