@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import ListViewHolder from './ListViewHolder';
-import FilterViewHolder from './FilterViewHolder';
+
 
 import popcorn from '../../img/popcorn.svg'
 

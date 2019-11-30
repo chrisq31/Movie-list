@@ -22,13 +22,13 @@ const StyledButton = styled.div`
 
 
 
-const PopularityButton = ({ onClick, isActive, popularity}) => (
+const VotingButton = ({ onClick, isActive, voteScore}) => (
 
     <div onClick={onClick} >
-        <StyledButton active={isActive}> {popularity}</StyledButton>
+        <StyledButton active={isActive}> {voteScore}</StyledButton>
     </div>
 
 
 )
 
-export default PopularityButton;
+export default VotingButton;

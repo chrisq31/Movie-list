@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { connect } from "react-redux";
 import { filterByRating } from "../actions/index";
 import FilterViewCollection from "./FilterViewCollection";
-import PopularityButton from "./PopularityButton"
+import VotingButton from "./VotingButton";
+import PopularIndexView from "./PopularIndexView";
 import { BASE_URL_IMAGE } from '../constants/site-constants';
 const lightColor = "#ffffff";
 const bgColor = "#f30a0a";
@@ -74,7 +75,7 @@ class ListViewItem extends React.Component {
         <MovieContainer poster_path={poster_path}>
                 <Title>{title}</Title>
 
-              <Title>{popularity}</Title> 
+              <PopularIndexView index ={popularity} />
 
                 <FilterViewCollectionHolder>
                
@@ -82,7 +83,7 @@ class ListViewItem extends React.Component {
               
                 </FilterViewCollectionHolder>
 
-                <PopularityButton popularity = {vote_average} onClick={() => onClick({vote_average})} />
+                <VotingButton voteScore = {vote_average} onClick={() => onClick({vote_average})} />
           
             </MovieContainer>
 
