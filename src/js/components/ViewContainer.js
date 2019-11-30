@@ -36,16 +36,10 @@ const ViewContainer = () => (
     <div className="row" >
 
         <ViewContainerHolder>
-
-        <Flexcolumn size={9}>
+        <Flexcolumn size={12}>
         <ListViewHolder />
         </Flexcolumn>
-
-        <Flexcolumn size={3}>
-        <FilterViewHolder />
-        </Flexcolumn>
-
-        </ViewContainerHolder>
+      </ViewContainerHolder>
     </div>
 
 
