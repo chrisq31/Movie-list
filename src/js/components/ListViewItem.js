@@ -69,13 +69,13 @@ class ListViewItem extends React.Component {
             } = this.props.item
 
         const onClick = this.props.onClick;
-
-     return (
+        
+        return (
  
         <MovieContainer poster_path={poster_path}>
                 <Title>{title}</Title>
 
-              <PopularIndexView index ={popularity} />
+              <PopularIndexView popular ={popularity} />
 
                 <FilterViewCollectionHolder>
                

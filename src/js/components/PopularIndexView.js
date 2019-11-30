@@ -10,7 +10,7 @@ const StyledButton = styled.div`
    font-family: ${primaryFontFamily};
    color:white;
    text-align:center;
-   font-size: 4.5em;
+   font-size: 2em;
    padding: 8%;
 
 
@@ -18,8 +18,8 @@ const StyledButton = styled.div`
 
 
 
-const PopularIndexView = ({ index }) => (
- <StyledButton> {index}</StyledButton>
+const PopularIndexView = ({ popular }) => (
+ <StyledButton> {popular}</StyledButton>
 )
 
 export default PopularIndexView;

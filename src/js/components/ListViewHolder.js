@@ -17,16 +17,14 @@ margin:0;
 const ListViewHolder = (props) => {
 
     const movies = props.movies;
-
-    console.log ('movies ',movies)
     if (props.loadingMovieList === true || props.loadingGenres === true) {
 
         return <div>Loading</div>
     }
     return (
         <MoviesContainer className="row">
-            {movies.map(movie => (
-                <ListViewItem key={movie.id} item={movie} />
+            {movies.map((movie,index) => (
+                <ListViewItem key={movie.id} item={movie} popular={index} />
             ))}
         </MoviesContainer>
     )
