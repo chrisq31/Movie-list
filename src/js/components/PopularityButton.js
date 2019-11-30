@@ -1,29 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
+import star from '../../img/star.svg'
 
 
 const primaryFontFamily = "league_gothicregular";
 
 const StyledButton = styled.div`
-  background-color: ${(props) => props.active ? "#000000" : "#ffffff"};
-    color: ${(props) => props.active ? "#ffffff" : "#f30a0a"};
-   border-color: "#ffffff";
+  
    font-family: ${primaryFontFamily};
+   color:white;
    text-align:center;
-   font-size: 1.5em;
+   font-size: 4.5em;
 box-sizing:border-box;
   
-  margin-top: 1em;
-  padding: .025em 1.5em;
+background-repeat:no-repeat;
  cursor:pointer;
-  border:10px;
-  border-radius: 80px 1px;
+
+
+background-image: url(${star});
+background-position: center;
+
+background-size:contain;
+
 
 
    overflow:hidden;
 
 
 `;
+
+
 
 const PopularityButton = ({ onClick, isActive, popularity}) => (
 
