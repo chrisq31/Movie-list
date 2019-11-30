@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import star from '../../img/star.svg'
+
 
 
 const primaryFontFamily = "league_gothicregular";
