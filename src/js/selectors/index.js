@@ -14,24 +14,64 @@ const genresList = (state) => state.siteData.genresList;
 const separator = " - ";
 
 
-const getGenreObjFromId =(id) =>{
+// const getGenreObjFromId =(id) =>{
 
-   // return genresData.find(element => element.id === id)
+//     return genresData.find(element => element.id === id)
 
-}
+// }
 
-const getGenresArrayFromIdArray =(idArray) =>{
+// const getGenresArrayFromIdArray =(idArray) =>{
+
+//     let filterCollectionarray =[];
+
+//     idArray.forEach(element => {
+
+//         filterCollectionarray.push(getGenreObjFromId(element));
+
+//     });
+
+//     return filterCollectionarray;
+// }
+
+
+const getGenre =(state,props) =>{
 
     let filterCollectionarray =[];
 
-    idArray.forEach(element => {
+    props.genreIds.forEach(element => {
 
-        filterCollectionarray.push(getGenreObjFromId(element));
+        let genreObj =  state.siteData.genresList.find(element => element.id)
+
+        filterCollectionarray.push(genreObj);
 
     });
 
     return filterCollectionarray;
+
+
+
 }
+
+
+export const getGenreArray = createSelector(
+    [getGenre],
+    (genreArray) => {
+        return genreArray;
+    }
+)
+
+// const getGenresArrayFromIdArray =(idArray) =>{
+
+//     let filterCollectionarray =[];
+
+//     idArray.forEach(element => {
+
+//         filterCollectionarray.push(getGenreObjFromId(element));
+
+//     });
+
+//     return filterCollectionarray;
+// }
 
 
 

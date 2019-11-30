@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import styled from 'styled-components';
 import FilterViewItem from "./FilterViewItem";
 import { addGenre } from "../actions/index";
-//import {getGenresArrayFromIdArray} from "../selectors/index";
+import {getGenreArray} from "../selectors/index";
 import { element } from 'prop-types';
 
 
@@ -28,7 +28,7 @@ class FilterViewCollection extends React.Component {
 
      render() {
 
-
+console.log('this props',this.props)
        // const genreIds = this.props.genre_ids;
         const genreIds = [28,878];
         const onGenreClick = this.props.onGenreClick;
@@ -72,7 +72,7 @@ class FilterViewCollection extends React.Component {
 
 }
 const mapStateToProps = (state,props) => ({
-   // getGenresArray:getGenresArrayFromIdArray(state,props)
+    getGenresArray:getGenreArray(state,props)
 });
 
 const mapDispatchToProps = dispatch => ({
