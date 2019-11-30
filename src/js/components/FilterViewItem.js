@@ -27,7 +27,7 @@ box-sizing:border-box;
 
 const FilterViewItem = ({ onClick, isActive, genreName, genreId }) => (
 
-    <div className="col" onClick={onClick} >
+    <div onClick={onClick} >
         <StyledButton active={isActive}> {genreName}</StyledButton>
     </div>
 
