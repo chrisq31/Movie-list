@@ -63,6 +63,7 @@ class ListViewItem extends React.Component {
             genre_ids,
             poster_path,
             vote_average,
+            popularity
         
             } = this.props.item
 
@@ -72,6 +73,8 @@ class ListViewItem extends React.Component {
  
         <MovieContainer poster_path={poster_path}>
                 <Title>{title}</Title>
+
+              <Title>{popularity}</Title> 
 
                 <FilterViewCollectionHolder>
                
