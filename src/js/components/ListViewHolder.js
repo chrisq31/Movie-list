@@ -2,27 +2,21 @@ import { connect } from "react-redux";
 import React from 'react';
 import styled from 'styled-components';
 import ListViewItem from "./ListViewItem";
-import { getMovies } from '../selectors/index'
+import { getMovies } from '../selectors/index';
 
 
 
 const MoviesContainer = styled.div`
 display:flex;
 justify-content: center;
-
 padding:0;
 margin:0;
-
-
 `;
 
 
 const ListViewHolder = (props) => {
 
     const movies = props.movies;
-
-
-
     if (props.loadingMovieList === true || props.loadingGenres === true) {
 
         return <div>Loading</div>
@@ -36,12 +30,6 @@ const ListViewHolder = (props) => {
     )
 }
 
-
-
-
-
-
-
 const mapStateToProps = (state) => {
 
     return {
@@ -54,6 +42,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(ListViewHolder);
-
-
-

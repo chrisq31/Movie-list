@@ -14,17 +14,12 @@ const primaryFontFamily = "league_gothicregular";
 const MovieContainer = styled.div`
     width: 40%;
     height: 650px;
-    margin-top:20%;
+    margin:5% 5%;
     max-width:600px;
     min-width:400px;
-
-
-    margin-right:50px;
-
     background-image: url(${props => (BASE_URL_IMAGE + props.poster_path)});
     background-repeat:no-repeat;
     background-size:cover;
-  
     background-color:${bgColor};
     overflow:hidden;
     display:flex;
@@ -32,30 +27,13 @@ const MovieContainer = styled.div`
     border:10px;
     border-radius: 0px 74px 286px 0px;
     box-shadow:10px 3px 33px 35px rgba(15,16,25,0.33);
-
-
 `;
 
-const CenterContainer = styled.div`
- display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
- 
-`
+
 
 const FilterViewCollectionHolder=styled.div`
 
-
-
 `
-
-
-
-
-
-
 
 const Title = styled.h2`
 padding-top:8%;
@@ -69,7 +47,6 @@ width:100%;
   background-color: rgba(255, 0, 0, 0.5)
 
 
-  
 `;
 
 
@@ -78,10 +55,7 @@ width:100%;
 
 class ListViewItem extends React.Component {
 
-
-
-
-    render() {
+        render() {
         const {
             title,
             genre_ids,
@@ -91,17 +65,10 @@ class ListViewItem extends React.Component {
 
         } = this.props.item
 
-  
+     return (
 
-
-
-        return (
-
-
-
-            <MovieContainer poster_path={poster_path}>
+        <MovieContainer poster_path={poster_path}>
                 <Title>{title}</Title>
-               
 
                 <FilterViewCollectionHolder>
                
