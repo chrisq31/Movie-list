@@ -13,12 +13,12 @@ const initialState = {
 };
 
 
-function genresData(state = initialState, action) {
+function filteredData(state = initialState, action) {
     switch (action.type) {
 
         case types.ADD_GENRE:
 
-            let genresIdArray = _.map(state.genresSelectedList, 'id'); // get ids for each gene tp check not in state
+            let genresIdArray = _.map(state.genresSelectedList, 'id'); // get ids for each gene to check not in state
 
             if (genresIdArray.indexOf(action.payload.genre.id) !== -1) {
                 return state
@@ -42,6 +42,6 @@ function genresData(state = initialState, action) {
 
 }
 
-export default genresData;
+export default filteredData;
 
 

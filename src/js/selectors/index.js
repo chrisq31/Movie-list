@@ -5,9 +5,9 @@ import { STATE_POPULAR, STATE_FILTERED, STATE_RATING } from '../constants/site-c
 
 const movieList = (state) => state.siteData.movieList; // selector for movie genres
 
-const selectedGenres = (state) => state.genresData.genresSelectedList; // selector genres for filtering
+const selectedGenres = (state) => state.filteredData.genresSelectedList; // selector genres for filtering
 
-const siteState = (state) => state.genresData.filterState;
+const siteState = (state) => state.filteredData.filterState;
 
 
 
