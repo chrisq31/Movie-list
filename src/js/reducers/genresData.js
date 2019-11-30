@@ -30,9 +30,7 @@ function genresData(state = initialState, action) {
 
         case types.FILTER_RATING:
 
-
-
-            return { ...state, ratingScore: [...state.ratingScore, action.payload], filterState: STATE_RATING }
+        return { ...state, ratingScore: [...state.ratingScore, action.payload], filterState: STATE_RATING }
 
         case types.SWITCH_SITE_STATE:
 
