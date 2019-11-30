@@ -1,6 +1,6 @@
 import { createSelector } from "reselect";
 import _ from 'lodash';
-import { STATE_POPULAR, STATE_FILTERED, STATE_RATING} from '../constants/site-constants'
+import { STATE_POPULAR, STATE_FILTERED, STATE_RATING } from '../constants/site-constants'
 
 
 const movieList = (state) => state.siteData.movieList; // selector for movie genres
@@ -14,7 +14,7 @@ const siteState = (state) => state.genresData.filterState;
 const separator = " - ";
 
 
-const getGenreObjFromId =(id,state) =>{
+const getGenreObjFromId = (id, state) => {
 
     let result = state.siteData.genresList.find(element => element.id === id);
 
@@ -29,9 +29,9 @@ const getGenre = (state, props) => {
 
     props.genreIds.forEach(element => {
 
-      let genreObj = getGenreObjFromId(element,state);
+        let genreObj = getGenreObjFromId(element, state);
 
-      filterCollectionarray.push(genreObj);
+        filterCollectionarray.push(genreObj);
 
     });
 
@@ -76,15 +76,17 @@ export const getMovies = createSelector(
     [selectedGenres, movieList, siteState],
     (genres, movieList, siteState) => {
 
+        let resultArray;
+
         switch (siteState) {
 
             case STATE_POPULAR:
                 // return movielist sorted on popularity
 
-            let resultArray = _.map(_.orderBy(movieList, 'popularity','desc'));
+                resultArray = _.map(_.orderBy(movieList, 'popularity', 'desc'));
 
-            return  resultArray;
-         
+                return resultArray;
+
 
             case STATE_FILTERED:
 
@@ -116,11 +118,15 @@ export const getMovies = createSelector(
 
                 return filteredArray;
 
-                case STATE_RATING:
+            case STATE_RATING:
 
                 console.log('get by ratings')
 
-                return 
+                resultArray = _.map(_.orderBy(movieList, 'vote_average', 'desc'));
+
+
+
+                return resultArray
 
             default:
 
