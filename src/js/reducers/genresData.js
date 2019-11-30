@@ -15,17 +15,19 @@ function genresData(state = initialState, action) {
 
         case types.ADD_GENRE:
 
-        console.log('ypes.ADD_GENRE name : ',action.payload.name)
+       
 
-        console.log('ypes.ADD_GENRE id : ',action.payload.id)
+        console.log('ypes.ADD_GENRE name : ',action.payload.genre)
+
+  
 
             let genresIdArray = _.map(state.genresSelectedList, 'id'); // get ids for each gene tp check not in state
 
-            if (genresIdArray.indexOf(action.payload.id) !== -1) {
+            if (genresIdArray.indexOf(action.payload.genre.id) !== -1) {
                 return state
             }
 
-            return { ...state, genresSelectedList: [...state.genresSelectedList, action.payload], filterState: STATE_FILTERED }
+            return { ...state, genresSelectedList: [...state.genresSelectedList, action.payload.genre], filterState: STATE_FILTERED }
 
 
         case types.SWITCH_SITE_STATE:

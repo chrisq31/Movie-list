@@ -34,11 +34,9 @@ class FilterViewCollection extends React.Component {
 
               <FilterContainer>
 
-                    {this.props.genres.map((element,index) => (
+                    {this.props.genres.map((genre,index) => (
 
-                  
-                 
-                    <FilterViewItem key={index} genreName={element.name} genreId={element.id} onClick={() => onGenreClick({element})} />
+                  <FilterViewItem key={index} genreName={genre.name} genreId={genre.id} onClick={() => onGenreClick({genre})} />
 
                   
                     ))}
