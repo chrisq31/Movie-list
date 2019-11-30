@@ -48,10 +48,7 @@ const FilterViewCollectionHolder=styled.div`
 
 `
 
-const Img = styled.img`
-min-width:600px;
 
-`;
 
 
 
@@ -102,9 +99,7 @@ class ListViewItem extends React.Component {
                     <FilterViewCollection genreIds ={genre_ids} />
               
                 </FilterViewCollectionHolder>
-                <CenterContainer>
-                    {/* <Img src={BASE_URL_IMAGE + poster_path} alt={title} /> */}
-                </CenterContainer>
+          
             </MovieContainer>
 
         );

@@ -17,6 +17,7 @@ const FilterContainer = styled.div`
 text-transform: uppercase;
 display:flex;
 flex-direction: column;
+width:30%;
 
 `;
 
@@ -34,7 +35,7 @@ class FilterViewCollection extends React.Component {
 
         //hard-coded for quick test
 
-       const filterCollectionarray= [ { id: 12, "name": "Adventure"}, { id: 14, "name": "Fantasy"},{ id: 10751, "name": "Family"},{ id: 14, "name": "Fantasy"}]
+       const filterCollectionarray= [ { id: 12, "name": "Adventure Fantasy"}, { id: 14, "name": "Fantasy"},{ id: 10751, "name": "Family"},{ id: 14, "name": "Fantasy"}]
 
         //const filterCollectionarray =this.props.getGenresArray(genreIds);
 
