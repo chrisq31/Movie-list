@@ -1,6 +1,6 @@
 import { createSelector } from "reselect";
 import _ from 'lodash';
-import { STATE_POPULAR, STATE_FILTERED } from '../constants/site-constants'
+import { STATE_POPULAR, STATE_FILTERED, STATE_RATING} from '../constants/site-constants'
 
 
 const movieList = (state) => state.siteData.movieList; // selector for movie genres
@@ -111,6 +111,12 @@ export const getMovies = createSelector(
                 )
 
                 return filteredArray;
+
+                case STATE_RATING:
+
+                console.log('get by ratings')
+
+                return 
 
             default:
 
