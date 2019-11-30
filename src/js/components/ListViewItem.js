@@ -19,6 +19,8 @@ const MovieContainer = styled.div`
 
     max-height:650px;
     margin-right:50px;
+
+    background-image: url(${props => (BASE_URL_IMAGE + props.poster_path)});
   
     background-color:${bgColor};
     overflow:hidden;
@@ -41,9 +43,7 @@ const CenterContainer = styled.div`
 `
 
 const FilterViewCollectionHolder=styled.div`
-position:absolute;
 
-bottom:0;
 
 
 `
@@ -94,16 +94,16 @@ class ListViewItem extends React.Component {
 
 
 
-            <MovieContainer>
+            <MovieContainer poster_path={poster_path}>
                 <Title>{title}</Title>
 
                 <FilterViewCollectionHolder>
-                <CenterContainer>
+               
                     <FilterViewCollection genreIds ={genre_ids} />
-                </CenterContainer>
+              
                 </FilterViewCollectionHolder>
                 <CenterContainer>
-                    <Img src={BASE_URL_IMAGE + poster_path} alt={title} />
+                    {/* <Img src={BASE_URL_IMAGE + poster_path} alt={title} /> */}
                 </CenterContainer>
             </MovieContainer>
 
