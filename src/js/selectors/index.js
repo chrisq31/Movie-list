@@ -124,20 +124,13 @@ export const getMovies = createSelector(
 
             case STATE_RATING:
 
-            let score = rating;
-
-            console.log('score : ',score)
-
             console.log('rating : ',rating)
 
-
-            
-
-               //resultArray = _.map(_.orderBy(movieList, 'vote_average', 'desc'));
+            resultArray = _.map(_.orderBy(movieList, 'vote_average', 'desc'));
 
 
 
-                return movieList
+                return resultArray
 
             default:
 
