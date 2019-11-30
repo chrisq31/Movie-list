@@ -36,6 +36,9 @@ const MovieContainer = styled.div`
 
 const FilterViewCollectionHolder=styled.div`
 
+
+
+
 `
 
 const Title = styled.h2`
@@ -73,9 +76,18 @@ class ListViewItem extends React.Component {
         return (
  
         <MovieContainer poster_path={poster_path}>
+
+            <div className="row" >
                 <Title>{title}</Title>
+                </div>
+
+                <div className="row" >
+
+                <VotingButton voteScore = {vote_average} onClick={() => onClick({vote_average})} />
 
               <PopularIndexView popular ={popularity} />
+
+              </div>
 
                 <FilterViewCollectionHolder>
                
@@ -83,7 +95,7 @@ class ListViewItem extends React.Component {
               
                 </FilterViewCollectionHolder>
 
-                <VotingButton voteScore = {vote_average} onClick={() => onClick({vote_average})} />
+              
           
             </MovieContainer>
 

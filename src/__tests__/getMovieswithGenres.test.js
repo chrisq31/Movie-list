@@ -318,7 +318,7 @@ test('test lodash intersection, expect to return 878 from [2,3,878] and [878,6]'
         
   
         if (result.length > 0){
-            console.log ('element parent ', element.title)
+            //console.log ('element parent ', element.title)
         }
 
  });
@@ -343,10 +343,10 @@ const getMoviesByVoterRating =()=>{
    
 
 
-    //console.log ('getMoviesByPopularity ',getMoviesByPopularity());
+   // console.log ('getMoviesByPopularity ',getMoviesByPopularity());
 
 
-    console.log ('----------- getMoviesByVoterRating ',getMoviesByVoterRating());
+    //console.log ('----------- getMoviesByVoterRating ',getMoviesByVoterRating());
   
 
 

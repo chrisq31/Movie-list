@@ -3,7 +3,7 @@ import * as types from '../constants/action-types'
 import { STATE_POPULAR, STATE_FILTERED, STATE_RATING } from '../constants/site-constants'
 import _ from 'lodash';
 
-//TODO refactor this to be reflective of all filter state eg genre, popularity
+
 
 const initialState = {
 
