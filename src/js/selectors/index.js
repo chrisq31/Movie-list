@@ -9,29 +9,18 @@ const selectedGenres = (state) => state.genresData.genresSelectedList; // select
 
 const siteState = (state) => state.genresData.filterState;
 
-const genresList = (state) => state.siteData.genresList;
+
 
 const separator = " - ";
 
 
-// const getGenreObjFromId =(id) =>{
+const getGenreObjFromId =(id,state) =>{
 
-//     return genresData.find(element => element.id === id)
+    let result = state.siteData.genresList.find(element => element.id === id);
 
-// }
+    return result;
 
-// const getGenresArrayFromIdArray =(idArray) =>{
-
-//     let filterCollectionarray =[];
-
-//     idArray.forEach(element => {
-
-//         filterCollectionarray.push(getGenreObjFromId(element));
-
-//     });
-
-//     return filterCollectionarray;
-// }
+}
 
 
 const getGenre = (state, props) => {
@@ -40,15 +29,13 @@ const getGenre = (state, props) => {
 
     props.genreIds.forEach(element => {
 
-        let genreObj = state.siteData.genresList.find(element => element.id)
+      let genreObj = getGenreObjFromId(element,state);
 
-        filterCollectionarray.push(genreObj);
+      filterCollectionarray.push(genreObj);
 
     });
 
     return filterCollectionarray;
-
-
 
 }
 
@@ -63,23 +50,6 @@ export const getGenreArray = () => {
 
 
 }
-
-
-// const getGenresArrayFromIdArray =(idArray) =>{
-
-//     let filterCollectionarray =[];
-
-//     idArray.forEach(element => {
-
-//         filterCollectionarray.push(getGenreObjFromId(element));
-
-//     });
-
-//     return filterCollectionarray;
-// }
-
-
-
 
 export const getSelectedGenresByName = createSelector(
     [selectedGenres],
