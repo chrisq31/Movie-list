@@ -33,14 +33,6 @@ const MovieContainer = styled.div`
 `;
 
 
-
-const FilterViewCollectionHolder=styled.div`
-
-
-
-
-`
-
 const Title = styled.h2`
 padding-top:8%;
 position:relative;
@@ -89,7 +81,7 @@ class ListViewItem extends React.Component {
 
               </div>
 
-                <FilterViewCollectionHolder>
+
 
                 <div className="row" >
                
@@ -97,7 +89,7 @@ class ListViewItem extends React.Component {
 
                     </div>
               
-                </FilterViewCollectionHolder>
+              
 
               
           
