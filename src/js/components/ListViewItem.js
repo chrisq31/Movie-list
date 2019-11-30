@@ -47,52 +47,71 @@ width:100%;
 
 `;
 
+const RatingContainer = styled.div`
+width:100%;
+display:flex;
+justify-content: center;
+flex-direction:row;
+
+`
+
 
 
 
 
 class ListViewItem extends React.Component {
 
-        render() {
+    render() {
         const {
             title,
             genre_ids,
             poster_path,
             vote_average,
             popularity
-        
-            } = this.props.item
+
+        } = this.props.item
 
         const onClick = this.props.onClick;
-        
-        return (
- 
-        <MovieContainer poster_path={poster_path}>
 
-            <div className="row" >
-                <Title>{title}</Title>
+        return (
+
+            <MovieContainer poster_path={poster_path}>
+
+                <div className="row" >
+                    <Title>{title}</Title>
                 </div>
 
-                <div className="row" >
+                
+                    <RatingContainer>
+                    <div className="row" >
 
-                <VotingButton voteScore = {vote_average} onClick={() => onClick({vote_average})} />
-
-              <PopularIndexView popular ={popularity} />
-
-              </div>
-
-
-
-                <div className="row" >
-               
-                    <FilterViewCollection genreIds ={genre_ids} />
+                    <VotingButton voteScore={vote_average} onClick={() => onClick({ vote_average })} />
 
                     </div>
-              
-              
+
+
+                    <div className="row" >
+                    <PopularIndexView popular={popularity} />
+                    </div>
+
+                    
+
+                    </RatingContainer>
 
               
-          
+
+
+
+                <div className="row" >
+
+                    <FilterViewCollection genreIds={genre_ids} />
+
+                </div>
+
+
+
+
+
             </MovieContainer>
 
         );
@@ -107,7 +126,7 @@ const mapDispatchToProps = dispatch => ({
     onClick: voteObj => dispatch(filterByRating(voteObj))
 })
 
-export default connect(null,mapDispatchToProps)(ListViewItem);
+export default connect(null, mapDispatchToProps)(ListViewItem);
 
 
 
