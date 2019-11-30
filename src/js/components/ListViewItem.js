@@ -22,6 +22,8 @@ const MovieContainer = styled.div`
     margin-right:50px;
 
     background-image: url(${props => (BASE_URL_IMAGE + props.poster_path)});
+    background-repeat:no-repeat;
+    background-size:cover;
   
     background-color:${bgColor};
     overflow:hidden;
