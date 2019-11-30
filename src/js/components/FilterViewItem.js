@@ -11,16 +11,13 @@ const StyledButton = styled.div`
    font-family: ${primaryFontFamily};
    text-align:center;
    font-size: 1.5em;
-box-sizing:border-box;
-  
+   box-sizing:border-box;
   margin-top: 1em;
   padding: .025em 1.5em;
  cursor:pointer;
   border:10px;
   border-radius: 80px 1px;
-
-
-   overflow:hidden;
+  overflow:hidden;
 
 
 `;

@@ -5,24 +5,19 @@ import FilterViewItem from "./FilterViewItem";
 import { addGenre } from "../actions/index";
 
 
-const bgColor = "#f90202";
+
 
 const primaryFontFamily = "league_gothicregular";
 
 const FilterContainerHolder = styled.div`
 display:flex;
-
 flex-direction: column;
 box-sizing:border-box;
 top:0;
 max-width:300px;
 min-width:250px;
 padding-top:20%;
-
 min-height:80vh;
-
-
-
 `;
 
 
