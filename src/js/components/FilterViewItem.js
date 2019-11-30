@@ -2,13 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 
+const primaryFontFamily = "league_gothicregular";
 
 const StyledButton = styled.div`
   background-color: ${(props) => props.active ? "#000000" : "#ffffff"};
     color: ${(props) => props.active ? "#ffffff" : "#f30a0a"};
    border-color: "#ffffff";
+   font-family: ${primaryFontFamily};
    text-align:center;
-    font-size: 4vh;
+   font-size: 1.5em;
 box-sizing:border-box;
   
   margin-top: 1em;

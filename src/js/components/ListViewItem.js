@@ -40,6 +40,14 @@ const CenterContainer = styled.div`
  
 `
 
+const FilterViewCollectionHolder=styled.div`
+position:absolute;
+
+bottom:0;
+
+
+`
+
 const Img = styled.img`
 min-width:600px;
 
@@ -54,7 +62,7 @@ padding-top:8%;
 position:relative;
 text-transform: uppercase;
 width:100%;
-  font-size: 3em;
+  font-size: 4em;
   text-align: center;
   color: ${lightColor};
   font-family: ${primaryFontFamily};
@@ -88,9 +96,12 @@ class ListViewItem extends React.Component {
 
             <MovieContainer>
                 <Title>{title}</Title>
+
+                <FilterViewCollectionHolder>
                 <CenterContainer>
                     <FilterViewCollection genreIds ={genre_ids} />
                 </CenterContainer>
+                </FilterViewCollectionHolder>
                 <CenterContainer>
                     <Img src={BASE_URL_IMAGE + poster_path} alt={title} />
                 </CenterContainer>

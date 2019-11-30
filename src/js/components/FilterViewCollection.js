@@ -15,6 +15,9 @@ import { element } from 'prop-types';
 const FilterContainer = styled.div`
 
 text-transform: uppercase;
+display:flex;
+flex-direction: column;
+
 `;
 
 // collection component for each movie showing genre buttons
@@ -31,7 +34,7 @@ class FilterViewCollection extends React.Component {
 
         //hard-coded for quick test
 
-       const filterCollectionarray= [ { id: 12, "name": "Adventure"}, { id: 14, "name": "Fantasy"},{ id: 10751, "name": "Family"}]
+       const filterCollectionarray= [ { id: 12, "name": "Adventure"}, { id: 14, "name": "Fantasy"},{ id: 10751, "name": "Family"},{ id: 14, "name": "Fantasy"}]
 
         //const filterCollectionarray =this.props.getGenresArray(genreIds);
 
@@ -43,11 +46,11 @@ class FilterViewCollection extends React.Component {
 
                 <FilterContainer>
 
-                    {filterCollectionarray.map(element => (
+                    {filterCollectionarray.map((element,index) => (
 
                   
                  
-                    <FilterViewItem key={element.id} genreName={element.name} genreId={element.id} onClick={() => onGenreClick({element})} />
+                    <FilterViewItem key={index} genreName={element.name} genreId={element.id} onClick={() => onGenreClick({element})} />
 
                   
                     ))}
