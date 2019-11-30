@@ -7,8 +7,7 @@ const movieList = (state) => state.siteData.movieList; // selector for movie gen
 
 const selectedGenres = (state) => state.filteredData.genresSelectedList; // selector genres for filtering
 
-const ratingsScore = (state) => state.filteredData.ratingsScore; // selector ratings for filtering
-
+const ratingScore = (state) => state.filteredData.ratingScore; // selector ratings for filtering
 
 const siteState = (state) => state.filteredData.filterState;
 
@@ -76,7 +75,7 @@ const getIntersection = (arr1, arr2) => {
 
 
 export const getMovies = createSelector(
-    [selectedGenres, movieList, siteState,ratingsScore],
+    [selectedGenres, movieList, siteState,ratingScore],
     (genres, movieList, siteState,rating) => {
 
         let resultArray;
@@ -129,7 +128,8 @@ export const getMovies = createSelector(
 
             console.log('score : ',score)
 
-            console.log('ratingsScore : ',ratingsScore)
+            console.log('rating : ',rating)
+
 
             
 
