@@ -12,12 +12,12 @@ const primaryFontFamily = "league_gothicregular";
 
 const MovieContainer = styled.div`
     width: 40%;
-    height: auto;
+    height: 650px;
     margin-top:20%;
-    max-width:400px;
+    max-width:600px;
     min-width:400px;
 
-    max-height:650px;
+
     margin-right:50px;
 
     background-image: url(${props => (BASE_URL_IMAGE + props.poster_path)});
@@ -63,6 +63,8 @@ width:100%;
   text-align: center;
   color: ${lightColor};
   font-family: ${primaryFontFamily};
+  background-color: rgba(255, 0, 0, 0.3)
+
 
   
 `;
