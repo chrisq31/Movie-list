@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import FilterViewItem from "./FilterViewItem";
 import { addGenre } from "../actions/index";
 import {getGenreArray} from "../selectors/index";
-import { element } from 'prop-types';
+
 
 
 

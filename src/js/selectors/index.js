@@ -114,7 +114,7 @@ export const getMovies = createSelector(
 
             default:
 
-                console.log('DEFAULT')
+                console.log('GET MOVIES DEFAULT')
                 return movieList;
         }
 

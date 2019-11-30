@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { connect } from "react-redux";
+import { filterByRating } from "../actions/index";
 import FilterViewCollection from "./FilterViewCollection";
 import PopularityButton from "./PopularityButton"
 import { BASE_URL_IMAGE } from '../constants/site-constants';
@@ -60,23 +62,24 @@ class ListViewItem extends React.Component {
             title,
             genre_ids,
             poster_path,
-            vote_average
+            vote_average,
+        
+            } = this.props.item
 
-
-        } = this.props.item
+        const onClick = this.props.onClick;
 
      return (
-
+ 
         <MovieContainer poster_path={poster_path}>
                 <Title>{title}</Title>
 
                 <FilterViewCollectionHolder>
                
-                    <FilterViewCollection genreIds ={genre_ids} />
+                    <FilterViewCollection genreIds ={genre_ids} />0
               
                 </FilterViewCollectionHolder>
 
-                <PopularityButton popularity = {vote_average}/>
+                <PopularityButton popularity = {vote_average} onClick={() => onClick({vote_average})} />
           
             </MovieContainer>
 
@@ -88,6 +91,12 @@ class ListViewItem extends React.Component {
 
 }
 
-export default ListViewItem;
+const mapDispatchToProps = dispatch => ({
+    onClick: voteObj => dispatch(filterByRating(voteObj))
+})
+
+export default connect(null,mapDispatchToProps)(ListViewItem);
+
+
 
 

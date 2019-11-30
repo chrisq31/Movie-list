@@ -11,23 +11,13 @@ const StyledButton = styled.div`
    color:white;
    text-align:center;
    font-size: 4.5em;
-box-sizing:border-box;
-padding: 8%;
-  
-background-repeat:no-repeat;
- cursor:pointer;
-
-
-background-image: url(${star});
-background-position: center;
-
-background-size:contain;
-
-
-
+   padding: 8%;
+   background-repeat:no-repeat;
+   cursor:pointer;
+   background-image: url(${star});
+   background-position: center;
+   background-size:contain;
    overflow:hidden;
-
-
 `;
 
 

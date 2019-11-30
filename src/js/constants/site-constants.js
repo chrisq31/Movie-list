@@ -6,3 +6,5 @@
 
  export const STATE_FILTERED ="STATE_FILTERED";
 
+ export const STATE_RATING ="STATE_RATING";
+
