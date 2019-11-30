@@ -12,6 +12,7 @@ const StyledButton = styled.div`
    text-align:center;
    font-size: 4.5em;
 box-sizing:border-box;
+padding: 8%;
   
 background-repeat:no-repeat;
  cursor:pointer;
