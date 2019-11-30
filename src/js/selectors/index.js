@@ -7,6 +7,9 @@ const movieList = (state) => state.siteData.movieList; // selector for movie gen
 
 const selectedGenres = (state) => state.filteredData.genresSelectedList; // selector genres for filtering
 
+const ratingsScore = (state) => state.filteredData.ratingsScore; // selector ratings for filtering
+
+
 const siteState = (state) => state.filteredData.filterState;
 
 
@@ -73,8 +76,8 @@ const getIntersection = (arr1, arr2) => {
 
 
 export const getMovies = createSelector(
-    [selectedGenres, movieList, siteState],
-    (genres, movieList, siteState) => {
+    [selectedGenres, movieList, siteState,ratingsScore],
+    (genres, movieList, siteState,rating) => {
 
         let resultArray;
 
@@ -91,6 +94,8 @@ export const getMovies = createSelector(
             case STATE_FILTERED:
 
                 if (genres.length < 1) return movieList;
+
+                console.log ('genres ',genres)
 
                 let genresIdArray = _.map(genres, 'id'); // get ids for each genre
 
@@ -120,13 +125,19 @@ export const getMovies = createSelector(
 
             case STATE_RATING:
 
-                console.log('get by ratings')
+            let score = rating;
 
-                resultArray = _.map(_.orderBy(movieList, 'vote_average', 'desc'));
+            console.log('score : ',score)
+
+            console.log('ratingsScore : ',ratingsScore)
+
+            
+
+               //resultArray = _.map(_.orderBy(movieList, 'vote_average', 'desc'));
 
 
 
-                return resultArray
+                return movieList
 
             default:
 
