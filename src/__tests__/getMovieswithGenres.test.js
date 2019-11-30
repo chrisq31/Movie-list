@@ -327,6 +327,35 @@ test('test lodash intersection, expect to return 878 from [2,3,878] and [878,6]'
 
  let genresArr1 =  _.map(genresData3, 'id')
 
+ 
+
+ // test   vote_average same as popularity - make a switch statement
+
+//  const getMoviesByVote =(vote)=>{
+
+//   _.map(_.sortBy(movieList, 'vote_average'), _.values);
+
+//   }
+
+
+  // const getMoviesByPopularity =()=>{
+
+  //  return  _.map(_.sortBy(movieList, 'popularity'), _.values);
+  
+  //   }
+
+
+    const getMoviesByPopularity =()=>{
+
+      return  _.map(_.orderBy(movieList, 'popularity','desc'), _.values);
+     
+       }
+   
+
+
+    console.log ('getMoviesByPopularity ',getMoviesByPopularity());
+  
+
 
 
 

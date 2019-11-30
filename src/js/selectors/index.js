@@ -67,10 +67,10 @@ const getIntersection = (arr1, arr2) => {
     return _.intersection(arr1, arr2);
 }
 
-//_.every(collection, [callback=identity], [thisArg])
-//_.filter(collection, [callback=identity], [thisArg])
 
-////_.filter(movieList, genresIdArray, [thisArg])
+
+
+
 
 export const getMovies = createSelector(
     [selectedGenres, movieList, siteState],
@@ -80,13 +80,18 @@ export const getMovies = createSelector(
 
             case STATE_POPULAR:
 
-                return movieList;
+            let resultArray = _.map(_.orderBy(movieList, 'popularity','desc'));
+
+            console.log('resultArray ',resultArray)
+
+            return  resultArray;
+            //return movieList;
 
             case STATE_FILTERED:
 
                 if (genres.length < 1) return movieList;
 
-                let genresIdArray = _.map(genres, 'id'); // get ids for each gene
+                let genresIdArray = _.map(genres, 'id'); // get ids for each genre
 
                 let filteredArray = [];
 

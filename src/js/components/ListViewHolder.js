@@ -17,6 +17,8 @@ margin:0;
 const ListViewHolder = (props) => {
 
     const movies = props.movies;
+
+    console.log ('movies ',movies)
     if (props.loadingMovieList === true || props.loadingGenres === true) {
 
         return <div>Loading</div>
