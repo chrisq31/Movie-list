@@ -1,6 +1,6 @@
 
 import * as types from '../constants/action-types'
-import { STATE_POPULAR, STATE_FILTERED,STATE_RATING } from '../constants/site-constants'
+import { STATE_POPULAR, STATE_FILTERED, STATE_RATING } from '../constants/site-constants'
 import _ from 'lodash';
 
 //TODO refactor this to be reflective of all filter state eg genre, popularity
@@ -18,7 +18,7 @@ function genresData(state = initialState, action) {
 
         case types.ADD_GENRE:
 
-        let genresIdArray = _.map(state.genresSelectedList, 'id'); // get ids for each gene tp check not in state
+            let genresIdArray = _.map(state.genresSelectedList, 'id'); // get ids for each gene tp check not in state
 
             if (genresIdArray.indexOf(action.payload.genre.id) !== -1) {
                 return state
@@ -30,13 +30,13 @@ function genresData(state = initialState, action) {
 
         case types.FILTER_RATING:
 
-        console.log ('FILTER_RATING ', action.payload)
-        
-        return { ...state, ratingScore: [...state.ratingScore, action.payload], filterState: STATE_RATING }
-    
+
+
+            return { ...state, ratingScore: [...state.ratingScore, action.payload], filterState: STATE_RATING }
+
         case types.SWITCH_SITE_STATE:
 
-        return { ...state, genresSelectedList: [], filterState: STATE_POPULAR }
+            return { ...state, genresSelectedList: [], filterState: STATE_POPULAR }
 
         default:
             return state
