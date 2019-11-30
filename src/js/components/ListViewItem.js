@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import FilterViewCollection from "./FilterViewCollection";
+import PopularityButton from "./PopularityButton"
 import { BASE_URL_IMAGE } from '../constants/site-constants';
 const lightColor = "#ffffff";
 const bgColor = "#f30a0a";
@@ -63,7 +64,7 @@ width:100%;
   text-align: center;
   color: ${lightColor};
   font-family: ${primaryFontFamily};
-  background-color: rgba(255, 0, 0, 0.3)
+  background-color: rgba(255, 0, 0, 0.5)
 
 
   
@@ -82,7 +83,8 @@ class ListViewItem extends React.Component {
         const {
             title,
             genre_ids,
-            poster_path
+            poster_path,
+            vote_average
 
 
         } = this.props.item
@@ -95,12 +97,15 @@ class ListViewItem extends React.Component {
 
             <MovieContainer poster_path={poster_path}>
                 <Title>{title}</Title>
+               
 
                 <FilterViewCollectionHolder>
                
                     <FilterViewCollection genreIds ={genre_ids} />
               
                 </FilterViewCollectionHolder>
+
+                <PopularityButton popularity = {vote_average}/>
           
             </MovieContainer>
 
