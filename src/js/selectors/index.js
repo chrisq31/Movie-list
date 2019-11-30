@@ -126,11 +126,13 @@ export const getMovies = createSelector(
 
             console.log('rating : ',rating)
 
-            resultArray = _.map(_.orderBy(movieList, 'vote_average', 'desc'));
+            // only show movies equal or above rating
 
+           let ratingsArray = _.map(_.orderBy(movieList, 'vote_average', 'desc'));
 
+           resultArray =_.filter(ratingsArray,({vote_average}) => vote_average >rating)
 
-                return resultArray
+            return resultArray
 
             default:
 
