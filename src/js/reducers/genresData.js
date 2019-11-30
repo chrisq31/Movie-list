@@ -15,13 +15,7 @@ function genresData(state = initialState, action) {
 
         case types.ADD_GENRE:
 
-       
-
-        console.log('ypes.ADD_GENRE name : ',action.payload.genre)
-
-  
-
-            let genresIdArray = _.map(state.genresSelectedList, 'id'); // get ids for each gene tp check not in state
+        let genresIdArray = _.map(state.genresSelectedList, 'id'); // get ids for each gene tp check not in state
 
             if (genresIdArray.indexOf(action.payload.genre.id) !== -1) {
                 return state

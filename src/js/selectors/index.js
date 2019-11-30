@@ -61,8 +61,16 @@ export const getSelectedGenresByName = createSelector(
 
 const getIntersection = (arr1, arr2) => {
 
+    // arr1:movielist.genres id
+    // arr2: selected genres id
+
     return _.intersection(arr1, arr2);
 }
+
+//_.every(collection, [callback=identity], [thisArg])
+//_.filter(collection, [callback=identity], [thisArg])
+
+////_.filter(movieList, genresIdArray, [thisArg])
 
 export const getMovies = createSelector(
     [selectedGenres, movieList, siteState],
@@ -81,6 +89,10 @@ export const getMovies = createSelector(
                 let genresIdArray = _.map(genres, 'id'); // get ids for each gene
 
                 let filteredArray = [];
+
+                // need to check intersection meets ALL conditions of selected genres
+                // either can filter complete movieList
+                // or filter previous filtered array for new condition
 
 
                 movieList.forEach(movie => {
