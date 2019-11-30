@@ -91,6 +91,8 @@ class ListViewItem extends React.Component {
 
         } = this.props.item
 
+        console.log('genrew ', genre_ids)
+
 
 
         return (

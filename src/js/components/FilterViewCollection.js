@@ -30,7 +30,7 @@ class FilterViewCollection extends React.Component {
 
 console.log('this props',this.props)
        // const genreIds = this.props.genre_ids;
-        const genreIds = [28,878];
+        //const genreIds = [28,878];
         const onGenreClick = this.props.onGenreClick;
 
         //hard-coded for quick test
@@ -63,17 +63,21 @@ console.log('this props',this.props)
         )
 
     }
-
-
-
-
-
-
-
 }
-const mapStateToProps = (state,props) => ({
-    getGenresArray:getGenreArray(state,props)
-});
+
+const makeMapStateToProps = () => {
+    const getGenres = getGenreArray()
+    const mapStateToProps = (state, props) => {
+      return {
+        genres: getGenres(state, props)
+      }
+    }
+    return mapStateToProps
+  }
+  
+// const mapStateToProps = (state,props) => ({
+//     getGenresArray:getGenreArray(state,props)
+// });
 
 const mapDispatchToProps = dispatch => ({
     onGenreClick: genreObj => dispatch(addGenre(genreObj))
@@ -84,5 +88,5 @@ const mapDispatchToProps = dispatch => ({
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(FilterViewCollection);
+export default connect(makeMapStateToProps, mapDispatchToProps)(FilterViewCollection);
 

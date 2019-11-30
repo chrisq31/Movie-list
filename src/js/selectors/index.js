@@ -34,13 +34,13 @@ const separator = " - ";
 // }
 
 
-const getGenre =(state,props) =>{
+const getGenre = (state, props) => {
 
-    let filterCollectionarray =[];
+    let filterCollectionarray = [];
 
     props.genreIds.forEach(element => {
 
-        let genreObj =  state.siteData.genresList.find(element => element.id)
+        let genreObj = state.siteData.genresList.find(element => element.id)
 
         filterCollectionarray.push(genreObj);
 
@@ -53,12 +53,17 @@ const getGenre =(state,props) =>{
 }
 
 
-export const getGenreArray = createSelector(
-    [getGenre],
-    (genreArray) => {
-        return genreArray;
-    }
-)
+export const getGenreArray = () => {
+    return createSelector(
+        [getGenre],
+        (genreArray) => {
+            return genreArray;
+        }
+    )
+
+
+}
+
 
 // const getGenresArrayFromIdArray =(idArray) =>{
 
@@ -92,12 +97,12 @@ const getIntersection = (arr1, arr2) => {
 export const getMovies = createSelector(
     [selectedGenres, movieList, siteState],
     (genres, movieList, siteState) => {
-        
-      switch (siteState) {
+
+        switch (siteState) {
 
             case STATE_POPULAR:
 
-               return movieList;
+                return movieList;
 
             case STATE_FILTERED:
 
