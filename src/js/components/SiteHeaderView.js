@@ -15,7 +15,7 @@ top:0;
   overflow:hidden;
   display: flex;
   align-items: center;
-  background: rgba(103, 23, 23, 0.96); 
+  background: rgba(33, 14, 14, 0.96); 
   z-index:200;
 `;
 
