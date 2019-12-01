@@ -375,7 +375,7 @@ const checker = (target) => {
 
 
   })
-  //return filteredCollection;
+
 }
 
 //console.log('check array1', checker(array1));
