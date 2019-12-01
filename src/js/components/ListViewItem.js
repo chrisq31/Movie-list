@@ -42,7 +42,7 @@ width:100%;
   text-align: center;
   color: ${lightColor};
   font-family: ${primaryFontFamily};
-  background-color: rgba(255, 0, 0, 0.5)
+  background-color: rgba(8, 3, 33, 0.5)
 
 
 `;
