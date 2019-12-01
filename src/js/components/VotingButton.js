@@ -44,7 +44,7 @@ position:absolute;
 const VotingButton = ({ onClick, isActive, voteScore}) => (
 
     <StyledButton onClick={onClick} >
-     <ImageDiv><img src= {star} /></ImageDiv>
+     <ImageDiv><img src= {star} alt="star background" /></ImageDiv>
       <TextDiv>{voteScore}</TextDiv>
     </StyledButton>
 

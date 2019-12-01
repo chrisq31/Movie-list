@@ -61,14 +61,6 @@ export const getSelectedGenresByName = createSelector(
     }
 )
 
-const getIntersection = (arr1, arr2) => {
-
-    // arr1:movielist.genres id
-    // arr2: selected genres id
-
-    return _.intersection(arr1, arr2);
-}
-
 
 
 
@@ -98,12 +90,7 @@ export const getMovies = createSelector(
 
                 let filteredArray = [];
 
-                // need to check intersection meets ALL conditions of selected genres
-                // either can filter complete movieList
-                // or filter previous filtered array for new condition
-
-
-                movieList.forEach(movie => {
+                 movieList.forEach(movie => {
 
                     let movieGenreIds = movie.genre_ids;
 
@@ -128,7 +115,9 @@ export const getMovies = createSelector(
 
                 let ratingsArray = _.map(_.orderBy(movieList, 'vote_average', 'desc'));
 
-                resultArray = _.filter(ratingsArray, ({ vote_average }) => vote_average >= rating)
+                console.log('rating ',rating)
+
+                resultArray = _.filter(ratingsArray, ({ vote_average }) => vote_average >= rating[rating.length-1])
 
                 return resultArray
 

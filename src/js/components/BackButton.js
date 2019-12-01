@@ -4,7 +4,7 @@ import clapperBoard from '../../img/clapperBoard.svg'
 
 
 const primaryFontFamily = "league_gothicregular";
-const bgColor = "#f30a0a";
+
 const textColor = "#ffffff";
 
 
@@ -38,7 +38,7 @@ const Title = styled.h1`
  color: ${textColor};
   text-align:right;
 line-height:1em;
-  //  white-space: nowrap;
+
 `;
 
 const TitleCTA = styled(Title)`
