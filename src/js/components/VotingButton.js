@@ -21,6 +21,7 @@ const StyledButton = styled.div`
    background-position: center;
    background-size:contain;
    overflow:hidden;
+
 `;
 
 

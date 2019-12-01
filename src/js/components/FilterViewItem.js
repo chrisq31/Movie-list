@@ -5,15 +5,15 @@ import styled from 'styled-components';
 const primaryFontFamily = "league_gothicregular";
 
 const StyledButton = styled.div`
-  background-color: ${(props) => props.active ? "#000000" : "#ffffff"};
+  background-color: ${(props) => props.active ? "#000000" : "#000000"};
     color: ${(props) => props.active ? "#ffffff" : "#f30a0a"};
    border-color: "#ffffff";
    font-family: ${primaryFontFamily};
    text-align:center;
-   font-size: 1.5em;
+   font-size: 1.8em;
    box-sizing:border-box;
   margin-top: 1em;
-  padding: .025em 1.5em;
+  padding: .06em 1em;
  cursor:pointer;
   border:10px;
   border-radius: 80px 1px;

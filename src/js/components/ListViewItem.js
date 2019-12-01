@@ -49,7 +49,7 @@ width:100%;
 
 const RatingContainer = styled.div`
 width:100%;
-heighty:200px;
+height:200px;
 display:flex;
 justify-content: center;
 flex-direction:row;
