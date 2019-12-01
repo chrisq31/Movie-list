@@ -67,9 +67,9 @@ background-repeat: no-repeat;
 
 
 
-const ctaText = "BACK!"
+const ctaText = "CUT!"
 
-const GenresSubmitButton = ({ onClick, isActive, text }) => (
+const BackButton = ({ onClick, isActive, text }) => (
 
   <div className="row" onClick={onClick} >
 
@@ -89,4 +89,4 @@ const GenresSubmitButton = ({ onClick, isActive, text }) => (
 
 
 
-export default GenresSubmitButton;
+export default BackButton;

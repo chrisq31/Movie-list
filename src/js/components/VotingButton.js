@@ -6,31 +6,23 @@ import star from '../../img/star.svg'
 const primaryFontFamily = "league_gothicregular";
 
 const StyledButton = styled.div`
+   padding:0;
+   margin:0;
   
    font-family: ${primaryFontFamily};
    display:inline-block;
-
    width:100%;
    display:flex;
-  
    align-items:center;
-    justify-content:center;  
- 
-  
- 
-   background-repeat:no-repeat;
+   justify-content:center;  
    cursor:pointer;
-  // background-image: url(${star});
-//    background-position: center;
-//    background-size:cover;
-//    overflow:hidden;
-
 `;
 
 const ImageDiv = styled.div`
   width:150px;
   height:150px;
   position:absolute;
+  transform: scale(0.66);
 
 `;
 

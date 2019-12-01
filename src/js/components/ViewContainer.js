@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import ListViewHolder from './ListViewHolder';
-
-
 import popcorn from '../../img/popcorn.svg'
 
 const ViewContainerHolder = styled.div`

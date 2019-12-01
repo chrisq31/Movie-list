@@ -1,5 +1,9 @@
 import React from 'react';
+import { connect } from "react-redux";
 import styled from 'styled-components';
+import BackButton from './BackButton';
+import { switchState } from "../actions/index";
+import { getSelectedGenresByName } from "../selectors"
 
 const lightColor = "#ec1515";
 
@@ -34,29 +38,72 @@ white-space: nowrap;
 `;
 
 
-const SiteHeaderView = () => {
 
 
 
-    return (
-
-        <div className="row">
-            <NavHeader>
-
-                <div className="col-8">
-
-                    <Title>POP MY CORN...PUNK</Title>
-
-                 </div>
-
-            </NavHeader>
-        </div>
+const SiteHeaderView = (props) => {
 
 
-    )
+    const onSubmitClick = props.onSubmitClick;
+    const getSelectedGenresByName = props.getSelectedGenresByName;
 
+    if (props.loadingMovieList === true || props.loadingGenres === true) {
+
+        return <div>Loading</div>
+    }
+
+
+
+    if (getSelectedGenresByName.length > -1) {
+
+
+
+        return (
+
+            <div className="row">
+                <NavHeader>
+
+                    <div className="col-8">
+
+                        <Title>POP MY CORN...PUNK</Title>
+
+                    </div>
+
+                    <div className="col-4">
+
+                        <BackButton text={getSelectedGenresByName} onClick={() => onSubmitClick()} />
+
+                    </div>
+
+                </NavHeader>
+            </div>
+
+
+        )
+
+    }
+
+    return null;
 
 }
 
 
-export default SiteHeaderView;
+const mapStateToProps = state => ({
+    loadingMovieList: state.siteData.dataLoadingMovieList,
+    loadingGenres: state.siteData.dataLoadingGenreList,
+    getSelectedGenresByName: getSelectedGenresByName(state)
+
+});
+
+const mapDispatchToProps = dispatch => ({
+    onSubmitClick: id => dispatch(switchState())
+})
+
+
+
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(SiteHeaderView);
+
+
