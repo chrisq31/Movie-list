@@ -28,9 +28,10 @@ const ImageDiv = styled.div`
 
 const TextDiv = styled.div`
 text-align:center;
-color:white;
-font-size: 3em;
+color:black;
+font-size: 2em;
 position:absolute;
+
 `;
 
 
