@@ -57,13 +57,6 @@ class FilterViewHolder extends React.Component {
         )
 
     }
-
-
-
-
-
-
-
 }
 const mapStateToProps = state => ({
     loadingMovieList: state.siteData.dataLoadingMovieList,
