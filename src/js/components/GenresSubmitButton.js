@@ -13,7 +13,7 @@ const StyledButton = styled.div`
 display:flex;
 justify-content: center;
 align-items: center;
-background-color: ${bgColor};
+background: rgba(33, 14, 14, 0.96);  
 box-sizing:border-box;
 
 margin: 0;
@@ -24,6 +24,8 @@ cursor:pointer;
 font-family: ${primaryFontFamily};
 text-transform: uppercase;
 overflow:hidden;
+
+border-radius: 80px 1px;
 
 
 box-shadow: -28px 18px 85px 32px rgba(245,7,7,0.75)
@@ -40,7 +42,7 @@ line-height:1em;
 `;
 
 const TitleCTA = styled(Title)`
-  color: ${bgColor};
+  color: black;
   text-align: left;
   font-size:calc(24px + 1vw);
   margin-top:60%;
