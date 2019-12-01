@@ -11,7 +11,10 @@ const StyledButton = styled.div`
    color:white;
    text-align:center;
    font-size: 4.5em;
-   padding: 8%;
+   width:100%;
+ 
+   padding:0%;
+   height:100px;
    background-repeat:no-repeat;
    cursor:pointer;
    background-image: url(${star});

@@ -49,6 +49,7 @@ width:100%;
 
 const RatingContainer = styled.div`
 width:100%;
+heighty:200px;
 display:flex;
 justify-content: center;
 flex-direction:row;
@@ -80,44 +81,19 @@ class ListViewItem extends React.Component {
                 <div className="row" >
                     <Title>{title}</Title>
                 </div>
-
-                
-                    <RatingContainer>
-                    <div className="row" >
-
-                    <VotingButton voteScore={vote_average} onClick={() => onClick({ vote_average })} />
-
-                    </div>
-
-
-                    <div className="row" >
-                    <PopularIndexView popular={popularity} />
-                    </div>
-
-                    
-
-                    </RatingContainer>
-
-              
-
-
-
+                <RatingContainer>
+                     <VotingButton voteScore={vote_average} onClick={() => onClick({ vote_average })} />
+                     <PopularIndexView popular={popularity} />
+                  </RatingContainer>
                 <div className="row" >
-
                     <FilterViewCollection genreIds={genre_ids} />
-
                 </div>
-
-
-
-
-
             </MovieContainer>
 
         );
 
 
-    }
+    } 
 
 
 }

@@ -12,6 +12,7 @@ const StyledButton = styled.div`
    text-align:center;
    font-size: 2em;
    padding: 8%;
+   visibility:hidden;
 
 
 `;
