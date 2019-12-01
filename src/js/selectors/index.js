@@ -106,13 +106,15 @@ export const getMovies = createSelector(
                 movieList.forEach(movie => {
 
                     let movieGenreIds = movie.genre_ids;
-                    // get intersection (common overlap) betwwen two arrays
-                    let result = getIntersection(genresIdArray, movieGenreIds)
 
-                    if (result.length > 0) {
 
-                        filteredArray.push(movie)
+                    let result = genresIdArray.every(v => movieGenreIds.includes(v));
+
+                    if (result) {
+                        filteredArray.push(movie);
                     }
+
+
 
                 }
 
