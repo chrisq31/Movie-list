@@ -115,7 +115,7 @@ export const getMovies = createSelector(
 
                 let ratingsArray = _.map(_.orderBy(movieList, 'vote_average', 'desc'));
 
-                console.log('rating ',rating)
+           
 
                 resultArray = _.filter(ratingsArray, ({ vote_average }) => vote_average >= rating[rating.length-1])
 
