@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const lightColor = "#ffffff";
+const lightColor = "#ec1515";
 
 const primaryFontFamily = "league_gothicregular";
 
