@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/Movie-list/build/static/css/main.2f87ca78.chunk.css",
-    "main.js": "/Movie-list/build/static/js/main.d53c3606.chunk.js",
-    "main.js.map": "/Movie-list/build/static/js/main.d53c3606.chunk.js.map",
+    "main.js": "/Movie-list/build/static/js/main.610023c3.chunk.js",
+    "main.js.map": "/Movie-list/build/static/js/main.610023c3.chunk.js.map",
     "runtime-main.js": "/Movie-list/build/static/js/runtime-main.e01e643b.js",
     "runtime-main.js.map": "/Movie-list/build/static/js/runtime-main.e01e643b.js.map",
     "static/js/2.6f811717.chunk.js": "/Movie-list/build/static/js/2.6f811717.chunk.js",
     "static/js/2.6f811717.chunk.js.map": "/Movie-list/build/static/js/2.6f811717.chunk.js.map",
     "index.html": "/Movie-list/build/index.html",
-    "precache-manifest.12f2d4b3767f3da1f86ad6b7bba87c56.js": "/Movie-list/build/precache-manifest.12f2d4b3767f3da1f86ad6b7bba87c56.js",
+    "precache-manifest.7cdc50f91ce5ec69e7f1e3e060c58725.js": "/Movie-list/build/precache-manifest.7cdc50f91ce5ec69e7f1e3e060c58725.js",
     "service-worker.js": "/Movie-list/build/service-worker.js",
     "static/css/main.2f87ca78.chunk.css.map": "/Movie-list/build/static/css/main.2f87ca78.chunk.css.map",
     "static/media/clapperBoard.svg": "/Movie-list/build/static/media/clapperBoard.3feec74b.svg",
     "static/media/index.css": "/Movie-list/build/static/media/leaguegothic-regular-webfont.ba4cbc9a.woff",
-    "static/media/popcorn.svg": "/Movie-list/build/static/media/popcorn.333c8689.svg",
+    "static/media/popcorn.svg": "/Movie-list/build/static/media/popcorn.88469b6d.svg",
     "static/media/star.svg": "/Movie-list/build/static/media/star.e356e09a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e01e643b.js",
     "static/js/2.6f811717.chunk.js",
     "static/css/main.2f87ca78.chunk.css",
-    "static/js/main.d53c3606.chunk.js"
+    "static/js/main.610023c3.chunk.js"
   ]
 }
