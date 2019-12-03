@@ -74,10 +74,14 @@ export const getMovies = createSelector(
 
         switch (siteState) {
 
+           
+
             case STATE_POPULAR:
                 // return movielist sorted on popularity
 
                 resultArray = _.map(_.orderBy(movieList, 'popularity', 'desc'));
+
+
 
                 return resultArray;
 
@@ -107,6 +111,8 @@ export const getMovies = createSelector(
 
                 )
 
+           
+
                 return filteredArray;
 
             case STATE_RATING:
@@ -117,7 +123,9 @@ export const getMovies = createSelector(
 
            
 
-                resultArray = _.filter(ratingsArray, ({ vote_average }) => vote_average >= rating[rating.length-1])
+                resultArray = _.filter(ratingsArray, ({ vote_average }) => vote_average >= rating[rating.length-1]);
+
+         
 
                 return resultArray
 
