@@ -1,5 +1,10 @@
 
 ## MovieList - CQC
+
+## Preview
+https://chrisq31.github.io/Movie-list/build/
+
+## Build
 you will need an Api key
 add an .env with YOUR Api key eg REACT_APP_API_KEY=XXXXXXXXXXXXX
 
