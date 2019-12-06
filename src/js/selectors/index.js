@@ -88,9 +88,13 @@ export const getMovies = createSelector(
 
             case STATE_FILTERED:
 
+            console.log('genres ', genres)
+
                 if (genres.length < 1) return movieList;
 
                 let genresIdArray = _.map(genres, 'id'); // get ids for each genre
+
+                console.log('genresIdArray ',genresIdArray)
 
                 let filteredArray = [];
 
