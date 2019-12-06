@@ -74,31 +74,29 @@ export const getMovies = createSelector(
 
         switch (siteState) {
 
-           
+
 
             case STATE_POPULAR:
                 // return movielist sorted on popularity
 
                 resultArray = _.map(_.orderBy(movieList, 'popularity', 'desc'));
 
-
-
                 return resultArray;
 
 
             case STATE_FILTERED:
 
-            console.log('genres ', genres)
+
 
                 if (genres.length < 1) return movieList;
 
                 let genresIdArray = _.map(genres, 'id'); // get ids for each genre
 
-                console.log('genresIdArray ',genresIdArray)
+
 
                 let filteredArray = [];
 
-                 movieList.forEach(movie => {
+                movieList.forEach(movie => {
 
                     let movieGenreIds = movie.genre_ids;
 
@@ -115,7 +113,7 @@ export const getMovies = createSelector(
 
                 )
 
-           
+
 
                 return filteredArray;
 
@@ -125,11 +123,11 @@ export const getMovies = createSelector(
 
                 let ratingsArray = _.map(_.orderBy(movieList, 'vote_average', 'desc'));
 
-           
 
-                resultArray = _.filter(ratingsArray, ({ vote_average }) => vote_average >= rating[rating.length-1]);
 
-         
+                resultArray = _.filter(ratingsArray, ({ vote_average }) => vote_average >= rating[rating.length - 1]);
+
+
 
                 return resultArray
 
