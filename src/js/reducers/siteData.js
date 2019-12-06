@@ -21,6 +21,8 @@ function siteData(state = initialState, action) {
 
         case types.MOVIE_LIST_DATA_LOADED:
             array = action.payload.results;
+
+            console.log ('loaded ', array)
             return { ...state, movieList: array, dataLoadingMovieList: false }
 
         case types.MOVIE_GENRES_DATA_LOADED:

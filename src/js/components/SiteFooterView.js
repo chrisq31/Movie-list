@@ -34,10 +34,7 @@ white-space: nowrap;
 
 
 const SiteFooterView = () => {
-
-
-
-    return (
+        return (
 
         <div className="row">
             <NavFooter>
