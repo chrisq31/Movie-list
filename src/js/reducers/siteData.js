@@ -6,7 +6,8 @@ const initialState = {
     dataLoadingMovieList: true,
     dataLoadingGenreList: true,
     movieList: [],
-    genresList: []
+    genresList: [],
+    error:{}
 
 };
 
@@ -30,12 +31,12 @@ function siteData(state = initialState, action) {
         case types.API_ERRORED_MOVIE_LIST:
 
             console.log('API_ERRORED_MOVIE_LIST')
-            return
+            return{ ...state,error:action.error}
 
         case types.API_ERRORED_GENRE_LIST:
 
             console.log('API_ERRORED_GENRE_LIST')
-            return
+            return{ ...state,error:action.error}
 
         default:
             return state
