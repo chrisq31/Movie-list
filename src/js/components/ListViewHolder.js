@@ -6,7 +6,6 @@ import { getMovies } from '../selectors/index';
 
 
 
-
 const MoviesContainer = styled.div`
 display:flex;
 justify-content: center;
@@ -18,11 +17,12 @@ margin:0;
 const ListViewHolder = (props) => {
 
     const movies = props.movies;
-    
+    if (props.loadingMovieList === true || props.loadingGenres === true) {
+
+        return <div>Loading</div>
+    }
     return (
         <MoviesContainer className="row">
-
-           
             {movies.map((movie,index) => (
                 <ListViewItem key={movie.id} item={movie} popular={index} />
             ))}

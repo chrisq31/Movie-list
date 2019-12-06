@@ -47,7 +47,10 @@ const SiteHeaderView = (props) => {
     const onSubmitClick = props.onSubmitClick;
     const getSelectedGenresByName = props.getSelectedGenresByName;
 
-   
+    if (props.loadingMovieList === true || props.loadingGenres === true) {
+
+        return <div>Loading</div>
+    }
 
 
 
