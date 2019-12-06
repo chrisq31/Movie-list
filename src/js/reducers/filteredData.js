@@ -24,17 +24,23 @@ function filteredData(state = initialState, action) {
                 return state
             }
 
-            return { ...state, genresSelectedList: [...state.genresSelectedList, action.payload.genre], filterState: STATE_FILTERED }
+           // return { ...state, genresSelectedList: [...state.genresSelectedList, action.payload.genre], filterState: STATE_FILTERED }
+
+            return { ...state, genresSelectedList: action.payload.genre, filterState: STATE_FILTERED }
 
 
 
         case types.FILTER_RATING:
 
-        return { ...state, ratingScore: [...state.ratingScore, action.payload.vote_average], genresSelectedList: [],filterState: STATE_RATING }
+        //return { ...state, ratingScore: [...state.ratingScore, action.payload.vote_average], genresSelectedList: [],filterState: STATE_RATING }
+
+        return { ...state, ratingScore: action.payload.vote_average, genresSelectedList: [],filterState: STATE_RATING }
 
         case types.SWITCH_SITE_STATE:
 
-            return { ...state, genresSelectedList: [], filterState: STATE_POPULAR }
+            //return { ...state, genresSelectedList: [], filterState: STATE_POPULAR }
+
+            return { ...state, ...initialState} // reset
 
         default:
             return state
