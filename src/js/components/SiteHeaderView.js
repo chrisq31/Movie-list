@@ -19,7 +19,7 @@ top:0;
   overflow:hidden;
   display: flex;
   align-items: center;
-  background: rgba(33, 14, 14, 0.96); 
+  background: rgba(33, 0, 14, 0.92); 
   z-index:200;
 `;
 
