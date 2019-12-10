@@ -19,7 +19,7 @@ function filteredData(state = initialState, action) {
         case types.ADD_GENRE:
 
             let genresIdArray = _.map(state.genresSelectedList, 'id'); // get ids for each gene to check not in state
-
+            //TODO toggle if already in selected
             if (genresIdArray.indexOf(action.payload.genre.id) !== -1) {
                 return state
             }

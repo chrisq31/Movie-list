@@ -118,7 +118,7 @@ export const getMovies = createSelector(
 
                 let genresIdArray = _.map(genres, 'id'); // get ids for each genre
 
-                // make an active key value foe each genre for filter buttons  active:true/false
+            
 
                 let filteredArray = [];
 
