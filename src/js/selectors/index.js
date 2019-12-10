@@ -18,7 +18,27 @@ const separator = " - ";
 
 const getGenreObjFromId = (id, state) => {
 
+    
+    let genresSelected = state.filteredData.genresSelectedList;
+
+ 
+
     let result = state.siteData.genresList.find(element => element.id === id);
+    result.active =false;
+
+
+    genresSelected.forEach(element => {
+ 
+
+        if (element.id === result.id){
+
+          
+            result.active =true;
+        }
+
+  
+
+    })
 
     return result;
 
@@ -31,11 +51,15 @@ const getGenre = (state, props) => {
 
     props.genreIds.forEach(element => {
 
+        
+
         let genreObj = getGenreObjFromId(element, state);
 
         filterCollectionarray.push(genreObj);
 
     });
+
+    
 
     return filterCollectionarray;
 
@@ -53,6 +77,7 @@ export const getGenreArray = () => {
 
 }
 
+// returns genres names selected 
 export const getSelectedGenresByName = createSelector(
     [selectedGenres],
     (genres) => {
@@ -60,6 +85,7 @@ export const getSelectedGenresByName = createSelector(
 
     }
 )
+
 
 
 
@@ -92,7 +118,7 @@ export const getMovies = createSelector(
 
                 let genresIdArray = _.map(genres, 'id'); // get ids for each genre
 
-
+                // make an active key value foe each genre for filter buttons  active:true/false
 
                 let filteredArray = [];
 
