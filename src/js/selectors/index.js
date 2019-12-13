@@ -2,6 +2,8 @@ import { createSelector } from "reselect";
 import _ from 'lodash';
 import { STATE_POPULAR, STATE_FILTERED, STATE_RATING } from '../constants/site-constants'
 
+//TODO remove lodash help,use native ES6 filtering
+
 
 const movieList = (state) => state.siteData.movieList; // selector for movie genres
 
