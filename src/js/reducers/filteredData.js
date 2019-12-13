@@ -19,33 +19,18 @@ function filteredData(state = initialState, action) {
 
         case types.ADD_GENRE:
 
-        // check if already selected - if already selected, remove it
+            // check if already selected - if already selected, remove it
 
-        let searchIndex = state.genresSelectedIdArray.indexOf(action.payload.genre.id);
+            let searchIndex = state.genresSelectedIdArray.indexOf(action.payload.genre.id);
 
-        console.log ('searchIndex ',searchIndex)
+            if (searchIndex !== -1) {
 
-         if ( searchIndex !== -1) {
-
-            console.log ('genresSelectedList match ', state.genresSelectedList[searchIndex])
-
-            console.log ('genresSelectedIdArray match ', state.genresSelectedIdArray[searchIndex])
-
-            // DELETE_ITEM: (state, action) => ({
-            //     ...state,
-            //     items: state.items.filter(item => item !== action.payload),
-            //     lastUpdated: Date.now() 
-            //   })
-
-
-
-           return { ...state, genresSelectedList: state.genresSelectedList.filter(item => item.id !==action.payload.genre.id),genresSelectedIdArray:state.genresSelectedIdArray.filter(item => item!==action.payload.genre.id)}
-
-
-            // return state
+                return { ...state, genresSelectedList: state.genresSelectedList.filter(item => item.id !== action.payload.genre.id), genresSelectedIdArray: state.genresSelectedIdArray.filter(item => item !== action.payload.genre.id) }
             }
 
-         return { ...state, genresSelectedList: [...state.genresSelectedList, action.payload.genre], genresSelectedIdArray: [...state.genresSelectedIdArray, action.payload.genre.id],filterState: STATE_FILTERED }
+            // otherwise add to state
+
+            return { ...state, genresSelectedList: [...state.genresSelectedList, action.payload.genre], genresSelectedIdArray: [...state.genresSelectedIdArray, action.payload.genre.id], filterState: STATE_FILTERED }
 
         case types.FILTER_RATING:
 
