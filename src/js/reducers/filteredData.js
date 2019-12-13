@@ -19,9 +19,30 @@ function filteredData(state = initialState, action) {
 
         case types.ADD_GENRE:
 
-         if ( state.genresSelectedIdArray.indexOf(action.payload.genre.id) !== -1) {
+        // check if already selected - if already selected, remove it
 
-             return state
+        let searchIndex = state.genresSelectedIdArray.indexOf(action.payload.genre.id);
+
+        console.log ('searchIndex ',searchIndex)
+
+         if ( searchIndex !== -1) {
+
+            console.log ('genresSelectedList match ', state.genresSelectedList[searchIndex])
+
+            console.log ('genresSelectedIdArray match ', state.genresSelectedIdArray[searchIndex])
+
+            // DELETE_ITEM: (state, action) => ({
+            //     ...state,
+            //     items: state.items.filter(item => item !== action.payload),
+            //     lastUpdated: Date.now() 
+            //   })
+
+
+
+           return { ...state, genresSelectedList: state.genresSelectedList.filter(item => item.id !==action.payload.genre.id),genresSelectedIdArray:state.genresSelectedIdArray.filter(item => item!==action.payload.genre.id)}
+
+
+            // return state
             }
 
          return { ...state, genresSelectedList: [...state.genresSelectedList, action.payload.genre], genresSelectedIdArray: [...state.genresSelectedIdArray, action.payload.genre.id],filterState: STATE_FILTERED }
