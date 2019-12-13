@@ -1,7 +1,7 @@
 
 import * as types from '../constants/action-types'
 import { STATE_POPULAR, STATE_FILTERED, STATE_RATING } from '../constants/site-constants'
-import _ from 'lodash';
+
 
 
 
