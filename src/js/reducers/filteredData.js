@@ -17,14 +17,15 @@ const initialState = {
 function filteredData(state = initialState, action) {
     switch (action.type) {
 
-        case types.ADD_GENRE:
+        case types.ADD_REMOVE_GENRE:
 
             // check if already selected - if already selected, remove it
 
             let searchIndex = state.genresSelectedIdArray.indexOf(action.payload.genre.id);
 
             if (searchIndex !== -1) {
-
+                
+                //remove
                 return { ...state, genresSelectedList: state.genresSelectedList.filter(item => item.id !== action.payload.genre.id), genresSelectedIdArray: state.genresSelectedIdArray.filter(item => item !== action.payload.genre.id) }
             }
 

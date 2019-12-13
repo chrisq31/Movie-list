@@ -1,10 +1,10 @@
 //action creators
 
-import { GET_MOVIE_DATA, GET_GENRE_DATA, ADD_GENRE, SHOW_SUBMIT_GENRES, HIDE_SUBMIT_GENRES, FILTER_RATING, SORT_POPULAR, SWITCH_SITE_STATE } from "../constants/action-types";
+import { GET_MOVIE_DATA, GET_GENRE_DATA, ADD_REMOVE_GENRE, SHOW_SUBMIT_GENRES, HIDE_SUBMIT_GENRES, FILTER_RATING, SORT_POPULAR, SWITCH_SITE_STATE } from "../constants/action-types";
 
 // eg Action and Drama
 export const addGenre = (payload) => ({
-    type: ADD_GENRE,
+    type: ADD_REMOVE_GENRE,
     payload
 
 })

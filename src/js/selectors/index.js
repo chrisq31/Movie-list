@@ -18,25 +18,25 @@ const separator = " - ";
 
 const getGenreObjFromId = (id, state) => {
 
-    
+
     let genresSelected = state.filteredData.genresSelectedList;
 
- 
+
 
     let result = state.siteData.genresList.find(element => element.id === id);
-    result.active =false;
+    result.active = false;
 
 
     genresSelected.forEach(element => {
- 
 
-        if (element.id === result.id){
 
-          
-            result.active =true;
+        if (element.id === result.id) {
+
+
+            result.active = true;
         }
 
-  
+
 
     })
 
@@ -51,7 +51,7 @@ const getGenre = (state, props) => {
 
     props.genreIds.forEach(element => {
 
-        
+
 
         let genreObj = getGenreObjFromId(element, state);
 
@@ -59,7 +59,7 @@ const getGenre = (state, props) => {
 
     });
 
-    
+
 
     return filterCollectionarray;
 
@@ -118,7 +118,7 @@ export const getMovies = createSelector(
 
                 let genresIdArray = _.map(genres, 'id'); // get ids for each genre
 
-            
+
 
                 let filteredArray = [];
 
