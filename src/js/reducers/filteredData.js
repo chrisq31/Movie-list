@@ -7,7 +7,8 @@ import _ from 'lodash';
 
 const initialState = {
 
-    genresSelectedList: [],
+    genresSelectedList: [], // stores full genre properties
+    genresSelectedIdArray: [], // stores only ids for faster searching
     ratingScore: [],
     filterState: STATE_POPULAR
 };
@@ -18,13 +19,12 @@ function filteredData(state = initialState, action) {
 
         case types.ADD_GENRE:
 
-            let genresIdArray = _.map(state.genresSelectedList, 'id'); // get ids for each gene to check not in state
-            //TODO toggle if already in selected
-            if (genresIdArray.indexOf(action.payload.genre.id) !== -1) {
-                return state
+         if ( state.genresSelectedIdArray.indexOf(action.payload.genre.id) !== -1) {
+
+             return state
             }
 
-            return { ...state, genresSelectedList: [...state.genresSelectedList, action.payload.genre], filterState: STATE_FILTERED }
+         return { ...state, genresSelectedList: [...state.genresSelectedList, action.payload.genre], genresSelectedIdArray: [...state.genresSelectedIdArray, action.payload.genre.id],filterState: STATE_FILTERED }
 
         case types.FILTER_RATING:
 

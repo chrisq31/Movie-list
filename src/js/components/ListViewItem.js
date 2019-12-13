@@ -72,6 +72,8 @@ class ListViewItem extends React.Component {
 
         const onClick = this.props.onClick;
 
+        console.log()
+
         return (
 
             <MovieContainer poster_path={poster_path}>
