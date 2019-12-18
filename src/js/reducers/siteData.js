@@ -7,7 +7,7 @@ const initialState = {
     dataLoadingGenreList: true,
     movieList: [],
     genresList: [],
-    error:{}
+    error: {}
 
 };
 
@@ -21,7 +21,10 @@ function siteData(state = initialState, action) {
 
         case types.MOVIE_LIST_DATA_LOADED:
             array = action.payload.results;
-            return { ...state, movieList: array, dataLoadingMovieList: false }
+            let resultArray = [...array].sort((a, b) => (a.popularity < b.popularity) ? 1 : -1)
+
+            return { ...state, movieList: resultArray, dataLoadingMovieList: false }
+
 
         case types.MOVIE_GENRES_DATA_LOADED:
             array = action.payload.genres;
@@ -31,12 +34,12 @@ function siteData(state = initialState, action) {
         case types.API_ERRORED_MOVIE_LIST:
 
             console.log('API_ERRORED_MOVIE_LIST')
-            return{ ...state,error:action.error}
+            return { ...state, error: action.error }
 
         case types.API_ERRORED_GENRE_LIST:
 
             console.log('API_ERRORED_GENRE_LIST')
-            return{ ...state,error:action.error}
+            return { ...state, error: action.error }
 
         default:
             return state

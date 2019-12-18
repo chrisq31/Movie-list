@@ -371,7 +371,7 @@ const checker = (target) => {
        filteredCollection.push(element);
     }
 
-    console.log('filteredCollection', filteredCollection)
+   // console.log('filteredCollection', filteredCollection)
 
 
   })
@@ -381,7 +381,7 @@ const checker = (target) => {
 //console.log('check array1', checker(array1));
 
 
-console.log('check array2', checker(array2));
+//console.log('check array2', checker(array2));
 
 
 //console.log('check array2', checker(array2));
@@ -392,7 +392,13 @@ console.log('check array2', checker(array2));
 
 
     //console.log ('----------- getMoviesByVoterRating ',getMoviesByVoterRating());
+    
+   let sortedByPopularArray= [...movieList].sort((a, b) => (a.popularity < b.popularity) ? 1 : -1)
 
+   console.log ('sortedByPopularArray--------------------- ',sortedByPopularArray)
+
+
+   console.log ('movieList----------------- ',movieList)
 
 
 

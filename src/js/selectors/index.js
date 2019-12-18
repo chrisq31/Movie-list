@@ -105,11 +105,7 @@ export const getMovies = createSelector(
 
 
             case STATE_POPULAR:
-                // return movielist sorted on popularity
-
-                resultArray = _.map(_.orderBy(movieList, 'popularity', 'desc'));
-
-                return resultArray;
+                return movieList;
 
 
             case STATE_FILTERED:
