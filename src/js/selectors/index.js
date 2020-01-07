@@ -7,6 +7,8 @@ import { STATE_POPULAR, STATE_FILTERED, STATE_RATING } from '../constants/site-c
 
 const movieList = (state) => state.siteData.movieList; // selector for movie genres
 
+const genresSelectedIdArray = (state) => state.filteredData.genresSelectedIdArray; // ids of movies selected
+
 const selectedGenres = (state) => state.filteredData.genresSelectedList; // selector genres for filtering
 
 const ratingScore = (state) => state.filteredData.ratingScore; // selector ratings for filtering
@@ -95,35 +97,29 @@ export const getSelectedGenresByName = createSelector(
 
 
 export const getMovies = createSelector(
-    [selectedGenres, movieList, siteState, ratingScore],
-    (genres, movieList, siteState, rating) => {
+    [genresSelectedIdArray, movieList, siteState, ratingScore],
+    (genresIdArray, movieList, siteState, rating) => {
 
         let resultArray;
 
         switch (siteState) {
 
-
-
-            case STATE_POPULAR:
+             case STATE_POPULAR:
                 return movieList;
+            
+                case STATE_FILTERED:
 
+                //genresIdArray - only contains ids of movies selected for quick comparison
 
-            case STATE_FILTERED:
-
-
-
-                if (genres.length < 1) return movieList;
-
-                let genresIdArray = _.map(genres, 'id'); // get ids for each genre
-
-
+                if (genresIdArray.length < 1) return movieList;
 
                 let filteredArray = [];
 
                 movieList.forEach(movie => {
 
-                    let movieGenreIds = movie.genre_ids;
+                  
 
+                    let movieGenreIds = movie.genre_ids;
 
                     let result = genresIdArray.every(v => movieGenreIds.includes(v));
 
@@ -131,9 +127,7 @@ export const getMovies = createSelector(
                         filteredArray.push(movie);
                     }
 
-
-
-                }
+                    }
 
                 )
 
@@ -145,7 +139,9 @@ export const getMovies = createSelector(
 
                 // only show movies equal or above rating
 
-                let ratingsArray = _.map(_.orderBy(movieList, 'vote_average', 'desc'));
+               // let ratingsArray = _.map(_.orderBy(movieList, 'vote_average', 'desc'));
+
+               let ratingsArray = [...movieList].sort((a, b) => (a.vote_average < b.vote_average) ? 1 : -1)
 
 
 

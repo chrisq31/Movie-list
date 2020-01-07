@@ -35,7 +35,7 @@ function filteredData(state = initialState, action) {
 
         case types.FILTER_RATING:
 
-            return { ...state, ratingScore: [...state.ratingScore, action.payload.vote_average], genresSelectedList: [], filterState: STATE_RATING }
+            return { ...state, ratingScore: [...state.ratingScore, action.payload.vote_average], genresSelectedList: [],  genresSelectedIdArray: [],filterState: STATE_RATING }
 
         case types.SWITCH_SITE_STATE:
 
