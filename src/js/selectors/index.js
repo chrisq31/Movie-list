@@ -1,6 +1,7 @@
 import { createSelector } from "reselect";
-import _ from 'lodash';
+
 import { STATE_POPULAR, STATE_FILTERED, STATE_RATING } from '../constants/site-constants'
+
 
 //TODO remove lodash help,use native ES6 filtering
 
@@ -81,11 +82,24 @@ export const getGenreArray = () => {
 
 }
 
+
 // returns genres names selected 
 export const getSelectedGenresByName = createSelector(
     [selectedGenres],
     (genres) => {
-        return _.map(genres, 'name').join(separator);
+
+        let selectedByNameArray = [...genres];
+        let genreNameArray = [];
+
+
+        selectedByNameArray.forEach(movie => {
+
+            genreNameArray.push(movie.name)
+
+        }
+        )
+
+        return genreNameArray.join(separator);
 
     }
 )
@@ -104,10 +118,10 @@ export const getMovies = createSelector(
 
         switch (siteState) {
 
-             case STATE_POPULAR:
+            case STATE_POPULAR:
                 return movieList;
-            
-                case STATE_FILTERED:
+
+            case STATE_FILTERED:
 
                 //genresIdArray - only contains ids of movies selected for quick comparison
 
@@ -117,7 +131,7 @@ export const getMovies = createSelector(
 
                 movieList.forEach(movie => {
 
-                  
+
 
                     let movieGenreIds = movie.genre_ids;
 
@@ -127,7 +141,7 @@ export const getMovies = createSelector(
                         filteredArray.push(movie);
                     }
 
-                    }
+                }
 
                 )
 
@@ -140,7 +154,7 @@ export const getMovies = createSelector(
                 // only show movies equal or above rating
 
                 // copy movielist array, and sort on vote average
-               let ratingsArray = [...movieList].sort((a, b) => (a.vote_average < b.vote_average) ? 1 : -1)
+                let ratingsArray = [...movieList].sort((a, b) => (a.vote_average < b.vote_average) ? 1 : -1)
 
 
                 //filter on condition that movie vote average is equal or above rating
