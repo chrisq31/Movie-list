@@ -66,3 +66,8 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+https://dev.to/vanderleisilva/global-state-management-with-react-hooks-and-context-5f6h
+
+https://github.com/vanderleisilva/react-context
+
+https://alligator.io/react/usecontext/
