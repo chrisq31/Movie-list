@@ -1,30 +1,12 @@
-import { createStore, applyMiddleware, compose } from "redux";
-import rootReducer from "../reducers/index";
-import createSagaMiddleware from "redux-saga";
-import rootSaga from "../sagas/api-saga";
+import React, { createContext, useContext, useReducer } from 'react';
 
-const initialiseSagaMiddleware = createSagaMiddleware();
+export const StateContext = createContext();
 
-// const storeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const composeEnhancers =
-    typeof window === 'object' &&
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
-        window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-            // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
-        }) : compose;
-
-
-const enhancer = composeEnhancers(
-    applyMiddleware( initialiseSagaMiddleware),
-
-    // other store enhancers if any
+export const StoreProvider = ({ reducer, initialState, children }) => (
+  <StateContext.Provider
+    value={useReducer(reducer, initialState)}
+    children={children}
+  />
 );
 
-const store = createStore(rootReducer, enhancer);
-
-
-
-initialiseSagaMiddleware.run(rootSaga);
-
-export default store;
+export const useStore = () => useContext(StateContext);

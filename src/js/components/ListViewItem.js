@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { connect } from "react-redux";
 import { filterByRating } from "../actions/index";
 import FilterViewCollection from "./FilterViewCollection";
-import VotingButton from "./VotingButton";
+import VotingButton from "./vote";
 import { BASE_URL_IMAGE } from '../constants/site-constants';
 const lightColor = "#ffffff";
 const bgColor = "#f30a0a";

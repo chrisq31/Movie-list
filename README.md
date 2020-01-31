@@ -66,3 +66,9 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+https://dev.to/vanderleisilva/global-state-management-with-react-hooks-and-context-5f6h
+
+https://www.robinwieruch.de/react-hooks-fetch-data
+
+https://medium.com/better-programming/how-to-fetch-data-from-an-api-with-react-hooks-9e7202b8afcd
+

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ListViewHolder from './ListViewHolder';
+import ListViewHolder from '../ListViewHolder';
 import popcorn from '../../img/popcorn.svg'
 
 const ViewContainerHolder = styled.div`
@@ -28,18 +28,14 @@ const Flexcolumn = styled.div`
 
 
 
-const ViewContainer = () => (
+export default () => (
 
     <div className="row" >
 
-        <ViewContainerHolder>
-        <Flexcolumn size={12}>
-        <ListViewHolder />
-        </Flexcolumn>
-      </ViewContainerHolder>
+      MovieList
+
     </div>
 
 
 )
 
-export default ViewContainer;

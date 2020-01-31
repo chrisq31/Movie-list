@@ -36,19 +36,11 @@ position:absolute;
 
 
 
-
-
-
-
-
-const VotingButton = ({ onClick, isActive, voteScore}) => (
+export default ({ onClick, isActive, voteScore}) => (
 
     <StyledButton onClick={onClick} >
      <ImageDiv><img src= {star} alt="star background" /></ImageDiv>
       <TextDiv>{voteScore}</TextDiv>
     </StyledButton>
 
-
 )
-
-export default VotingButton;
