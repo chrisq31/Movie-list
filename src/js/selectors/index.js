@@ -1,10 +1,6 @@
-import { createSelector } from "reselect";
+import {createSelector} from "reselect";
 
-import { STATE_POPULAR, STATE_FILTERED, STATE_RATING } from '../constants/site-constants'
-
-
-//TODO remove lodash help,use native ES6 filtering
-
+import {STATE_POPULAR, STATE_FILTERED, STATE_RATING} from '../constants/site-constants'
 
 const movieList = (state) => state.siteData.movieList; // selector for movie genres
 
@@ -17,7 +13,6 @@ const ratingScore = (state) => state.filteredData.ratingScore; // selector ratin
 const siteState = (state) => state.filteredData.filterState;
 
 
-
 const separator = " - ";
 
 
@@ -25,7 +20,6 @@ const getGenreObjFromId = (id, state) => {
 
 
     let genresSelected = state.filteredData.genresSelectedList;
-
 
 
     let result = state.siteData.genresList.find(element => element.id === id);
@@ -42,7 +36,6 @@ const getGenreObjFromId = (id, state) => {
         }
 
 
-
     })
 
     return result;
@@ -57,13 +50,11 @@ const getGenre = (state, props) => {
     props.genreIds.forEach(element => {
 
 
-
         let genreObj = getGenreObjFromId(element, state);
 
         filterCollectionarray.push(genreObj);
 
     });
-
 
 
     return filterCollectionarray;
@@ -83,7 +74,7 @@ export const getGenreArray = () => {
 }
 
 
-// returns genres names selected 
+// returns genres names selected
 export const getSelectedGenresByName = createSelector(
     [selectedGenres],
     (genres) => {
@@ -94,20 +85,15 @@ export const getSelectedGenresByName = createSelector(
 
         selectedByNameArray.forEach(movie => {
 
-            genreNameArray.push(movie.name)
+                genreNameArray.push(movie.name)
 
-        }
+            }
         )
 
         return genreNameArray.join(separator);
 
     }
 )
-
-
-
-
-
 
 
 export const getMovies = createSelector(
@@ -132,19 +118,16 @@ export const getMovies = createSelector(
                 movieList.forEach(movie => {
 
 
+                        let movieGenreIds = movie.genre_ids;
 
-                    let movieGenreIds = movie.genre_ids;
+                        let result = genresIdArray.every(v => movieGenreIds.includes(v));
 
-                    let result = genresIdArray.every(v => movieGenreIds.includes(v));
+                        if (result) {
+                            filteredArray.push(movie);
+                        }
 
-                    if (result) {
-                        filteredArray.push(movie);
                     }
-
-                }
-
                 )
-
 
 
                 return filteredArray;
